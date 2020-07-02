@@ -94,6 +94,12 @@ class ProvidersTable extends Table
             ->email('email')
             ->allowEmptyString('email');
 
+        $validator
+            ->scalar('direction')
+            ->maxLength('direction', 255)
+            ->requirePresence('direction', 'create')
+            ->notEmptyString('direction');
+
         return $validator;
     }
 

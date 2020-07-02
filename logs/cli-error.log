@@ -1,0 +1,87 @@
+2020-07-01 23:59:14 Error: [Cake\Database\Exception\MissingConnectionException] Connection to Mysql could not be established: SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Driver.php on line 107
+Exception Attributes: array (
+  'driver' => 'Mysql',
+  'reason' => 'SQLSTATE[HY000] [1045] Access denied for user \'my_app\'@\'localhost\' (using password: YES)',
+)
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:114
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php:47
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php:65
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:401
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Utility/TableScanner.php:65
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/ModelCommand.php:1061
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/ModelCommand.php:192
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/ModelCommand.php:123
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/ModelCommand.php:99
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/ModelCommand.php:82
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/AllCommand.php:102
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Console/BaseCommand.php:175
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/public_html/proyecto1/bin/cake.php:12
+
+Caused by: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Driver.php on line 104
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Driver.php:104
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:114
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php:47
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php:65
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:401
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Utility/TableScanner.php:65
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/ModelCommand.php:1061
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/ModelCommand.php:192
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/ModelCommand.php:123
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/ModelCommand.php:99
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/ModelCommand.php:82
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/AllCommand.php:102
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Console/BaseCommand.php:175
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/public_html/proyecto1/bin/cake.php:12
+
+
+
+2020-07-02 00:01:52 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'distribution.provider' doesn't exist in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Schema/Collection.php on line 142
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:100
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php:84
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:509
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:649
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/ModelCommand.php:200
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/ModelCommand.php:123
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/ModelCommand.php:99
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/ModelCommand.php:82
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/AllCommand.php:102
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Console/BaseCommand.php:175
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/public_html/proyecto1/bin/cake.php:12
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'distribution.provider' doesn't exist in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php on line 39
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php:39
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:359
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:69
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:362
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:311
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:69
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:315
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:140
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:100
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php:84
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:509
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:649
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/ModelCommand.php:200
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/ModelCommand.php:123
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/ModelCommand.php:99
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/ModelCommand.php:82
+- /var/www/html/public_html/proyecto1/vendor/cakephp/bake/src/Command/AllCommand.php:102
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Console/BaseCommand.php:175
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/public_html/proyecto1/bin/cake.php:12
+
+
+

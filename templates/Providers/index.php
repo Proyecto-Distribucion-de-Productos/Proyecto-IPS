@@ -17,6 +17,7 @@
                     <th><?= $this->Paginator->sort('district_id') ?></th>
                     <th><?= $this->Paginator->sort('province_id') ?></th>
                     <th><?= $this->Paginator->sort('department_id') ?></th>
+                    <th><?= $this->Paginator->sort('direction') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -29,6 +30,7 @@
                     <td><?= $provider->has('district') ? $this->Html->link($provider->district->name, ['controller' => 'Districts', 'action' => 'view', $provider->district->id]) : '' ?></td>
                     <td><?= $provider->has('province') ? $this->Html->link($provider->province->name, ['controller' => 'Provinces', 'action' => 'view', $provider->province->id]) : '' ?></td>
                     <td><?= $provider->has('department') ? $this->Html->link($provider->department->name, ['controller' => 'Departments', 'action' => 'view', $provider->department->id]) : '' ?></td>
+                    <td><?= h($provider->direction) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $provider->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $provider->id]) ?>

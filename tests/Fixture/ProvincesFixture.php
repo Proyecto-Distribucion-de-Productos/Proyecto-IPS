@@ -27,7 +27,7 @@ class ProvincesFixture extends TestFixture
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             'ProCod' => ['type' => 'unique', 'columns' => ['id'], 'length' => []],
             'ProNam' => ['type' => 'unique', 'columns' => ['name'], 'length' => []],
-            'provinces_ibfk_1' => ['type' => 'foreign', 'columns' => ['department_id'], 'references' => ['departments', 'id'], 'update' => 'cascade', 'delete' => 'restrict', 'length' => []],
+            'provinces_ibfk_1' => ['type' => 'foreign', 'columns' => ['department_id'], 'references' => ['departments', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',

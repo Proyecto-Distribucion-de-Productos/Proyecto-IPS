@@ -30,9 +30,9 @@ class ProductsPurchasesFixture extends TestFixture
         ],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            'products_purchases_ibfk_1' => ['type' => 'foreign', 'columns' => ['purchase_id'], 'references' => ['purchases', 'id'], 'update' => 'cascade', 'delete' => 'restrict', 'length' => []],
-            'products_purchases_ibfk_2' => ['type' => 'foreign', 'columns' => ['provider_id'], 'references' => ['purchases', 'provider_id'], 'update' => 'cascade', 'delete' => 'restrict', 'length' => []],
-            'products_purchases_ibfk_3' => ['type' => 'foreign', 'columns' => ['product_id'], 'references' => ['products', 'id'], 'update' => 'cascade', 'delete' => 'restrict', 'length' => []],
+            'products_purchases_ibfk_1' => ['type' => 'foreign', 'columns' => ['provider_id'], 'references' => ['providers', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
+            'products_purchases_ibfk_2' => ['type' => 'foreign', 'columns' => ['purchase_id'], 'references' => ['purchases', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
+            'products_purchases_ibfk_3' => ['type' => 'foreign', 'columns' => ['product_id'], 'references' => ['products', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',

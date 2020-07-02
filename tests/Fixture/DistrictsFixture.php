@@ -28,8 +28,8 @@ class DistrictsFixture extends TestFixture
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             'DisCod' => ['type' => 'unique', 'columns' => ['id'], 'length' => []],
-            'districts_ibfk_1' => ['type' => 'foreign', 'columns' => ['province_id'], 'references' => ['provinces', 'id'], 'update' => 'cascade', 'delete' => 'restrict', 'length' => []],
-            'districts_ibfk_2' => ['type' => 'foreign', 'columns' => ['department_id'], 'references' => ['provinces', 'department_id'], 'update' => 'cascade', 'delete' => 'restrict', 'length' => []],
+            'districts_ibfk_1' => ['type' => 'foreign', 'columns' => ['department_id'], 'references' => ['departments', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
+            'districts_ibfk_2' => ['type' => 'foreign', 'columns' => ['province_id'], 'references' => ['provinces', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',

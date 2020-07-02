@@ -72,6 +72,7 @@
                             <th><?= __('District Id') ?></th>
                             <th><?= __('Province Id') ?></th>
                             <th><?= __('Department Id') ?></th>
+                            <th><?= __('Direction') ?></th>
                             <th class="actions"><?= __('Actions') ?></th>
                         </tr>
                         <?php foreach ($province->providers as $providers) : ?>
@@ -82,6 +83,7 @@
                             <td><?= h($providers->district_id) ?></td>
                             <td><?= h($providers->province_id) ?></td>
                             <td><?= h($providers->department_id) ?></td>
+                            <td><?= h($providers->direction) ?></td>
                             <td class="actions">
                                 <?= $this->Html->link(__('View'), ['controller' => 'Providers', 'action' => 'view', $providers->id]) ?>
                                 <?= $this->Html->link(__('Edit'), ['controller' => 'Providers', 'action' => 'edit', $providers->id]) ?>

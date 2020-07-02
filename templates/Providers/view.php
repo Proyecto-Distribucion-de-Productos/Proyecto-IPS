@@ -39,6 +39,10 @@
                     <td><?= $provider->has('department') ? $this->Html->link($provider->department->name, ['controller' => 'Departments', 'action' => 'view', $provider->department->id]) : '' ?></td>
                 </tr>
                 <tr>
+                    <th><?= __('Direction') ?></th>
+                    <td><?= h($provider->direction) ?></td>
+                </tr>
+                <tr>
                     <th><?= __('Id') ?></th>
                     <td><?= $this->Number->format($provider->id) ?></td>
                 </tr>

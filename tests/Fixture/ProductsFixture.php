@@ -29,8 +29,8 @@ class ProductsFixture extends TestFixture
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             'ProCod' => ['type' => 'unique', 'columns' => ['id'], 'length' => []],
-            'products_ibfk_1' => ['type' => 'foreign', 'columns' => ['category_id'], 'references' => ['categories', 'id'], 'update' => 'cascade', 'delete' => 'restrict', 'length' => []],
-            'products_ibfk_2' => ['type' => 'foreign', 'columns' => ['measurement_id'], 'references' => ['measurements', 'id'], 'update' => 'cascade', 'delete' => 'restrict', 'length' => []],
+            'products_ibfk_1' => ['type' => 'foreign', 'columns' => ['category_id'], 'references' => ['categories', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
+            'products_ibfk_2' => ['type' => 'foreign', 'columns' => ['measurement_id'], 'references' => ['measurements', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',

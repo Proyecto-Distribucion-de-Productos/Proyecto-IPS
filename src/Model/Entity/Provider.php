@@ -14,6 +14,7 @@ use Cake\ORM\Entity;
  * @property int $district_id
  * @property int $province_id
  * @property int $department_id
+ * @property string $direction
  *
  * @property \App\Model\Entity\District $district
  * @property \App\Model\Entity\Province $province
@@ -39,6 +40,7 @@ class Provider extends Entity
         'district_id' => true,
         'province_id' => true,
         'department_id' => true,
+        'direction' => true,
         'district' => true,
         'province' => true,
         'department' => true,

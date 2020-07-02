@@ -1,0 +1,1642 @@
+2020-07-02 00:02:47 Warning: Warning (512): SplFileInfo::openFile(/var/www/html/public_html/proyecto1/tmp/cache/models/myapp_cake_model_default_categories): failed to open stream: Permission denied in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 372]
+Request URL: /products/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/products
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 372
+Cake\Cache\Engine\FileEngine::get() - CORE/src/Cache/Engine/FileEngine.php, line 164
+DebugKit\Cache\Engine\DebugEngine::get() - ROOT/vendor/cakephp/debug_kit/src/Cache/Engine/DebugEngine.php, line 180
+Cake\Database\Schema\CachedCollection::describe() - CORE/src/Database/Schema/CachedCollection.php, line 78
+Cake\ORM\Table::getSchema() - CORE/src/ORM/Table.php, line 509
+Cake\ORM\Query::addDefaultTypes() - CORE/src/ORM/Query.php, line 277
+Cake\ORM\Query::__construct() - CORE/src/ORM/Query.php, line 177
+Cake\ORM\Table::query() - CORE/src/ORM/Table.php, line 1673
+Cake\ORM\Table::find() - CORE/src/ORM/Table.php, line 1255
+Cake\ORM\Association::find() - CORE/src/ORM/Association.php, line 861
+App\Controller\ProductsController::add() - APP/Controller/ProductsController.php, line 62
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 521
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 138
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-02 00:02:47 Warning: Warning (512): SplFileInfo::openFile(/var/www/html/public_html/proyecto1/tmp/cache/models/myapp_cake_model_default_categories) [<a href='https://secure.php.net/splfileinfo.openfile'>splfileinfo.openfile</a>]: failed to open stream: Permission denied in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 372]
+Request URL: /products/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/products
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 372
+Cake\Cache\Engine\FileEngine::set() - CORE/src/Cache/Engine/FileEngine.php, line 122
+DebugKit\Cache\Engine\DebugEngine::set() - ROOT/vendor/cakephp/debug_kit/src/Cache/Engine/DebugEngine.php, line 150
+Cake\Database\Schema\CachedCollection::describe() - CORE/src/Database/Schema/CachedCollection.php, line 85
+Cake\ORM\Table::getSchema() - CORE/src/ORM/Table.php, line 509
+Cake\ORM\Query::addDefaultTypes() - CORE/src/ORM/Query.php, line 277
+Cake\ORM\Query::__construct() - CORE/src/ORM/Query.php, line 177
+Cake\ORM\Table::query() - CORE/src/ORM/Table.php, line 1673
+Cake\ORM\Table::find() - CORE/src/ORM/Table.php, line 1255
+Cake\ORM\Association::find() - CORE/src/ORM/Association.php, line 861
+App\Controller\ProductsController::add() - APP/Controller/ProductsController.php, line 62
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 521
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 138
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-02 00:02:47 Warning: Warning (512): SplFileInfo::openFile(/var/www/html/public_html/proyecto1/tmp/cache/models/myapp_cake_model_default_measurements) [<a href='https://secure.php.net/splfileinfo.openfile'>splfileinfo.openfile</a>]: failed to open stream: Permission denied in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 372]
+Request URL: /products/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/products
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 372
+Cake\Cache\Engine\FileEngine::get() - CORE/src/Cache/Engine/FileEngine.php, line 164
+DebugKit\Cache\Engine\DebugEngine::get() - ROOT/vendor/cakephp/debug_kit/src/Cache/Engine/DebugEngine.php, line 180
+Cake\Database\Schema\CachedCollection::describe() - CORE/src/Database/Schema/CachedCollection.php, line 78
+Cake\ORM\Table::getSchema() - CORE/src/ORM/Table.php, line 509
+Cake\ORM\Query::addDefaultTypes() - CORE/src/ORM/Query.php, line 277
+Cake\ORM\Query::__construct() - CORE/src/ORM/Query.php, line 177
+Cake\ORM\Table::query() - CORE/src/ORM/Table.php, line 1673
+Cake\ORM\Table::find() - CORE/src/ORM/Table.php, line 1255
+Cake\ORM\Association::find() - CORE/src/ORM/Association.php, line 861
+App\Controller\ProductsController::add() - APP/Controller/ProductsController.php, line 63
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 521
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 138
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-02 00:02:47 Warning: Warning (512): SplFileInfo::openFile(/var/www/html/public_html/proyecto1/tmp/cache/models/myapp_cake_model_default_measurements) [<a href='https://secure.php.net/splfileinfo.openfile'>splfileinfo.openfile</a>]: failed to open stream: Permission denied in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 372]
+Request URL: /products/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/products
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 372
+Cake\Cache\Engine\FileEngine::set() - CORE/src/Cache/Engine/FileEngine.php, line 122
+DebugKit\Cache\Engine\DebugEngine::set() - ROOT/vendor/cakephp/debug_kit/src/Cache/Engine/DebugEngine.php, line 150
+Cake\Database\Schema\CachedCollection::describe() - CORE/src/Database/Schema/CachedCollection.php, line 85
+Cake\ORM\Table::getSchema() - CORE/src/ORM/Table.php, line 509
+Cake\ORM\Query::addDefaultTypes() - CORE/src/ORM/Query.php, line 277
+Cake\ORM\Query::__construct() - CORE/src/ORM/Query.php, line 177
+Cake\ORM\Table::query() - CORE/src/ORM/Table.php, line 1673
+Cake\ORM\Table::find() - CORE/src/ORM/Table.php, line 1255
+Cake\ORM\Association::find() - CORE/src/ORM/Association.php, line 861
+App\Controller\ProductsController::add() - APP/Controller/ProductsController.php, line 63
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 521
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 138
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-02 00:02:47 Warning: Warning (512): SplFileInfo::openFile(/var/www/html/public_html/proyecto1/tmp/cache/models/myapp_cake_model_default_purchases) [<a href='https://secure.php.net/splfileinfo.openfile'>splfileinfo.openfile</a>]: failed to open stream: Permission denied in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 372]
+Request URL: /products/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/products
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 372
+Cake\Cache\Engine\FileEngine::get() - CORE/src/Cache/Engine/FileEngine.php, line 164
+DebugKit\Cache\Engine\DebugEngine::get() - ROOT/vendor/cakephp/debug_kit/src/Cache/Engine/DebugEngine.php, line 180
+Cake\Database\Schema\CachedCollection::describe() - CORE/src/Database/Schema/CachedCollection.php, line 78
+Cake\ORM\Table::getSchema() - CORE/src/ORM/Table.php, line 509
+Cake\ORM\Query::addDefaultTypes() - CORE/src/ORM/Query.php, line 277
+Cake\ORM\Query::__construct() - CORE/src/ORM/Query.php, line 177
+Cake\ORM\Table::query() - CORE/src/ORM/Table.php, line 1673
+Cake\ORM\Table::find() - CORE/src/ORM/Table.php, line 1255
+Cake\ORM\Association\BelongsToMany::find() - CORE/src/ORM/Association/BelongsToMany.php, line 1034
+App\Controller\ProductsController::add() - APP/Controller/ProductsController.php, line 64
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 521
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 138
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-02 00:02:47 Warning: Warning (512): SplFileInfo::openFile(/var/www/html/public_html/proyecto1/tmp/cache/models/myapp_cake_model_default_purchases) [<a href='https://secure.php.net/splfileinfo.openfile'>splfileinfo.openfile</a>]: failed to open stream: Permission denied in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 372]
+Request URL: /products/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/products
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 372
+Cake\Cache\Engine\FileEngine::set() - CORE/src/Cache/Engine/FileEngine.php, line 122
+DebugKit\Cache\Engine\DebugEngine::set() - ROOT/vendor/cakephp/debug_kit/src/Cache/Engine/DebugEngine.php, line 150
+Cake\Database\Schema\CachedCollection::describe() - CORE/src/Database/Schema/CachedCollection.php, line 85
+Cake\ORM\Table::getSchema() - CORE/src/ORM/Table.php, line 509
+Cake\ORM\Query::addDefaultTypes() - CORE/src/ORM/Query.php, line 277
+Cake\ORM\Query::__construct() - CORE/src/ORM/Query.php, line 177
+Cake\ORM\Table::query() - CORE/src/ORM/Table.php, line 1673
+Cake\ORM\Table::find() - CORE/src/ORM/Table.php, line 1255
+Cake\ORM\Association\BelongsToMany::find() - CORE/src/ORM/Association/BelongsToMany.php, line 1034
+App\Controller\ProductsController::add() - APP/Controller/ProductsController.php, line 64
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 521
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 138
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-02 00:02:47 Warning: Warning (512): SplFileInfo::openFile(/var/www/html/public_html/proyecto1/tmp/cache/models/myapp_cake_model_default_products) [<a href='https://secure.php.net/splfileinfo.openfile'>splfileinfo.openfile</a>]: failed to open stream: Permission denied in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 372]
+Request URL: /products/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/products
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 372
+Cake\Cache\Engine\FileEngine::get() - CORE/src/Cache/Engine/FileEngine.php, line 164
+DebugKit\Cache\Engine\DebugEngine::get() - ROOT/vendor/cakephp/debug_kit/src/Cache/Engine/DebugEngine.php, line 180
+Cake\Database\Schema\CachedCollection::describe() - CORE/src/Database/Schema/CachedCollection.php, line 78
+Cake\ORM\Table::getSchema() - CORE/src/ORM/Table.php, line 509
+Cake\View\Form\EntityContext::_schemaDefault() - CORE/src/View/Form/EntityContext.php, line 313
+Cake\View\Form\EntityContext::val() - CORE/src/View/Form/EntityContext.php, line 289
+Cake\View\Helper\FormHelper::getSourceValue() - CORE/src/View/Helper/FormHelper.php, line 2514
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2284
+Cake\View\Helper\FormHelper::select() - CORE/src/View/Helper/FormHelper.php, line 2030
+Cake\View\Helper\FormHelper::_getInput() - CORE/src/View/Helper/FormHelper.php, line 1175
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1081
+include - ROOT/templates/Products/add.php, line 20
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1160
+Cake\View\View::_render() - CORE/src/View/View.php, line 1121
+Cake\View\View::render() - CORE/src/View/View.php, line 751
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 138
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-02 00:02:47 Warning: Warning (512): SplFileInfo::openFile(/var/www/html/public_html/proyecto1/tmp/cache/models/myapp_cake_model_default_products) [<a href='https://secure.php.net/splfileinfo.openfile'>splfileinfo.openfile</a>]: failed to open stream: Permission denied in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 372]
+Request URL: /products/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/products
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 372
+Cake\Cache\Engine\FileEngine::set() - CORE/src/Cache/Engine/FileEngine.php, line 122
+DebugKit\Cache\Engine\DebugEngine::set() - ROOT/vendor/cakephp/debug_kit/src/Cache/Engine/DebugEngine.php, line 150
+Cake\Database\Schema\CachedCollection::describe() - CORE/src/Database/Schema/CachedCollection.php, line 85
+Cake\ORM\Table::getSchema() - CORE/src/ORM/Table.php, line 509
+Cake\View\Form\EntityContext::_schemaDefault() - CORE/src/View/Form/EntityContext.php, line 313
+Cake\View\Form\EntityContext::val() - CORE/src/View/Form/EntityContext.php, line 289
+Cake\View\Helper\FormHelper::getSourceValue() - CORE/src/View/Helper/FormHelper.php, line 2514
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2284
+Cake\View\Helper\FormHelper::select() - CORE/src/View/Helper/FormHelper.php, line 2030
+Cake\View\Helper\FormHelper::_getInput() - CORE/src/View/Helper/FormHelper.php, line 1175
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1081
+include - ROOT/templates/Products/add.php, line 20
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1160
+Cake\View\View::_render() - CORE/src/View/View.php, line 1121
+Cake\View\View::render() - CORE/src/View/View.php, line 751
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 138
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-02 00:02:49 Warning: Warning (512): Unable to emit headers. Headers sent in file=/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php line=841 in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 71]
+Request URL: /products/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/products
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-02 00:02:49 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php:841) in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 168]
+Request URL: /products/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/products
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE/src/Http/ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-02 00:02:49 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php:841) in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /products/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/products
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-02 00:02:49 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php:841) in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /products/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/products
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-02 00:03:43 Error: [Cake\Http\Exception\InvalidCsrfTokenException] Missing or invalid CSRF cookie. in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php on line 254
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:134
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /measurements/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/measurements/add
+Client IP: 192.168.0.104
+
+
+2020-07-02 00:08:31 Error: [Cake\Http\Exception\MissingControllerException] Controller class Products_purchases could not be found. in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Products_purchases',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /products_purchases
+Client IP: 192.168.0.104
+
+
+2020-07-02 17:24:57 Error: [Cake\Controller\Exception\MissingComponentException] Component class AuthenticationComponent could not be found. in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ComponentRegistry.php on line 111
+Exception Attributes: array (
+  'class' => 'AuthenticationComponent',
+  'plugin' => 'Authentication',
+)
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Core/ObjectRegistry.php:102
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:283
+- /var/www/html/public_html/proyecto1/src/Controller/AppController.php:47
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:210
+- ReflectionClass::newInstance() - [internal], line ??- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:56
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /
+Referer URL: http://192.168.0.104/public_html/
+Client IP: 192.168.0.104
+
+
+2020-07-02 17:25:41 Error: [Cake\Controller\Exception\MissingComponentException] Component class AuthenticationComponent could not be found. in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ComponentRegistry.php on line 111
+Exception Attributes: array (
+  'class' => 'AuthenticationComponent',
+  'plugin' => 'Authentication',
+)
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Core/ObjectRegistry.php:102
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:283
+- /var/www/html/public_html/proyecto1/src/Controller/AppController.php:47
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:210
+- ReflectionClass::newInstance() - [internal], line ??- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:56
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /users
+Client IP: 192.168.0.104
+
+
+2020-07-02 17:46:41 Error: [ParseError] syntax error, unexpected 'Use' (T_USE), expecting identifier (T_STRING) in /var/www/html/public_html/proyecto1/src/Model/Entity/User.php on line 23
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/composer/ClassLoader.php:322
+- spl_autoload_call - [internal], line ??- class_exists - [internal], line ??- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:713
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/ResultSet.php:169
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Query.php:1104
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:292
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Query.php:1049
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Datasource/Paginator.php:180
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Component/PaginatorComponent.php:201
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:780
+- /var/www/html/public_html/proyecto1/src/Controller/UsersController.php:24
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /users
+Referer URL: http://192.168.0.104/public_html/proyecto1/users/edit/1
+Client IP: 192.168.0.104
+
+
+2020-07-02 17:52:00 Error: [Error] Class 'Authentication\PasswordHasher\DefaultPasswordHasher' not found in /var/www/html/public_html/proyecto1/src/Model/Entity/User.php on line 30
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Datasource/EntityTrait.php:259
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Marshaller.php:595
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:2795
+- /var/www/html/public_html/proyecto1/src/Controller/UsersController.php:54
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /users/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/users/add
+Client IP: 192.168.0.104
+
+
+2020-07-02 17:53:13 Error: [Error] Class 'Authentication\PasswordHasher\DefaultPasswordHasher' not found in /var/www/html/public_html/proyecto1/src/Model/Entity/User.php on line 59
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Datasource/EntityTrait.php:259
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Marshaller.php:595
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:2795
+- /var/www/html/public_html/proyecto1/src/Controller/UsersController.php:54
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /users/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/users/add
+Client IP: 192.168.0.104
+
+
+2020-07-02 17:54:58 Error: [Error] Class 'Authentication\PasswordHasher\DefaultPasswordHasher' not found in /var/www/html/public_html/proyecto1/src/Model/Entity/User.php on line 59
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Datasource/EntityTrait.php:259
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Marshaller.php:595
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:2795
+- /var/www/html/public_html/proyecto1/src/Controller/UsersController.php:54
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /users/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/users/add
+Client IP: 192.168.0.104
+
+
+2020-07-02 18:04:30 Error: [PDOException] SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'password' at row 1 in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php on line 39
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php:39
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:343
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:69
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:346
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Query.php:245
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:2036
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1928
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1829
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1529
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:693
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1530
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1830
+- /var/www/html/public_html/proyecto1/src/Controller/UsersController.php:55
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /users/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/users/add
+Client IP: 192.168.0.104
+
+
+2020-07-02 18:07:11 Error: [Error] Class 'Authentication\PasswordHasher\DefaultPasswordHasher' not found in /var/www/html/public_html/proyecto1/src/Model/Entity/User.php on line 58
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Datasource/EntityTrait.php:259
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Marshaller.php:595
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:2795
+- /var/www/html/public_html/proyecto1/src/Controller/UsersController.php:54
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /users/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/users/add
+Client IP: 192.168.0.104
+
+
+2020-07-02 18:07:21 Error: [Error] Class 'Authentication\PasswordHasher\DefaultPasswordHasher' not found in /var/www/html/public_html/proyecto1/src/Model/Entity/User.php on line 58
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Datasource/EntityTrait.php:259
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Marshaller.php:595
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:2795
+- /var/www/html/public_html/proyecto1/src/Controller/UsersController.php:54
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /users/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/users/add
+Client IP: 192.168.0.104
+
+
+2020-07-02 18:08:13 Error: [Error] Class 'Authentication\PasswordHasher\DefaultPasswordHasher' not found in /var/www/html/public_html/proyecto1/src/Model/Entity/User.php on line 58
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Datasource/EntityTrait.php:259
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Marshaller.php:595
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:2795
+- /var/www/html/public_html/proyecto1/src/Controller/UsersController.php:54
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /users/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/users/add
+Client IP: 192.168.0.104
+
+
+2020-07-02 18:09:28 Error: [Error] Class 'Authentication\PasswordHasher\DefaultPasswordHasher' not found in /var/www/html/public_html/proyecto1/src/Model/Entity/User.php on line 58
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Datasource/EntityTrait.php:259
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Marshaller.php:595
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:2795
+- /var/www/html/public_html/proyecto1/src/Controller/UsersController.php:54
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /users/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/users/add
+Client IP: 192.168.0.104
+
+
+2020-07-02 18:13:28 Error: [Error] Class 'Authentication\PasswordHasher\DefaultPasswordHasher' not found in /var/www/html/public_html/proyecto1/src/Model/Entity/User.php on line 57
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Datasource/EntityTrait.php:259
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Marshaller.php:595
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:2795
+- /var/www/html/public_html/proyecto1/src/Controller/UsersController.php:54
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /users/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/users/add
+Client IP: 192.168.0.104
+
+
+2020-07-02 18:51:57 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:28:56 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:28:59 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:29:00 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:29:00 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:29:00 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:29:01 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:29:01 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:29:01 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:29:01 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:31:23 Error: [Error] Class 'Cake\Auth\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:31:25 Error: [Error] Class 'Cake\Auth\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:31:25 Error: [Error] Class 'Cake\Auth\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:31:25 Error: [Error] Class 'Cake\Auth\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:31:25 Error: [Error] Class 'Cake\Auth\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:31:25 Error: [Error] Class 'Cake\Auth\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:31:26 Error: [Error] Class 'Cake\Auth\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:31:26 Error: [Error] Class 'Cake\Auth\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:31:33 Error: [Error] Class 'Cake\Auth\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:31:34 Error: [Error] Class 'Cake\Auth\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:31:34 Error: [Error] Class 'Cake\Auth\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:31:48 Error: [Error] Class 'Cake\Auth\Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:31:54 Error: [Error] Class 'Cake\Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:32:00 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:32:01 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:32:02 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:32:02 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:32:02 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:32:02 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:32:02 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:32:02 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:32:03 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:32:18 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:32:18 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:32:19 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:32:44 Error: [Error] Class 'App\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 96
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:33:56 Error: [Error] Class 'App\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 97
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:33:56 Error: [Error] Class 'App\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 97
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:33:56 Error: [Error] Class 'App\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 97
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:33:57 Error: [Error] Class 'App\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 97
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:33:57 Error: [Error] Class 'App\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 97
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:33:57 Error: [Error] Class 'App\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 97
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:34:15 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 98
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:34:16 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 98
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:34:16 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 98
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:34:16 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 98
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:34:16 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 98
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:34:16 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 98
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:34:17 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 98
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:34:17 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 98
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:34:17 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 98
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:34:18 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 98
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:35:02 Error: [Error] Class 'App\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 98
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:35:02 Error: [Error] Class 'App\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 98
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:35:02 Error: [Error] Class 'App\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 98
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:35:02 Error: [Error] Class 'App\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 98
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:35:03 Error: [Error] Class 'App\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 98
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:35:03 Error: [Error] Class 'App\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 98
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:35:03 Error: [Error] Class 'App\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 98
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:35:03 Error: [Error] Class 'App\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 98
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:35:04 Error: [Error] Class 'App\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 98
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:35:44 Error: [Cake\Controller\Exception\MissingComponentException] Component class AuthenticationComponent could not be found. in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ComponentRegistry.php on line 111
+Exception Attributes: array (
+  'class' => 'AuthenticationComponent',
+  'plugin' => 'Authentication',
+)
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Core/ObjectRegistry.php:102
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:283
+- /var/www/html/public_html/proyecto1/src/Controller/AppController.php:48
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:210
+- ReflectionClass::newInstance() - [internal], line ??- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:56
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /users/login
+Client IP: 192.168.0.104
+
+
+2020-07-02 19:36:18 Error: [Error] Class 'Authentication\Middleware\AuthenticationMiddleware' not found in /var/www/html/public_html/proyecto1/src/Application.php on line 97
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:45:30 Error: [InvalidArgumentException] Subject must be an instance of `Authentication\AuthenticationServiceInterface` or `Authentication\AuthenticationServiceProviderInterface`, `App\Application` given. in /var/www/html/public_html/proyecto1/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php on line 87
+Stack Trace:
+- /var/www/html/public_html/proyecto1/src/Application.php:97
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:45:40 Error: [InvalidArgumentException] Subject must be an instance of `Authentication\AuthenticationServiceInterface` or `Authentication\AuthenticationServiceProviderInterface`, `App\Application` given. in /var/www/html/public_html/proyecto1/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php on line 87
+Stack Trace:
+- /var/www/html/public_html/proyecto1/src/Application.php:97
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:45:42 Error: [InvalidArgumentException] Subject must be an instance of `Authentication\AuthenticationServiceInterface` or `Authentication\AuthenticationServiceProviderInterface`, `App\Application` given. in /var/www/html/public_html/proyecto1/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php on line 87
+Stack Trace:
+- /var/www/html/public_html/proyecto1/src/Application.php:97
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:45:47 Error: [InvalidArgumentException] Subject must be an instance of `Authentication\AuthenticationServiceInterface` or `Authentication\AuthenticationServiceProviderInterface`, `App\Application` given. in /var/www/html/public_html/proyecto1/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php on line 87
+Stack Trace:
+- /var/www/html/public_html/proyecto1/src/Application.php:97
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:45:48 Error: [InvalidArgumentException] Subject must be an instance of `Authentication\AuthenticationServiceInterface` or `Authentication\AuthenticationServiceProviderInterface`, `App\Application` given. in /var/www/html/public_html/proyecto1/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php on line 87
+Stack Trace:
+- /var/www/html/public_html/proyecto1/src/Application.php:97
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:45:50 Error: [InvalidArgumentException] Subject must be an instance of `Authentication\AuthenticationServiceInterface` or `Authentication\AuthenticationServiceProviderInterface`, `App\Application` given. in /var/www/html/public_html/proyecto1/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php on line 87
+Stack Trace:
+- /var/www/html/public_html/proyecto1/src/Application.php:97
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:45:50 Error: [InvalidArgumentException] Subject must be an instance of `Authentication\AuthenticationServiceInterface` or `Authentication\AuthenticationServiceProviderInterface`, `App\Application` given. in /var/www/html/public_html/proyecto1/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php on line 87
+Stack Trace:
+- /var/www/html/public_html/proyecto1/src/Application.php:97
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:45:50 Error: [InvalidArgumentException] Subject must be an instance of `Authentication\AuthenticationServiceInterface` or `Authentication\AuthenticationServiceProviderInterface`, `App\Application` given. in /var/www/html/public_html/proyecto1/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php on line 87
+Stack Trace:
+- /var/www/html/public_html/proyecto1/src/Application.php:97
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:45:51 Error: [InvalidArgumentException] Subject must be an instance of `Authentication\AuthenticationServiceInterface` or `Authentication\AuthenticationServiceProviderInterface`, `App\Application` given. in /var/www/html/public_html/proyecto1/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php on line 87
+Stack Trace:
+- /var/www/html/public_html/proyecto1/src/Application.php:97
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:45:51 Error: [InvalidArgumentException] Subject must be an instance of `Authentication\AuthenticationServiceInterface` or `Authentication\AuthenticationServiceProviderInterface`, `App\Application` given. in /var/www/html/public_html/proyecto1/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php on line 87
+Stack Trace:
+- /var/www/html/public_html/proyecto1/src/Application.php:97
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:45:51 Error: [InvalidArgumentException] Subject must be an instance of `Authentication\AuthenticationServiceInterface` or `Authentication\AuthenticationServiceProviderInterface`, `App\Application` given. in /var/www/html/public_html/proyecto1/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php on line 87
+Stack Trace:
+- /var/www/html/public_html/proyecto1/src/Application.php:97
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:45:51 Error: [InvalidArgumentException] Subject must be an instance of `Authentication\AuthenticationServiceInterface` or `Authentication\AuthenticationServiceProviderInterface`, `App\Application` given. in /var/www/html/public_html/proyecto1/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php on line 87
+Stack Trace:
+- /var/www/html/public_html/proyecto1/src/Application.php:97
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 19:46:21 Error: [InvalidArgumentException] Subject must be an instance of `Authentication\AuthenticationServiceInterface` or `Authentication\AuthenticationServiceProviderInterface`, `App\Application` given. in /var/www/html/public_html/proyecto1/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php on line 87
+Stack Trace:
+- /var/www/html/public_html/proyecto1/src/Application.php:104
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:83
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+
+
+2020-07-02 20:46:25 Error: [Error] Cannot use object of type Authentication\Authenticator\Result as array in /var/www/html/public_html/proyecto1/src/Controller/UsersController.php on line 132
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:124
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:160
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /users/login?redirect=%2F
+Referer URL: http://192.168.0.104/public_html/proyecto1/users/login?redirect=%2F
+Client IP: 192.168.0.104
+
+
+2020-07-02 20:48:00 Error: [Error] Call to a member function error() on null in /var/www/html/public_html/proyecto1/src/Controller/UsersController.php on line 133
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:124
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:160
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /users/login?redirect=%2F
+Referer URL: http://192.168.0.104/public_html/proyecto1/users/login?redirect=%2F
+Client IP: 192.168.0.104
+
+
+2020-07-02 20:48:01 Warning: Warning (512): Unable to emit headers. Headers sent in file=/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php line=841 in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 71]
+Request URL: /users/login?redirect=%2F
+Referer URL: http://192.168.0.104/public_html/proyecto1/users/login?redirect=%2F
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-02 20:48:01 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php:841) in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 168]
+Request URL: /users/login?redirect=%2F
+Referer URL: http://192.168.0.104/public_html/proyecto1/users/login?redirect=%2F
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE/src/Http/ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-02 20:48:01 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php:841) in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /users/login?redirect=%2F
+Referer URL: http://192.168.0.104/public_html/proyecto1/users/login?redirect=%2F
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-02 20:48:01 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php:841) in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /users/login?redirect=%2F
+Referer URL: http://192.168.0.104/public_html/proyecto1/users/login?redirect=%2F
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-02 21:44:48 Error: [Cake\Http\Exception\MissingControllerException] Controller class User could not be found. in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'User',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /user
+Client IP: 192.168.0.104
+
+
+2020-07-02 22:12:21 Error: [Cake\Http\Exception\MissingControllerException] Controller class Productos could not be found. in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Productos',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /productos
+Client IP: 192.168.0.104
+
+

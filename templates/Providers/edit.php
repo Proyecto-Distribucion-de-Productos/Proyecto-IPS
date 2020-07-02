@@ -27,6 +27,7 @@
                     echo $this->Form->control('district_id', ['options' => $districts]);
                     echo $this->Form->control('province_id', ['options' => $provinces]);
                     echo $this->Form->control('department_id', ['options' => $departments]);
+                    echo $this->Form->control('direction');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>
