@@ -2540,3 +2540,102 @@ Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
 
 
 
+2020-07-03 15:47:49 Error: [Cake\Http\Exception\MissingControllerException] Controller class Productos could not be found. in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Productos',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /productos
+Client IP: 192.168.0.104
+
+
+2020-07-03 15:48:11 Error: [Cake\Http\Exception\MissingControllerException] Controller class Proveedores could not be found. in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Proveedores',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /proveedores
+Client IP: 192.168.0.104
+
+
+2020-07-03 15:49:30 Error: [Cake\Http\Exception\MissingControllerException] Controller class Products_purchases could not be found. in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Products_purchases',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /products_purchases
+Client IP: 192.168.0.104
+
+
