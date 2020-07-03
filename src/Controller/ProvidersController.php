@@ -52,6 +52,36 @@ class ProvidersController extends AppController
         $provider = $this->Providers->newEmptyEntity();
         if ($this->request->is('post')) {
             $provider = $this->Providers->patchEntity($provider, $this->request->getData());
+
+            //Recuperar datos de Sunat
+            
+            $cookie = array(
+                'cookie'        => array(
+                    'use'       => true,
+                    'file'      => __DIR__ . "/cookie.txt"
+                )
+            );
+            $config = array(
+                'representantes_legales'    => true,
+                'cantidad_trabajadores'     => true,
+                'establecimientos'          => true,
+                'cookie'                    => $cookie
+            );
+            $sunat = new \Sunat\ruc( $config );
+            
+            $ruc = $_POST['ruc'];
+            
+            $search = $sunat->consulta( $ruc );
+            
+            if( $search->success == true )
+            {
+                $nombre = $search->result->razon_social;
+                $direccion = $search->result->direccion;
+            }
+            $provider->name = $nombre;
+            $provider->direction = $direccion;
+            //Fin de recuperacion
+
             if ($this->Providers->save($provider)) {
                 $this->Flash->success(__('The provider has been saved.'));
 
