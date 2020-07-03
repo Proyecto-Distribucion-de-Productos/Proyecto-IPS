@@ -77,20 +77,25 @@ class ProvidersController extends AppController
             {
                 $nombre = $search->result->razon_social;
                 $direccion = $search->result->direccion;
+                    $provider->name = $nombre;
+                $provider->direction = $direccion;
+                $provider->ruc = $ruc;
+                //Fin de recuperacion
 
+                if ($this->Providers->save($provider)) {
+                    $this->Flash->success(__('The provider has been saved.'));
+
+                    return $this->redirect(['action' => 'index']);
+                }
+                $this->Flash->error(__('The provider could not be saved. Please, try again.'));
+
+
+
+            }else{
+                $this->Flash->success(__('No existe el ruc'));
             }
            
-            $provider->name = $nombre;
-            $provider->direction = $direccion;
-            $provider->ruc = $ruc;
-            //Fin de recuperacion
-
-            if ($this->Providers->save($provider)) {
-                $this->Flash->success(__('The provider has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('The provider could not be saved. Please, try again.'));
+            
         }
         $districts = $this->Providers->Districts->find('list', ['limit' => 200]);
         $provinces = $this->Providers->Provinces->find('list', ['limit' => 200]);
