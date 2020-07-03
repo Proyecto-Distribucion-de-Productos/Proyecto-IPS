@@ -19,6 +19,7 @@
                 <?php
                     echo $this->Form->control('ruc');
                     echo $this->Form->control('email');
+                    //Aqui hacer algo con el distrito provincia, y departamento
                     echo $this->Form->control('district_id', ['options' => $districts]);
                     echo $this->Form->control('province_id', ['options' => $provinces]);
                     echo $this->Form->control('department_id', ['options' => $departments]);

@@ -12,6 +12,7 @@
             <thead>
                 <tr>
                     <th><?= $this->Paginator->sort('id') ?></th>
+                    <th><?= $this->Paginator->sort('ruc') ?></th>
                     <th><?= $this->Paginator->sort('name') ?></th>
                     <th><?= $this->Paginator->sort('email') ?></th>
                     <th><?= $this->Paginator->sort('district_id') ?></th>
@@ -25,6 +26,7 @@
                 <?php foreach ($providers as $provider): ?>
                 <tr>
                     <td><?= $this->Number->format($provider->id) ?></td>
+                    <td><?= h($provider->ruc) ?></td>
                     <td><?= h($provider->name) ?></td>
                     <td><?= h($provider->email) ?></td>
                     <td><?= $provider->has('district') ? $this->Html->link($provider->district->name, ['controller' => 'Districts', 'action' => 'view', $provider->district->id]) : '' ?></td>

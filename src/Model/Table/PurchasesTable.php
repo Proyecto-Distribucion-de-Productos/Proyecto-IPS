@@ -91,6 +91,7 @@ class PurchasesTable extends Table
     public function buildRules(RulesChecker $rules): RulesChecker
     {
         $rules->add($rules->isUnique(['id']));
+        $rules->add($rules->isUnique(['ruc']));
         $rules->add($rules->isUnique(['date']));
         $rules->add($rules->existsIn(['provider_id'], 'Providers'));
         $rules->add($rules->existsIn(['user_id'], 'Users'));

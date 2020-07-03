@@ -82,10 +82,15 @@ class ProvidersTable extends Table
         $validator
             ->allowEmptyString('id', null, 'create')
             ->add('id', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
+        $validator
+            ->scalar('ruc')
+            ->maxLength('ruc', 16)
+            ->requirePresence('ruc', 'create')
+            ->notEmptyString('ruc');
 
         $validator
             ->scalar('name')
-            ->maxLength('name', 38)
+            ->maxLength('name', 128)
             ->requirePresence('name', 'create')
             ->notEmptyString('name')
             ->add('name', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);

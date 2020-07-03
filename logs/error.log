@@ -1880,3 +1880,561 @@ Stack trace:
 #18 C:\xampp\htdocs\Proyecto-IPS\vendor\cakephp\cakephp\src\Http\Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(App\Application))
 #19 C:\xampp\htdocs\Proyecto-IPS\webroot\index.php(40): Cake\Http\Server->run()
 #20 {main}
+2020-07-03 14:42:54 Error: [PDOException] SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'name' at row 1 in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php on line 39
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php:39
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:343
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:69
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:346
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Query.php:245
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:2036
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1928
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1829
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1529
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:693
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1530
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1830
+- /var/www/html/public_html/proyecto1/src/Controller/ProvidersController.php:85
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+
+
+2020-07-03 14:45:47 Error: [PDOException] SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'name' at row 1 in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php on line 39
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php:39
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:343
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:69
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:346
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Query.php:245
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:2036
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1928
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1829
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1529
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:693
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1530
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1830
+- /var/www/html/public_html/proyecto1/src/Controller/ProvidersController.php:85
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+
+
+2020-07-03 14:46:25 Error: [PDOException] SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'name' at row 1 in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php on line 39
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php:39
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:343
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:69
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:346
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Query.php:245
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:2036
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1928
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1829
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1529
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:693
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1530
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1830
+- /var/www/html/public_html/proyecto1/src/Controller/ProvidersController.php:85
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+
+
+2020-07-03 14:49:11 Error: [TypeError] Argument 1 passed to Cake\Http\Session::_overwrite() must be of the type array, null given, called in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Session.php on line 495 in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Session.php on line 541
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Session.php:495
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Component/FlashComponent.php:112
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Component/FlashComponent.php:155
+- /var/www/html/public_html/proyecto1/src/Controller/ProvidersController.php:81
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+
+
+2020-07-03 14:49:11 Warning: Warning (512): Unable to emit headers. Headers sent in file=/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php line=841 in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 71]
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-03 14:49:11 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php:841) in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 168]
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE/src/Http/ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-03 14:49:11 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php:841) in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-03 14:49:11 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php:841) in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-03 14:49:39 Error: [PDOException] SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'name' at row 1 in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php on line 39
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php:39
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:343
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:69
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:346
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Query.php:245
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:2036
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1928
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1829
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1529
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:693
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1530
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1830
+- /var/www/html/public_html/proyecto1/src/Controller/ProvidersController.php:86
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+
+
+2020-07-03 14:50:20 Error: [PDOException] SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'name' at row 1 in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php on line 39
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php:39
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:343
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:69
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:346
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Query.php:245
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:2036
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1928
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1829
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1529
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:693
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1530
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1830
+- /var/www/html/public_html/proyecto1/src/Controller/ProvidersController.php:87
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+
+
+2020-07-03 15:00:03 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php on line 39
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php:39
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:343
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:69
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:346
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Query.php:245
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:2036
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1928
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1829
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1529
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:693
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1530
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1830
+- /var/www/html/public_html/proyecto1/src/Controller/ProvidersController.php:87
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+
+
+2020-07-03 15:00:03 Warning: Warning (512): Unable to emit headers. Headers sent in file=/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php line=841 in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 71]
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-03 15:00:03 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php:841) in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 168]
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE/src/Http/ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-03 15:00:03 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php:841) in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-03 15:00:03 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php:841) in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-03 15:00:23 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php on line 39
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php:39
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:343
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:69
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:346
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Query.php:245
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:2036
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1928
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1829
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1529
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:693
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1530
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1830
+- /var/www/html/public_html/proyecto1/src/Controller/ProvidersController.php:87
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+
+
+2020-07-03 15:00:23 Warning: Warning (512): Unable to emit headers. Headers sent in file=/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php line=841 in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 71]
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-03 15:00:23 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php:841) in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 168]
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE/src/Http/ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-03 15:00:23 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php:841) in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-03 15:00:23 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Debugger.php:841) in [/var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-03 15:02:51 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`distribution`.`phones`, CONSTRAINT `phones_ibfk_1` FOREIGN KEY (`provider_id`) REFERENCES `providers` (`id`)) in /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php on line 39
+Stack Trace:
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php:39
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:343
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:69
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:346
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Query.php:245
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:2419
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:2257
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1529
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Database/Connection.php:693
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:1530
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/ORM/Table.php:2258
+- /var/www/html/public_html/proyecto1/src/Controller/ProvidersController.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/public_html/proyecto1/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/public_html/proyecto1/webroot/index.php:40
+
+Request URL: /providers/delete/1
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers
+Client IP: 192.168.0.104
+
+

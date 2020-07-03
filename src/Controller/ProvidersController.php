@@ -77,9 +77,12 @@ class ProvidersController extends AppController
             {
                 $nombre = $search->result->razon_social;
                 $direccion = $search->result->direccion;
+
             }
+           
             $provider->name = $nombre;
             $provider->direction = $direccion;
+            $provider->ruc = $ruc;
             //Fin de recuperacion
 
             if ($this->Providers->save($provider)) {

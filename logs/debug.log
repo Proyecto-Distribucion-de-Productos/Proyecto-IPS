@@ -35,3 +35,163 @@ Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
 
 
 
+2020-07-03 14:49:11 Notice: Notice (8): Undefined variable: name in [/var/www/html/public_html/proyecto1/src/Controller/ProvidersController.php, line 81]
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+App\Controller\ProvidersController::add() - APP/Controller/ProvidersController.php, line 81
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 521
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 164
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 138
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-03 15:00:03 Notice: Notice (8): Undefined variable: nombre in [/var/www/html/public_html/proyecto1/src/Controller/ProvidersController.php, line 83]
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+App\Controller\ProvidersController::add() - APP/Controller/ProvidersController.php, line 83
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 521
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 164
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 138
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-03 15:00:03 Notice: Notice (8): Undefined variable: direccion in [/var/www/html/public_html/proyecto1/src/Controller/ProvidersController.php, line 84]
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+App\Controller\ProvidersController::add() - APP/Controller/ProvidersController.php, line 84
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 521
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 164
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 138
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-03 15:00:23 Notice: Notice (8): Undefined variable: nombre in [/var/www/html/public_html/proyecto1/src/Controller/ProvidersController.php, line 83]
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+App\Controller\ProvidersController::add() - APP/Controller/ProvidersController.php, line 83
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 521
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 164
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 138
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2020-07-03 15:00:23 Notice: Notice (8): Undefined variable: direccion in [/var/www/html/public_html/proyecto1/src/Controller/ProvidersController.php, line 84]
+Request URL: /providers/add
+Referer URL: http://192.168.0.104/public_html/proyecto1/providers/add
+Client IP: 192.168.0.104
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+App\Controller\ProvidersController::add() - APP/Controller/ProvidersController.php, line 84
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 521
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 164
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 138
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+
+

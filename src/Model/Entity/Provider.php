@@ -35,6 +35,7 @@ class Provider extends Entity
      * @var array
      */
     protected $_accessible = [
+        'ruc' => true,
         'name' => true,
         'email' => true,
         'district_id' => true,
