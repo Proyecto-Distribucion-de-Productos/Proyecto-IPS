@@ -14,7 +14,6 @@
                     <th><?= $this->Paginator->sort('id') ?></th>
                     <th><?= $this->Paginator->sort('name') ?></th>
                     <th><?= $this->Paginator->sort('email') ?></th>
-                    <th><?= $this->Paginator->sort('password') ?></th>
                     <th><?= $this->Paginator->sort('firstname') ?></th>
                     <th><?= $this->Paginator->sort('secondname') ?></th>
                     <th><?= $this->Paginator->sort('role_id') ?></th>
@@ -27,7 +26,6 @@
                     <td><?= $this->Number->format($user->id) ?></td>
                     <td><?= h($user->name) ?></td>
                     <td><?= h($user->email) ?></td>
-                    <td><?= h($user->password) ?></td>
                     <td><?= h($user->firstname) ?></td>
                     <td><?= h($user->secondname) ?></td>
                     <td><?= $user->has('role') ? $this->Html->link($user->role->name, ['controller' => 'Roles', 'action' => 'view', $user->role->id]) : '' ?></td>
