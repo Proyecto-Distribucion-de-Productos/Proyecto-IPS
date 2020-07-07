@@ -17,14 +17,31 @@ class ProductsController extends AppController
      * @return \Cake\Http\Response|null|void Renders view
      */
     public function index()
-    {
+    {   
         $this->paginate = [
-            'contain' => ['Categories', 'Measurements'],
+                'contain' => ['Categories', 'Measurements'],
         ];
-        $products = $this->paginate($this->Products);
 
-        $this->set(compact('products'));
+        //Si se realiza el filtrado
+        if(isset($_POST['category_id'])){
+            $category_id = $_POST['category_id'];
+            //Almacena los productos si son del mismo category_id
+            $query = $this->Products->find('all', [
+                'conditions' => ['category_id LIKE' => $category_id]
+            ]);
+
+            $products = $this->paginate($query);
+            
+        }
+        //Si no se realiza el filtrado
+        else{
+            $products = $this->paginate($this->Products);
+        }
+
+        $categories = $this->Products->Categories->find('list', ['limit' => 200]);
+        $this->set(compact('products', 'categories'));
     }
+    
          public function logout()
 {
     $this->Flash->success('You are now logged out.');
