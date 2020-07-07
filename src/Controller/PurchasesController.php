@@ -25,6 +25,11 @@ class PurchasesController extends AppController
 
         $this->set(compact('purchases'));
     }
+         public function logout()
+{
+    $this->Flash->success('You are now logged out.');
+    return $this->redirect($this->Auth->logout());
+}
 
     /**
      * View method

@@ -26,6 +26,12 @@ class ProvidersController extends AppController
         $this->set(compact('providers'));
     }
 
+         public function logout()
+{
+    $this->Flash->success('You are now logged out.');
+    return $this->redirect($this->Auth->logout());
+}
+
     /**
      * View method
      *

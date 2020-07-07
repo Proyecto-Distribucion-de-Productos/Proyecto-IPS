@@ -11,6 +11,22 @@ namespace App\Controller;
  */
 class UsersController extends AppController
 {
+    
+         public function login()
+    {
+        if ($this->request->is('post')) {
+        $user = $this->Auth->identify();
+        if ($user) {
+            $this->Auth->setUser($user);
+            return $this->redirect(['Controller'=>'Users','action'=>'index']);
+        }else{
+            $this->Flash->error('Your username or password is incorrect.');
+        }
+        
+    }
+    }
+
+
     /**
      * Index method
      *
@@ -87,6 +103,12 @@ class UsersController extends AppController
         $roles = $this->Users->Roles->find('list', ['limit' => 200]);
         $this->set(compact('user', 'roles'));
     }
+
+     public function logout()
+{
+    $this->Flash->success('You are now logged out.');
+    return $this->redirect($this->Auth->logout());
+}
 
     /**
      * Delete method

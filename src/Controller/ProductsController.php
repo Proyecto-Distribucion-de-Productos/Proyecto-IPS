@@ -25,6 +25,11 @@ class ProductsController extends AppController
 
         $this->set(compact('products'));
     }
+         public function logout()
+{
+    $this->Flash->success('You are now logged out.');
+    return $this->redirect($this->Auth->logout());
+}
 
     /**
      * View method

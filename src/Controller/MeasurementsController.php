@@ -22,6 +22,11 @@ class MeasurementsController extends AppController
 
         $this->set(compact('measurements'));
     }
+         public function logout()
+{
+    $this->Flash->success('You are now logged out.');
+    return $this->redirect($this->Auth->logout());
+}
 
     /**
      * View method

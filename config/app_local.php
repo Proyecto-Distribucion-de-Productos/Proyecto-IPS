@@ -45,9 +45,9 @@ return [
             //'port' => 'non_standard_port_number',
 
             'username' => 'root',
-            'password' => 'root123$',
+            'password' => '',
 
-            'database' => 'distribution',
+            'database' => 'nessuno',
             /**
              * If not using the default 'public' schema with the PostgreSQL driver
              * set it here.
