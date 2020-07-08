@@ -24,7 +24,7 @@ $this->disableAutoLayout();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <title>Distribucion de Productos</title>
