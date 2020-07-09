@@ -85,7 +85,7 @@
             <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
             <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-user fa-lg"></i> Profile</a></li>
             <!--<li><a class="dropdown-item" href="page-login.html"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>-->
-            <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-sign-out fa-lg']).'Cerrar Sesión','/',['class' => 'dropdown-item', 'escape' => false])?></li>
+            <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-sign-out fa-lg']).'Cerrar Sesión','/users/logout',['class' => 'dropdown-item', 'escape' => false])?></li>
           </ul>
         </li>
       </ul>
@@ -125,6 +125,10 @@
           <div class="tile">
             <div class="tile-body">
               <div class="table-responsive">
+              <div class="row mb-3">
+                <div class="col-sm-12 col-md-12"><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-plus', 'aria-hidden' => 'true']).'Nuevo', ['action' => 'add'],['class' => 'btn btn-success float-right', 'escape' => false])?></div>
+                <!--<div class="col-sm-12 col-md-12"><button class="btn btn-success float-right" type="button"><i class="fa fa-plus" aria-hidden="true"></i>Nuevo</button></div>-->
+              </div>
                 <table class="table table-hover table-bordered" id="sampleTable">
                   <thead>
                       <tr>
