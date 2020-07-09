@@ -75,8 +75,8 @@ $this->disableAutoLayout();
                     <div class="top-right clearfix">
                         <!-- Botones ingresar y registrarse-->
                         <div class="">
-                            <a href="/public_html/proyecto1/users/login" class="btn-style-one">Ingresar</a>
-                            <a href="/public_html/proyecto1/users/register" class="btn-style-one">Registrarse</a>
+                            <a href="users/login" class="btn-style-one">Ingresar</a>
+                            <a href="users/register" class="btn-style-one">Registrarse</a>
                         </div>
                     </div>
                 </div>
