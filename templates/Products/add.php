@@ -21,7 +21,7 @@
                     echo $this->Form->control('measurement_id', ['options' => $measurements]);
                     echo $this->Form->control('name');
                     echo $this->Form->control('price');
-                    echo $this->Form->control('purchases._ids', ['options' => $purchases]);
+                    echo $this->Form->control('purchases_ids', ['options' => $purchases]);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>
