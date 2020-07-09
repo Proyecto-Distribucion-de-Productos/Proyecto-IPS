@@ -84,7 +84,8 @@
           <ul class="dropdown-menu settings-menu dropdown-menu-right">
             <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
             <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-user fa-lg"></i> Profile</a></li>
-            <li><a class="dropdown-item" href="page-login.html"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+            <!--<li><a class="dropdown-item" href="page-login.html"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>-->
+            <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-sign-out fa-lg']).'Cerrar Sesión','/',['class' => 'dropdown-item', 'escape' => false])?></li>
           </ul>
         </li>
       </ul>
@@ -155,9 +156,9 @@
                             <td><?= h($product->name) ?></td>
                             <td><?= $this->Number->format($product->price) ?></td>
                             <td class="actions">
-                                <?= $this->Html->link(__('View'), ['action' => 'view', $product->id]) ?>
-                                <?= $this->Html->link(__('Edit'), ['action' => 'edit', $product->id]) ?>
-                                <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $product->id], ['confirm' => __('Are you sure you want to delete # {0}?', $product->id)]) ?>
+                                <?= $this->Html->link('', ['action' => 'view', $product->id], ['class' => 'btn btn-info fa fa-eye']) ?>
+                                <?= $this->Html->link('', ['action' => 'edit', $product->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
+                                <?= $this->Form->postLink('', ['action' => 'delete', $product->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $product->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>

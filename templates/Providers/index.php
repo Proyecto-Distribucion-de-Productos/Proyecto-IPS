@@ -84,7 +84,8 @@
           <ul class="dropdown-menu settings-menu dropdown-menu-right">
             <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
             <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-user fa-lg"></i> Profile</a></li>
-            <li><a class="dropdown-item" href="page-login.html"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+            <!--<li><a class="dropdown-item" href="page-login.html"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>-->
+            <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-sign-out fa-lg']).'Cerrar Sesión','/',['class' => 'dropdown-item', 'escape' => false])?></li>
           </ul>
         </li>
       </ul>
@@ -138,11 +139,9 @@
                         <th><?= $this->Paginator->sort('#') ?></th>
                         <th><?= $this->Paginator->sort('Ruc') ?></th>
                         <th><?= $this->Paginator->sort('Nombre') ?></th>
-                        <th><?= $this->Paginator->sort('Correo') ?></th>
                         <th><?= $this->Paginator->sort('Distrito') ?></th>
                         <th><?= $this->Paginator->sort('Provincia') ?></th>
                         <th><?= $this->Paginator->sort('Departamento') ?></th>
-                        <th><?= $this->Paginator->sort('Dirección') ?></th>
                         <th class="actions"><?= __('Acciones') ?></th>
                     </tr>
                   </thead>
@@ -152,15 +151,13 @@
                         <td><?= $this->Number->format($provider->id) ?></td>
                         <td><?= h($provider->ruc) ?></td>
                         <td><?= h($provider->name) ?></td>
-                        <td><?= h($provider->email) ?></td>
                         <td><?= $provider->has('district') ? $this->Html->link($provider->district->name, ['controller' => 'Districts', 'action' => 'view', $provider->district->id]) : '' ?></td>
                         <td><?= $provider->has('province') ? $this->Html->link($provider->province->name, ['controller' => 'Provinces', 'action' => 'view', $provider->province->id]) : '' ?></td>
                         <td><?= $provider->has('department') ? $this->Html->link($provider->department->name, ['controller' => 'Departments', 'action' => 'view', $provider->department->id]) : '' ?></td>
-                        <td><?= h($provider->direction) ?></td>
                         <td class="actions">
-                            <?= $this->Html->link(__('View'), ['action' => 'view', $provider->id]) ?>
-                            <?= $this->Html->link(__('Edit'), ['action' => 'edit', $provider->id]) ?>
-                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $provider->id], ['confirm' => __('Are you sure you want to delete # {0}?', $provider->id)]) ?>
+                            <?= $this->Html->link('', ['action' => 'view', $provider->id], ['class' => 'btn btn-info fa fa-eye']) ?>
+                            <?= $this->Html->link('', ['action' => 'edit', $provider->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
+                            <?= $this->Form->postLink('', ['action' => 'delete', $provider->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $provider->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>

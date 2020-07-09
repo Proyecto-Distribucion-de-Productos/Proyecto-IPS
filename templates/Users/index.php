@@ -147,9 +147,9 @@
                           <td><?= h($user->secondname) ?></td>
                           <td><?= $user->has('role') ? $this->Html->link($user->role->name, ['controller' => 'Roles', 'action' => 'view', $user->role->id]) : '' ?></td>
                           <td class="actions">
-                              <?= $this->Html->link(__('View'), ['action' => 'view', $user->id]) ?>
-                              <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>
-                              <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?>
+                              <?= $this->Html->link('', ['action' => 'view', $user->id], ['class' => 'btn btn-info fa fa-eye']) ?>
+                              <?= $this->Html->link('', ['action' => 'edit', $user->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
+                              <?= $this->Form->postLink('', ['action' => 'delete', $user->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $user->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
                           </td>
                       </tr>
                       <?php endforeach; ?>
