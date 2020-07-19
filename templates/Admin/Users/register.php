@@ -1,3 +1,9 @@
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var \App\Model\Entity\User $user
+ */
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,59 +15,47 @@
     <?= $this->Html->css('main.css') ?>
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Inicio de Sesion</title>
+    <title>Registrarse</title>
   </head>
   <body>
     <section class="material-half-bg">
       <div class="cover"></div>
     </section>
-    <section class="login-content">
-      <div class="login-box">
+    <section class="register-content">
+      <div class="register-box">
         <!-- Inicio del formulario login-->
-        <div class="login-form">
+        <div class="register-form">
         <?= $this->Form->create() ?>
-        <!--<form class="login-form" method="post" accept-charset="utf-8" action="user/login">-->
-          <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>INICIAR SESIÓN</h3>
+        <!--<form class="register-form" method="post" accept-charset="utf-8" action="user/login">-->
+          <h3 class="register-head"><i class="fa fa-lg fa-fw fa-user"></i>REGISTRARSE</h3>
+          <div class="form-group">
+            <label class="control-label">NOMBRE DE USUARIO</label>
+            <input class="form-control" type="text" name="name" id="name" placeholder="Ingrese su nombre de usuario" required="required" autofocus>
+          </div>
+          <div class="form-group">
+            <label class="control-label">NOMBRE</label>
+            <input class="form-control" type="text" name="firstname" id="firstname" placeholder="Ingrese su nombre" required="required">
+          </div>
+          <div class="form-group">
+            <label class="control-label">APELLIDOS</label>
+            <input class="form-control" type="text" name="secondname" id="secondname" placeholder="Ingrese su apellido" required="required">
+          </div>
           <div class="form-group">
             <label class="control-label">CORREO ELECTRÓNICO</label>
-            <input class="form-control" type="email" name="email" id="email" placeholder="Ingrese su correo" required="required" autofocus>
+            <input class="form-control" type="email" name="email" id="email" placeholder="Ingrese su correo" required="required">
           </div>
           <div class="form-group">
             <label class="control-label">CONTRASEÑA</label>
-            <input class="form-control" type="password" name="password" id="password" placeholder="Ingrese su contraseña" required="required">
+            <input class="form-control" type="password" name="password" id="password" placeholder="Ingrese su contraseña">
             
           </div>
-          <div class="form-group">
-            <div class="utility">
-              <div class="animated-checkbox">
-                <label>
-                  <input type="checkbox"><span class="label-text">Stay Signed in</span>
-                </label>
-              </div>
-              <p class="semibold-text mb-2"><a href="#" data-toggle="flip">Forgot Password ?</a></p>
-            </div>
-          </div>
           <div class="form-group btn-container">
-            <button class="btn btn-primary btn-block" type="submit"><i class="fa fa-sign-in fa-lg fa-fw"></i>INGRESAR</button>
+            <button class="btn btn-primary btn-block" type="submit"><i class="fa fa-sign-in fa-lg fa-fw"></i>Registrarse</button>
           </div>
         <!--</form>-->
         <?= $this->Form->end() ?></div>
 
         <!-- Inicio del formulario login-->
-
-        <form class="forget-form" action="index.html">
-          <h3 class="login-head"><i class="fa fa-lg fa-fw fa-lock"></i>Forgot Password ?</h3>
-          <div class="form-group">
-            <label class="control-label">EMAIL</label>
-            <input class="form-control" type="text" placeholder="Email">
-          </div>
-          <div class="form-group btn-container">
-            <button class="btn btn-primary btn-block"><i class="fa fa-unlock fa-lg fa-fw"></i>RESET</button>
-          </div>
-          <div class="form-group mt-3">
-            <p class="semibold-text mb-0"><a href="#" data-toggle="flip"><i class="fa fa-angle-left fa-fw"></i> Back to Login</a></p>
-          </div>
-        </form>
       </div>
     </section>
     <!-- Essential javascripts for application to work-->

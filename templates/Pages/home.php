@@ -69,8 +69,7 @@ $this->disableAutoLayout();
                     <div class="top-left">
                         <ul class="clearfix">
                             <li>Realice consultas sobre los proveedores y productos disponibles<i class="fa fa-long-arrow-alt-right"></i></li>
-                        </ul>
-                        
+                        </ul> 
                     </div>
                     <div class="top-right clearfix">
                         <!-- Botones ingresar y registrarse-->
@@ -124,11 +123,11 @@ $this->disableAutoLayout();
 
 							<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
 								<ul class="navigation clearfix">
-                                    <li class="dropdown current"><a href="#">Principal</a></li>
-                                    <li class="dropdown"><a href="#">Proveedores</a></li>
-                                    <li class="dropdown"><a href="#">Visualizaciones</a></li>
-                                    <li class="dropdown"><a href="#">Productos</a></li>
-                                    <li class="dropdown has-mega-menu"><a href="#">Ubicaciones</a></li>
+                                    <li class="current dropdown"><?= $this->Html->link('Principal','/')?></li>
+                                    <li class="dropdown"><?= $this->Html->link('Proveedores','/providers')?></li>
+                                    <li class="dropdown"><?= $this->Html->link('Visualizaciones','/visualizations')?></li>
+                                    <li class="dropdown"><?= $this->Html->link('Productos','/products')?></li>
+                                    <li class="dropdown"><?= $this->Html->link('Ubicaciones','/ubications')?></li>
                                 </ul>
                             </div>
 
@@ -163,11 +162,11 @@ $this->disableAutoLayout();
 
                         <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
                             <ul class="navigation clearfix">
-                                <li class="dropdown current"><a href="#">Principal</a></li>
-                                <li class="dropdown"><a href="#">Proveedores</a></li>
-                                <li class="dropdown"><a href="#">Visualizaciones</a></li>
-                                <li class="dropdown"><a href="#">Productos</a></li>
-                                <li class="dropdown has-mega-menu"><a href="#">Ubicaciones</a></li>
+                                <li class="current dropdown"><?= $this->Html->link('Principal','/')?></li>
+                                <li class="dropdown"><?= $this->Html->link('Proveedores','/providers')?></li>
+                                <li class="dropdown"><?= $this->Html->link('Visualizaciones','/visualizations')?></li>
+                                <li class="dropdown"><?= $this->Html->link('Productos','/products')?></li>
+                                <li class="dropdown"><?= $this->Html->link('Ubicaciones','/ubications')?></li>
                             </ul>
                         </div>
                     </nav><!-- Main Menu End-->

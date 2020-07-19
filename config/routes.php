@@ -96,6 +96,7 @@ Router::scope('/admin/users', function (RouteBuilder $routes) {
     $routes->connect('/edit/*', ['prefix' => 'Admin', 'controller' => 'Users', 'action' => 'edit']);
     $routes->connect('/delete/*', ['prefix' => 'Admin', 'controller' => 'Users', 'action' => 'delete']);
     $routes->connect('/login', ['prefix' => 'Admin', 'controller' => 'Users', 'action' => 'login']);
+    $routes->connect('/register', ['prefix' => 'Admin', 'controller' => 'Users', 'action' => 'register']);
     $routes->connect('/logout/*', ['prefix' => 'Admin', 'controller' => 'Users', 'action' => 'logout']);
 
 	//$routes->fallbacks();
