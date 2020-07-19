@@ -1,7 +1,7 @@
 <?php
 /**
  * @var \App\View\AppView $this
- * @var \App\Model\Entity\User[]|\Cake\Collection\CollectionInterface $users
+ * @var \App\Model\Entity\Product[]|\Cake\Collection\CollectionInterface $products
  */
 ?>
 <!DOCTYPE html>
@@ -19,12 +19,12 @@
     <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
     <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
     <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
-    <title>Usuarios</title>
+    <title>Productos</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Main CSS-->
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <?= $this->Html->css('main.css');?>
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
@@ -85,7 +85,7 @@
             <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
             <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-user fa-lg"></i> Profile</a></li>
             <!--<li><a class="dropdown-item" href="page-login.html"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>-->
-            <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-sign-out fa-lg']).'Cerrar Sesión','/users/logout',['class' => 'dropdown-item', 'escape' => false])?></li>
+            <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-sign-out fa-lg']).'Cerrar Sesión','/admin/users/logout',['class' => 'dropdown-item', 'escape' => false])?></li>
           </ul>
         </li>
       </ul>
@@ -102,8 +102,8 @@
       <ul class="app-menu">
         <li><a class="app-menu__item" href="dashboard"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Tablero</span></a></li>
         <li><a class="app-menu__item" href="providers"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Proveedores</span></a></li>
-        <li><a class="app-menu__item" href="products"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Productos</span></a></li>
-        <li><a class="app-menu__item active" href="users"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Usuarios</span></a></li>
+        <li><a class="app-menu__item active" href="products"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Productos</span></a></li>
+        <li><a class="app-menu__item" href="users"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Usuarios</span></a></li>
         <li><a class="app-menu__item" href="#"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Reportes</span></a></li>
       </ul>
     </aside>
@@ -111,52 +111,61 @@
 <main class="app-content">
     <div class="app-title">
         <div>
-          <h1><i class="fa fa-th-list"></i> Usuarios</h1>
+          <h1><i class="fa fa-th-list"></i> Productos</h1>
           <!--<p>Basic bootstrap tables</p>-->
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
           <!--<li class="breadcrumb-item">Tables</li>-->
-          <li class="breadcrumb-item active"><a href="#">Usuarios</a></li>
+          <li class="breadcrumb-item active"><a href="#">Productos</a></li>
         </ul>
     </div>
     <div class="row">
+    <!-- Formulario para hacer el filtro-->
+    <div class="col-md-12">
+          <div class="tile">
+             <?= $this->Form->create() ?>
+             <?= $this->Form->control('category_id', ['options' => $categories]) ?>
+             <?= $this->Form->button(__('Fitrar')) ?>
+             <?= $this->Form->end() ?>
+          </div>
+    </div>
+
+
         <div class="col-md-12">
           <div class="tile">
             <div class="tile-body">
               <div class="table-responsive">
-              <div class="row mb-3">
-                <div class="col-sm-12 col-md-12"><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-plus', 'aria-hidden' => 'true']).'Nuevo', ['action' => 'add'],['class' => 'btn btn-success float-right', 'escape' => false])?></div>
-                <!--<div class="col-sm-12 col-md-12"><button class="btn btn-success float-right" type="button"><i class="fa fa-plus" aria-hidden="true"></i>Nuevo</button></div>-->
-              </div>
+                <div class="row mb-3">
+                  <div class="col-sm-12 col-md-12"><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-plus', 'aria-hidden' => 'true']).'Nuevo', ['action' => 'add'],['class' => 'btn btn-success float-right', 'escape' => false])?></div>
+                  <!--<div class="col-sm-12 col-md-12"><button class="btn btn-success float-right" type="button"><i class="fa fa-plus" aria-hidden="true"></i>Nuevo</button></div>-->
+                </div>
                 <table class="table table-hover table-bordered" id="sampleTable">
                   <thead>
-                      <tr>
-                          <th><?= $this->Paginator->sort('#') ?></th>
-                          <th><?= $this->Paginator->sort('Nombre') ?></th>
-                          <th><?= $this->Paginator->sort('Correo') ?></th>
-                          <th><?= $this->Paginator->sort('Apellido Paterno') ?></th>
-                          <th><?= $this->Paginator->sort('Apellido Materno') ?></th>
-                          <th><?= $this->Paginator->sort('Rol') ?></th>
-                          <th class="actions"><?= __('Acciones') ?></th>
-                      </tr>
+                    <tr>
+                        <th><?= $this->Paginator->sort('id') ?></th>
+                        <th><?= $this->Paginator->sort('category_id') ?></th>
+                        <th><?= $this->Paginator->sort('measurement_id') ?></th>
+                        <th><?= $this->Paginator->sort('name') ?></th>
+                        <th><?= $this->Paginator->sort('price') ?></th>
+                        <th class="actions"><?= __('Actions') ?></th>
+                    </tr>
                   </thead>
                   <tbody>
-                  <?php foreach ($users as $user): ?>
-                      <tr>
-                          <td><?= $this->Number->format($user->id) ?></td>
-                          <td><?= h($user->name) ?></td>
-                          <td><?= h($user->email) ?></td>
-                          <td><?= h($user->firstname) ?></td>
-                          <td><?= h($user->secondname) ?></td>
-                          <td><?= $user->has('role') ? $this->Html->link($user->role->name, ['controller' => 'Roles', 'action' => 'view', $user->role->id]) : '' ?></td>
-                          <td class="actions">
-                              <?= $this->Html->link('', ['action' => 'view', $user->id], ['class' => 'btn btn-info fa fa-eye']) ?>
-                              <?= $this->Html->link('', ['action' => 'edit', $user->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
-                              <?= $this->Form->postLink('', ['action' => 'delete', $user->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $user->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
-                          </td>
-                      </tr>
-                      <?php endforeach; ?>
+                        <?php foreach ($products as $product): ?>
+                        <tr>
+                            <td><?= $this->Number->format($product->id) ?></td>
+                            <td><?= $product->has('category') ? $this->Html->link($product->category->name, ['controller' => 'Categories', 'action' => 'view', $product->category->id]) : '' ?></td>
+                            <td><?= $product->has('measurement') ? $this->Html->link($product->measurement->name, ['controller' => 'Measurements', 'action' => 'view', $product->measurement->id]) : '' ?></td>
+                            <td><?= h($product->name) ?></td>
+                            <td><?= $this->Number->format($product->price) ?></td>
+                            <td class="actions">
+                                <?= $this->Html->link('', ['action' => 'view', $product->id], ['class' => 'btn btn-info fa fa-eye']) ?>
+                                <?= $this->Html->link('', ['action' => 'edit', $product->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
+                                <?= $this->Form->postLink('', ['action' => 'delete', $product->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $product->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
                   </tbody>
                 </table>
               </div>
@@ -165,15 +174,16 @@
         </div>
       </div>
 </main>
-    <!-- Essential javascripts for application to work-->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-    <!-- Page specific javascripts-->
+
+<!-- Essential javascripts for application to work-->
+    <?= $this->Html->script('jquery-3.2.1.min.js');?>
+    <?= $this->Html->script('popper.min.js');?>
+    <?= $this->Html->script('bootstrap.min.js');?>
+    <?= $this->Html->script('main.js');?>
+<!-- Page specific javascripts-->
     <!-- Data table plugin-->
-    <script type="text/javascript" src="js/plugins/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="js/plugins/dataTables.bootstrap.min.js"></script>
+    <?= $this->Html->script('plugins/jquery.dataTables.min.js',['type'=>'text/javascript']);?>
+    <?= $this->Html->script('plugins/dataTables.bootstrap.min.js',['type'=>'text/javascript']);?>
     <script type="text/javascript">$('#sampleTable').DataTable();</script>
     <!-- Google analytics script-->
     <script type="text/javascript">
@@ -188,3 +198,12 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+

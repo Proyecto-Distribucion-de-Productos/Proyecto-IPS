@@ -24,7 +24,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Main CSS-->
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <?= $this->Html->css('main.css');?>
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
@@ -85,7 +85,7 @@
             <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
             <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-user fa-lg"></i> Profile</a></li>
             <!--<li><a class="dropdown-item" href="page-login.html"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>-->
-            <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-sign-out fa-lg']).'Cerrar Sesión','/users/logout',['class' => 'dropdown-item', 'escape' => false])?></li>
+            <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-sign-out fa-lg']).'Cerrar Sesión','/admin/users/logout',['class' => 'dropdown-item', 'escape' => false])?></li>
           </ul>
         </li>
       </ul>
@@ -175,17 +175,16 @@
 </main>
 
 <!-- Essential javascripts for application to work-->
-<script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-
+    <?= $this->Html->script('jquery-3.2.1.min.js');?>
+    <?= $this->Html->script('popper.min.js');?>
+    <?= $this->Html->script('bootstrap.min.js');?>
+    <?= $this->Html->script('main.js',['type'=>'text/javascript']);?>
 
 
 <!-- Page specific javascripts-->
     <!-- Data table plugin-->
-    <script type="text/javascript" src="js/plugins/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="js/plugins/dataTables.bootstrap.min.js"></script>
+    <?= $this->Html->script('plugins/jquery.dataTables.min.js',['type'=>'text/javascript']);?>
+    <?= $this->Html->script('plugins/dataTables.bootstrap.min.js',['type'=>'text/javascript']);?>
     <script type="text/javascript">$('#sampleTable').DataTable();</script>
     <!-- Google analytics script-->
     <script type="text/javascript">

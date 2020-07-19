@@ -75,10 +75,8 @@ $this->disableAutoLayout();
                     <div class="top-right clearfix">
                         <!-- Botones ingresar y registrarse-->
                         <div class="">
-                            <!--<a href="users/login" class="btn-style-one">Ingresar</a>
-                            <a href="users/register" class="btn-style-one">Registrarse</a>-->
-                            <?= $this->Html->link('Ingresar','/users/login',['class' => 'btn-style-one'])?>
-                            <?= $this->Html->link('Registrarse','/users/register',['class' => 'btn-style-one'])?>
+                            <?= $this->Html->link('Ingresar','/admin/users/login',['class' => 'btn-style-one'])?>
+                            <?= $this->Html->link('Registrarse','/admin/users/register',['class' => 'btn-style-one'])?>
                         </div>
                     </div>
                 </div>
@@ -126,98 +124,11 @@ $this->disableAutoLayout();
 
 							<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
 								<ul class="navigation clearfix">
-                                    <li class="dropdown current"><a href="#">Principal</a>
-                                        <ul>
-                                            <li><a href="index.html">Homepage One</a></li>
-                                            <li><a href="index-2.html">Homepage Two</a></li>
-                                            <li><a href="index-3.html">Homepage Three</a></li>
-											<li><a href="index-4.html">Homepage Four</a></li>
-                                            <li class="dropdown"><a href="#">Header Styles</a>
-                                                <ul>
-                                                    <li><a href="index.html">Header Style One</a></li>
-                                                    <li><a href="index-2.html">Header Style Two</a></li>
-                                                    <li><a href="index-3.html">Header Style Three</a></li>
-													<li><a href="index-4.html">Header Style Four</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="#">Proveedores</a>
-                                        <ul>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="appointment.html">Appointment</a></li>
-                                            <li><a href="team.html">Team</a></li>
-                                            <li><a href="price.html">Price</a></li>
-                                            <li><a href="coming-soon.html">Coming Soon</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="#">Visualizaciones</a>
-                                        <ul>
-                                            <li><a href="project.html">Project</a></li>
-                                            <li><a href="project-detail.html">Project Detail</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="#">Productos</a>
-                                        <ul>
-                                            <li><a href="services.html">Services 01</a></li>
-                                            <li><a href="services-2.html">Services 02</a></li>
-                                            <li><a href="service-detail.html">Services Single</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown has-mega-menu"><a href="#">Ubicaciones</a>
-                                        <div class="mega-menu">
-                                            <div class="mega-menu-bar row clearfix">
-                                                <div class="column col-md-4 col-sm-4 col-xs-12">
-                                                    <h3>About Us</h3>
-                                                    <ul>
-                                                        <li><a href="team.html">Team</a></li>
-                                                        <li><a href="team-single.html">Team Single</a></li>
-                                                        <li><a href="testimonials.html">Testimonial</a></li>
-                                                        <li><a href="faq.html">FAQ's</a></li>
-                                                        <li><a href="coming-soon.html">Coming Soon</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="column col-md-4 col-sm-4 col-xs-12">
-                                                    <h3>Solutions</h3>
-                                                    <ul>
-                                                        <li><a href="service-detail.html">Solutions</a></li>
-                                                        <li><a href="service-detail.html">Chemical Engineering</a></li>
-                                                        <li><a href="service-detail.html">Energy & Power Engineering</a></li>
-                                                        <li><a href="service-detail.html">Oil & Gas Engineering</a></li>
-                                                        <li><a href="service-detail.html">Civil Engineering</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="column col-md-4 col-sm-4 col-xs-12">
-                                                    <h3>Blog</h3>
-                                                    <ul>
-                                                        <li><a href="blog.html">Our Blog</a></li>
-                                                        <li><a href="blog-classic.html">Blog Classic</a></li>
-                                                        <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                                        <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                                        <li><a href="blog-detail.html">Blog Details</a></li>
-                                                    </ul>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!--<li class="dropdown"><a href="#">News</a>
-                                        <ul>
-                                            <li><a href="blog.html">News</a></li>
-                                            <li><a href="blog-detail.html">News Detail</a></li>
-                                            <li><a href="error-page.html">Error Page</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="#">Shop</a>
-                                        <ul>
-                                            <li><a href="shop.html">Products</a></li>
-                                            <li><a href="shop-single.html">Products Detail</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
-                                            <li><a href="cart.html">Shopping Cart</a></li>
-                                            <li><a href="login.html">Registration</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>-->
+                                    <li class="dropdown current"><a href="#">Principal</a></li>
+                                    <li class="dropdown"><a href="#">Proveedores</a></li>
+                                    <li class="dropdown"><a href="#">Visualizaciones</a></li>
+                                    <li class="dropdown"><a href="#">Productos</a></li>
+                                    <li class="dropdown has-mega-menu"><a href="#">Ubicaciones</a></li>
                                 </ul>
                             </div>
 
@@ -252,92 +163,11 @@ $this->disableAutoLayout();
 
                         <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
                             <ul class="navigation clearfix">
-                                 <li class="dropdown current"><a href="#">Principal</a>
-                                        <ul>
-                                            <li><a href="index.html">Homepage One</a></li>
-                                            <li><a href="index-2.html">Homepage Two</a></li>
-                                            <li><a href="index-3.html">Homepage Three</a></li>
-											<li><a href="index-4.html">Homepage Four</a></li>
-                                            <li class="dropdown"><a href="#">Header Styles</a>
-                                                <ul>
-                                                    <li><a href="index.html">Header Style One</a></li>
-                                                    <li><a href="index-2.html">Header Style Two</a></li>
-                                                    <li><a href="index-3.html">Header Style Three</a></li>
-													<li><a href="index-4.html">Header Style Four</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                <li class="dropdown"><a href="#">Proveedores</a>
-                                    <ul>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="appointment.html">Appointment</a></li>
-                                        <li><a href="team.html">Team</a></li>
-                                        <li><a href="price.html">Price</a></li>
-                                        <li><a href="coming-soon.html">Coming Soon</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="#">Visualizaciones</a>
-                                    <ul>
-                                        <li><a href="project.html">Project</a></li>
-                                        <li><a href="project-detail.html">Project Detail</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="#">Productos</a>
-                                    <ul>
-                                        <li><a href="services.html">Services 01</a></li>
-                                        <li><a href="services-2.html">Services 02</a></li>
-                                        <li><a href="service-detail.html">Services Single</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown has-mega-menu"><a href="#">Ubicaciones</a>
-                                    <div class="mega-menu">
-                                        <div class="mega-menu-bar row clearfix">
-                                            <div class="column col-md-3 col-sm-3 col-xs-12">
-                                                <h3>About Us</h3>
-                                                <ul>
-                                                    <li><a href="team.html">Team</a></li>
-                                                    <li><a href="team-single.html">Team Single</a></li>
-                                                    <li><a href="testimonials.html">Testimonial</a></li>
-                                                    <li><a href="faq.html">FAQ's</a></li>
-                                                    <li><a href="coming-soon.html">Coming Soon</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="column col-md-3 col-sm-3 col-xs-12">
-                                                <h3>Solutions</h3>
-                                                <ul>
-                                                    <li><a href="service-detail.html">Solutions</a></li>
-                                                    <li><a href="service-detail.html">Chemical Engineering</a></li>
-                                                    <li><a href="service-detail.html">Energy & Power Engineering</a></li>
-                                                    <li><a href="service-detail.html">Oil & Gas Engineering</a></li>
-                                                    <li><a href="service-detail.html">Civil Engineering</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="column col-md-3 col-sm-3 col-xs-12">
-                                                <h3>Blog</h3>
-                                                <ul>
-                                                    <li><a href="blog.html">Our Blog</a></li>
-                                                    <li><a href="blog-classic.html">Blog Classic</a></li>
-                                                    <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                                    <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                                    <li><a href="blog-detail.html">Blog Details</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="column col-md-3 col-sm-3 col-xs-12">
-                                                <h3>Shop</h3>
-                                                <ul>
-                                                    <li><a href="shop.html">Shop</a></li>
-                                                    <li><a href="shop-single.html">Product Details</a></li>
-                                                    <li><a href="shoping-cart.html">Cart Page</a></li>
-                                                    <li><a href="checkout.html">Checkout Page</a></li>
-                                                    <li><a href="login.html">Registration Page</a></li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </li>
+                                <li class="dropdown current"><a href="#">Principal</a></li>
+                                <li class="dropdown"><a href="#">Proveedores</a></li>
+                                <li class="dropdown"><a href="#">Visualizaciones</a></li>
+                                <li class="dropdown"><a href="#">Productos</a></li>
+                                <li class="dropdown has-mega-menu"><a href="#">Ubicaciones</a></li>
                             </ul>
                         </div>
                     </nav><!-- Main Menu End-->
@@ -598,9 +428,27 @@ $this->disableAutoLayout();
     </section>
     <!--End Main Slider-->
 
+    <!-- Call to Action -->
+    <section class="call-to-action style-two">
+        <!--<div class="auto-container clearfix">
+            <div class="title-box">
+               <p>We provide them access to customers, schedule flexibility, and high-quality parts</p>
+            </div>
+            <div class="btn-box">
+                <a href="#" class="theme-btn btn-style-one">Contact now</a>
+            </div>
+        </div>-->
+    </section>
+    <!-- End Call to Action -->
+
+
      <!-- Services Section -->
-    <section class="services-section alternate">
+    <section class="services-section">
         <div class="auto-container">
+            <div class="sec-title text-center">
+                <h2>Categorías</h2>
+                <div class="separator"><span class="flaticon-settings-2"></span></div>
+            </div>
             <div class="services-carousel owl-carousel owl-theme">
                 <!-- Service Block -->
                 <div class="service-block">
@@ -682,112 +530,6 @@ $this->disableAutoLayout();
     </section>
     <!-- End Services Section -->
     
-    <!-- Call to Action -->
-    <section class="call-to-action style-two">
-        <!--<div class="auto-container clearfix">
-            <div class="title-box">
-               <p>We provide them access to customers, schedule flexibility, and high-quality parts</p>
-            </div>
-            <div class="btn-box">
-                <a href="#" class="theme-btn btn-style-one">Contact now</a>
-            </div>
-        </div>-->
-    </section>
-    <!-- End Call to Action -->
-
-    <!-- Team Section -->
-    <section class="team-section">
-        <div class="auto-container">
-            <div class="sec-title text-center">
-                <h2>Categorías</h2>
-                <div class="separator"><span class="flaticon-settings-2"></span></div>
-            </div>
-
-            <div class="row clearfix">
-                <!-- Team Block -->
-                <div class="team-block-two col-lg-3 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure><img src="home/images/gallery/1.jpg" alt=""></figure>
-                            <div class="overlay-box">
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                </ul>
-                                <span class="designation">Equipo de Protección Personal</span>
-                            </div>
-                        </div>
-                        <div class="caption-box">
-                           <h3 class="name"><a href="team.html">EPP</a></h3>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Block -->
-                <div class="team-block-two col-lg-3 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure><img src="home/images/gallery/2.jpg" alt=""></figure>
-                            <div class="overlay-box">
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                </ul>
-                                <span class="designation">Pruebas de Diagnóstico</span>
-                            </div>
-                        </div>
-                        <div class="caption-box">
-                           <h3 class="name"><a href="team.html">Pruebas de Diagnóstico</a></h3>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Block -->
-                <div class="team-block-two col-lg-3 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure><img src="home/images/gallery/3.jpg" alt=""></figure>
-                            <div class="overlay-box">
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                </ul>
-                                <span class="designation">Material Desinfectante</span>
-                            </div>
-                        </div>
-                        <div class="caption-box">
-                           <h3 class="name"><a href="team.html">Material Desinfectante</a></h3>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Block -->
-                <div class="team-block-two col-lg-3 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure><img src="home/images/gallery/4.jpg" alt=""></figure>
-                            <div class="overlay-box">
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                </ul>
-                                <span class="designation">Medicamentos</span>
-                            </div>
-                        </div>
-                        <div class="caption-box">
-                           <h3 class="name"><a href="team.html">Medicamentos</a></h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Team Section -->
-
     <!-- Main Footer -->
     <footer class="main-footer" style="background-image: url(home/images/background/4.jpg);">
         <div class="auto-container">

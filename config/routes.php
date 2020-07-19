@@ -24,6 +24,7 @@
 use Cake\Http\Middleware\CsrfProtectionMiddleware;
 use Cake\Routing\Route\DashedRoute;
 use Cake\Routing\RouteBuilder;
+use Cake\Routing\Router;
 
 /*
  * The default class to use for all routes
@@ -68,6 +69,8 @@ $routes->scope('/', function (RouteBuilder $builder) {
      * ...and connect the rest of 'Pages' controller's URLs.
      */
     $builder->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+    
+    
 
     /*
      * Connect catchall routes for all controllers.
@@ -84,7 +87,50 @@ $routes->scope('/', function (RouteBuilder $builder) {
      */
     $builder->fallbacks();
 });
+Router::scope('/admin/users', function (RouteBuilder $routes) {
+	//route to switch locale
+	//$routes->connect('/lang/*', array('controller' => 'p28n', 'action' => 'change'));
+    $routes->connect('/', ['prefix' => 'Admin', 'controller' => 'Users', 'action' => 'index']);
+    $routes->connect('/add', ['prefix' => 'Admin', 'controller' => 'Users', 'action' => 'add']);
+    $routes->connect('/view/*', ['prefix' => 'Admin', 'controller' => 'Users', 'action' => 'view']);
+    $routes->connect('/edit/*', ['prefix' => 'Admin', 'controller' => 'Users', 'action' => 'edit']);
+    $routes->connect('/delete/*', ['prefix' => 'Admin', 'controller' => 'Users', 'action' => 'delete']);
+    $routes->connect('/login', ['prefix' => 'Admin', 'controller' => 'Users', 'action' => 'login']);
+    $routes->connect('/logout/*', ['prefix' => 'Admin', 'controller' => 'Users', 'action' => 'logout']);
 
+	//$routes->fallbacks();
+});
+
+Router::scope('/admin/providers', function (RouteBuilder $routes) {
+    $routes->connect('/', ['prefix' => 'Admin', 'controller' => 'Providers', 'action' => 'index']);
+    $routes->connect('/add', ['prefix' => 'Admin', 'controller' => 'Providers', 'action' => 'add']);
+    $routes->connect('/view/*', ['prefix' => 'Admin', 'controller' => 'Providers', 'action' => 'view']);
+    $routes->connect('/edit/*', ['prefix' => 'Admin', 'controller' => 'Providers', 'action' => 'edit']);
+    $routes->connect('/delete/*', ['prefix' => 'Admin', 'controller' => 'Providers', 'action' => 'delete']);
+});
+
+Router::scope('/admin/products', function (RouteBuilder $routes) {
+    $routes->connect('/', ['prefix' => 'Admin', 'controller' => 'Products', 'action' => 'index']);
+    $routes->connect('/add', ['prefix' => 'Admin', 'controller' => 'Products', 'action' => 'add']);
+    $routes->connect('/view/*', ['prefix' => 'Admin', 'controller' => 'Products', 'action' => 'view']);
+    $routes->connect('/edit/*', ['prefix' => 'Admin', 'controller' => 'Products', 'action' => 'edit']);
+    $routes->connect('/delete/*', ['prefix' => 'Admin', 'controller' => 'Products', 'action' => 'delete']);
+});
+
+Router::scope('/admin/dashboard', function (RouteBuilder $routes) {
+    $routes->connect('/', ['prefix' => 'Admin', 'controller' => 'Dashboard', 'action' => 'index']);
+    $routes->connect('/add', ['prefix' => 'Admin', 'controller' => 'Dashboard', 'action' => 'add']);
+    $routes->connect('/view/*', ['prefix' => 'Admin', 'controller' => 'Dashboard', 'action' => 'view']);
+    $routes->connect('/edit/*', ['prefix' => 'Admin', 'controller' => 'Dashboard', 'action' => 'edit']);
+    $routes->connect('/delete/*', ['prefix' => 'Admin', 'controller' => 'Dashboard', 'action' => 'delete']);
+});
+
+Router::prefix('Admin', function (RouteBuilder $routes) {
+	// Because you are in the admin scope,
+	// you do not need to include the /admin prefix
+	// or the admin route element.
+	$routes->fallbacks();
+});
 /*
  * If you need a different set of middleware or none at all,
  * open new scope and define routes there.
