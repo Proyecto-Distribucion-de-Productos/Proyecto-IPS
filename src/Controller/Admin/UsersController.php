@@ -18,8 +18,20 @@ class UsersController extends AppController
         if ($this->request->is('post')) {
         $user = $this->Auth->identify();
         if ($user) {
-            $this->Auth->setUser($user);
-            return $this->redirect(['controller' => 'dashboard', 'action' => 'index']);
+            if($user['role_id'] != null){ //verifica el status del usuario
+                $role = $this->Users->Roles->findById($user['role_id']);
+                $role=$role->toArray()[0]['name'];
+                $user['role'] = $role;
+                //Aqui guardo la sesion
+                $this->Auth->setUser($user);
+             }
+             //Aqui redirecciona segun el role de usuario
+             if(isset($user['role']) && $user['role'] === 'Administrador'){
+                 return $this->redirect(['controller' => 'dashboard', 'action' => 'index']);
+             }elseif (isset($user['role']) && $user['role'] === 'Cliente') {
+                 return $this->redirect($this->Auth->redirectUrl());
+             }
+            //return $this->redirect(['controller' => 'dashboard', 'action' => 'index']);
             //return $this->redirect(['Controller'=>'dashboard','action'=>'index']);
         }else{
             $this->Flash->error('Your username or password is incorrect.');
@@ -107,8 +119,11 @@ class UsersController extends AppController
 
      public function logout()
 {
-    $this->Flash->success('You are now logged out.');
-    return $this->redirect($this->Auth->logout());
+    //$this->Flash->success('You are now logged out.');
+    //return $this->redirect($this->Auth->logout());
+    $this->Auth->logout();
+    return $this->redirect($this->Auth->redirectUrl());
+    //cambiar la direccion del logout al home
 }
 
     /**
@@ -148,4 +163,12 @@ class UsersController extends AppController
         $roles = $this->Users->Roles->find('list', ['limit' => 200]);
         $this->set(compact('user', 'roles'));
     } 
+    public function isAuthorized($user) { 
+		if(isset($user['role']) && $user['role'] === 'Cliente'){
+		    if(in_array($this->request->getParam('action'),['logout'])){
+		        return true;
+		    }
+		}
+		return parent::isAuthorized($user);
+	}
 }

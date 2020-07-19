@@ -46,6 +46,7 @@ class AppController extends Controller
         ]);
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
+            'authorize'=> 'Controller',
             'authenticate' => [
                 'Form' => [
                     'fields' => [
@@ -64,7 +65,7 @@ class AppController extends Controller
 
         // Allow the display action so our PagesController
         // continues to work. Also enable the read only actions.
-        $this->Auth->allow(['register','edit','display', 'view', 'index']); 
+        $this->Auth->allow(['register','display','logout','login']); 
         /*
          * Enable the following component for recommended CakePHP form protection settings.
          * see https://book.cakephp.org/4/en/controllers/components/form-protection.html
@@ -72,5 +73,12 @@ class AppController extends Controller
         //$this->loadComponent('FormProtection');
 
     }
+    public function isAuthorized($user)
+	{
+		if(isset($user['role']) && $user['role'] === 'Administrador'){
+		    return true;
+		}
+	    return false; //false
+	}
    
 }
