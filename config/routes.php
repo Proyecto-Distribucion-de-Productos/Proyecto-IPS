@@ -126,6 +126,14 @@ Router::scope('/admin/dashboard', function (RouteBuilder $routes) {
     $routes->connect('/delete/*', ['prefix' => 'Admin', 'controller' => 'Dashboard', 'action' => 'delete']);
 });
 
+Router::scope('/admin/categories', function (RouteBuilder $routes) {
+    $routes->connect('/', ['prefix' => 'Admin', 'controller' => 'Categories', 'action' => 'index']);
+    $routes->connect('/add', ['prefix' => 'Admin', 'controller' => 'Categories', 'action' => 'add']);
+    $routes->connect('/view/*', ['prefix' => 'Admin', 'controller' => 'Categories', 'action' => 'view']);
+    $routes->connect('/edit/*', ['prefix' => 'Admin', 'controller' => 'Categories', 'action' => 'edit']);
+    $routes->connect('/delete/*', ['prefix' => 'Admin', 'controller' => 'Categories', 'action' => 'delete']);
+});
+
 Router::prefix('Admin', function (RouteBuilder $routes) {
 	// Because you are in the admin scope,
 	// you do not need to include the /admin prefix

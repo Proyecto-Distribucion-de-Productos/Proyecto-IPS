@@ -179,10 +179,10 @@
     <section class="page-title" style="background-image:url(images/background/8.jpg);">
         <div class="auto-container">
             <div class="inner-container clearfix">
-                <h1>services 01</h1>
+                <h1>PROVEEDORES</h1>
                 <ul class="bread-crumb clearfix">
-                    <li><a href="index.html">Home</a></li>
-                    <li>services 01</li>
+                    <li><?= $this->Html->link('Principal','/')?></li>
+                    <li>Proveedores</li>
                 </ul>
             </div>
         </div>
@@ -194,112 +194,29 @@
         <div class="auto-container">
             <div class="row clearfix">
                 <!-- Service Block -->
-                <div class="service-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure><img src="images/resource/service-1.jpg" alt=""></figure>
-                            <div class="title"><h4>Suspension Repair</h4></div>
-                        </div>
-                        <div class="caption-box">
-                            <div class="title-box">
-                                <span class="icon flaticon-electrical"></span>
-                                <h4><a href="service-detail.html">Suspension Repair</a></h4>
+                <?php foreach ($providers as $provider): ?>
+                    <!-- Service Block -->
+                    <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <figure><img src="home/images/resource/providers.jpg" alt=""></figure>
+                                <div class="title"><h4><?= h($provider->name) ?></h4></div>
                             </div>
-                            <p>We should point out that maintaining your vehicle with an occasional visual inspectionfluid level.</p>
-                            <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a>
+                            <div class="caption-box">
+                                <div class="title-box">
+                                    <span class="icon flaticon-pistons"></span>
+                                    <h4><?= $this->Html->link(h($provider->name), ['action' => 'view', $provider->id]) ?></h4>
+                                </div>
+                                <p>Empresa distribuidora de productos para la salud</p>
+                                <?= $this->Html->link('Ver Mas'.$this->Html->tag('i', '', ['class' => 'fa fa-angle-double-right']),['action' => 'view', $provider->id],['class' => 'read-more', 'escape' => false])?>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Service Block -->
-                <div class="service-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure><img src="images/resource/service-2.jpg" alt=""></figure>
-                            <div class="title"><h4>Engine Overhaul</h4></div>
-                        </div>
-                        <div class="caption-box">
-                            <div class="title-box">
-                                <span class="icon flaticon-pistons"></span>
-                                <h4><a href="service-detail.html">Engine Overhaul</a></h4>
-                            </div>
-                            <p>We should point out that maintaining your vehicle with an occasional visual inspectionfluid level.</p>
-                            <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+                        
+                    
+                <?php endforeach; ?>
 
-                <!-- Service Block -->
-                <div class="service-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure><img src="images/resource/service-3.jpg" alt=""></figure>
-                            <div class="title"><h4>Wheel Alignment</h4></div>
-                        </div>
-                        <div class="caption-box">
-                            <div class="title-box">
-                                <span class="icon flaticon-cogwheel"></span>
-                                <h4><a href="service-detail.html">Wheel Alignment</a></h4>
-                            </div>
-                            <p>We should point out that maintaining your vehicle with an occasional visual inspectionfluid level.</p>
-                            <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                                <!-- Service Block -->
-                <div class="service-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure><img src="images/resource/service-4.jpg" alt=""></figure>
-                            <div class="title"><h4>Suspension Repair</h4></div>
-                        </div>
-                        <div class="caption-box">
-                            <div class="title-box">
-                                <span class="icon flaticon-electrical"></span>
-                                <h4><a href="service-detail.html">Suspension Repair</a></h4>
-                            </div>
-                            <p>We should point out that maintaining your vehicle with an occasional visual inspectionfluid level.</p>
-                            <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service Block -->
-                <div class="service-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure><img src="images/resource/service-5.jpg" alt=""></figure>
-                            <div class="title"><h4>Engine Overhaul</h4></div>
-                        </div>
-                        <div class="caption-box">
-                            <div class="title-box">
-                                <span class="icon flaticon-pistons"></span>
-                                <h4><a href="service-detail.html">Engine Overhaul</a></h4>
-                            </div>
-                            <p>We should point out that maintaining your vehicle with an occasional visual inspectionfluid level.</p>
-                            <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service Block -->
-                <div class="service-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure><img src="images/resource/service-6.jpg" alt=""></figure>
-                            <div class="title"><h4>Wheel Alignment</h4></div>
-                        </div>
-                        <div class="caption-box">
-                            <div class="title-box">
-                                <span class="icon flaticon-cogwheel"></span>
-                                <h4><a href="service-detail.html">Wheel Alignment</a></h4>
-                            </div>
-                            <p>We should point out that maintaining your vehicle with an occasional visual inspectionfluid level.</p>
-                            <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <!-- Styled Pagination -->
@@ -448,7 +365,7 @@
          <div class="footer-bottom">
             <div class="auto-container">
                 <div class="copyright-text">
-                    <p>Copyrights © 2019 All Rights Reserved. by <a href="#"> Expert Themes</a></p>
+                    <p>Copyrights © 2019 All Rights Reserved.</p>
                 </div>
             </div>
         </div>

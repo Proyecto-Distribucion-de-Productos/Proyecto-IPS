@@ -5,7 +5,7 @@
  */
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <title>Productos</title>
@@ -182,8 +182,8 @@
             <div class="inner-container clearfix">
                 <h1>Products</h1>
                 <ul class="bread-crumb clearfix">
-                    <li><a href="index.html">Home</a></li>
-                    <li>Products</li>
+                    <li><?= $this->Html->link('Principal','/')?></li>
+                    <li>Productos</li>
                 </ul>
             </div>
         </div>
@@ -212,193 +212,29 @@
 
                     <div class="row clearfix">
                         <!-- Shop item -->
-                        <div class="shop-item col-lg-4 col-md-6 col-sm-12">
-                            <div class="inner-box">
-                                <div class="image">
-                                    <img src="images/resource/products/1.jpg" alt="">
-                                    <div class="overlay-box">
-                                        <div class="icon-box">
-                                            <a href="cart.html" class="cart-btn"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
+                        <?php foreach ($products as $product): ?>
+                            <div class="shop-item col-lg-4 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image">
+                                        <img src="home/images/resource/products/products.jpg" alt="">
+                                        <div class="overlay-box">
+                                            <div class="icon-box">
+                                                <?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-eye']).'Ver ',['action' => 'view', $product->id],['class' => 'cart-btn', 'escape' => false])?>
+                                                <!--<a href="cart.html" class="cart-btn"><i class="fa fa-shopping-cart"></i> Add To Cart</a>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lower-content">
+                                        <h3><?= $this->Html->link(h($product->name), ['action' => 'view', $product->id]) ?></h3>
+                                        <span class="price"><?= $this->Number->format($product->price) ?></span>
+                                        <div class="rating">
+                                            <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="lower-content">
-                                    <h3><a href="shop-single.html">Flying Ninja</a></h3>
-                                    <span class="price"><del>$15.00</del> $12.00</span>
-                                    <div class="rating">
-                                        <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
-                                    </div>
-                                </div>
                             </div>
-                        </div>
-
-                        <!-- Shop item -->
-                        <div class="shop-item col-lg-4 col-md-6 col-sm-12">
-                            <div class="inner-box">
-                                <div class="image">
-                                    <img src="images/resource/products/2.jpg" alt="">
-                                    <div class="overlay-box">
-                                        <div class="icon-box">
-                                            <a href="cart.html" class="cart-btn"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lower-content">
-                                    <h3><a href="shop-single.html">Happy Ninja</a></h3>
-                                    <span class="price">$18.00</span>
-                                    <div class="rating">
-                                        <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Shop item -->
-                        <div class="shop-item col-lg-4 col-md-6 col-sm-12">
-                            <div class="inner-box">
-                                <div class="image">
-                                    <img src="images/resource/products/3.jpg" alt="">
-                                    <div class="overlay-box">
-                                        <div class="icon-box">
-                                            <a href="cart.html" class="cart-btn"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lower-content">
-                                    <h3><a href="shop-single.html">Patient Ninja</a></h3>
-                                    <span class="price">$35.00</span>
-                                    <div class="rating">
-                                        <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Shop item -->
-                        <div class="shop-item col-lg-4 col-md-6 col-sm-12">
-                            <div class="inner-box">
-                                <div class="image">
-                                    <img src="images/resource/products/4.jpg" alt="">
-                                    <div class="overlay-box">
-                                        <div class="icon-box">
-                                            <a href="cart.html" class="cart-btn"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lower-content">
-                                    <h3><a href="shop-single.html">Ninja Silhouette</a></h3>
-                                    <span class="price">$20.00</span>
-                                    <div class="rating">
-                                        <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Shop item -->
-                        <div class="shop-item col-lg-4 col-md-6 col-sm-12">
-                            <div class="inner-box">
-                                <div class="image">
-                                    <img src="images/resource/products/5.jpg" alt="">
-                                    <div class="overlay-box">
-                                        <div class="icon-box">
-                                            <a href="cart.html" class="cart-btn"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lower-content">
-                                    <h3><a href="shop-single.html">Premium Quality</a></h3>
-                                    <span class="price">$35.00</span>
-                                    <div class="rating">
-                                        <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Shop item -->
-                        <div class="shop-item col-lg-4 col-md-6 col-sm-12">
-                            <div class="inner-box">
-                                <div class="image">
-                                    <img src="images/resource/products/6.jpg" alt="">
-                                    <div class="overlay-box">
-                                        <div class="icon-box">
-                                            <a href="cart.html" class="cart-btn"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lower-content">
-                                    <h3><a href="shop-single.html">Ship Your Idea</a></h3>
-                                    <span class="price"><del>$15.00</del> $12.00</span>
-                                    <div class="rating">
-                                        <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Shop item -->
-                        <div class="shop-item col-lg-4 col-md-6 col-sm-12">
-                            <div class="inner-box">
-                                <div class="image">
-                                    <img src="images/resource/products/7.jpg" alt="">
-                                    <div class="overlay-box">
-                                        <div class="icon-box">
-                                            <a href="cart.html" class="cart-btn"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lower-content">
-                                    <h3><a href="shop-single.html">Ninja Silhouette</a></h3>
-                                    <span class="price">$20.00</span>
-                                    <div class="rating">
-                                        <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Shop item -->
-                        <div class="shop-item col-lg-4 col-md-6 col-sm-12">
-                            <div class="inner-box">
-                                <div class="image">
-                                    <img src="images/resource/products/8.jpg" alt="">
-                                    <div class="overlay-box">
-                                        <div class="icon-box">
-                                            <a href="cart.html" class="cart-btn"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lower-content">
-                                    <h3><a href="shop-single.html">Premium Quality</a></h3>
-                                    <span class="price">$35.00</span>
-                                    <div class="rating">
-                                        <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Shop item -->
-                        <div class="shop-item col-lg-4 col-md-6 col-sm-12">
-                            <div class="inner-box">
-                                <div class="image">
-                                    <img src="images/resource/products/9.jpg" alt="">
-                                    <div class="overlay-box">
-                                        <div class="icon-box">
-                                            <a href="cart.html" class="cart-btn"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lower-content">
-                                    <h3><a href="shop-single.html">Ship Your Idea</a></h3>
-                                    <span class="price"><del>$15.00</del> $12.00</span>
-                                    <div class="rating">
-                                        <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
+                     
                     </div>
 
                     <!-- Styled Pagination -->
@@ -429,13 +265,13 @@
 
                         <!-- Categories -->
                         <div class="sidebar-widget categories">
-                            <div class="sidebar-title"><h2>Categories</h2></div>
+                            <div class="sidebar-title"><h2>Categorias</h2></div>
                             <ul class="category-list">
-                                <li><a href="#">Cooling Kit  <span>12</span></a></li>
-                                <li><a href="#">Engine Kit   <span>15</span></a></li>
-                                <li><a href="#">Car Engine   <span>10</span></a></li>
-                                <li><a href="#">Single Parts <span>08</span></a></li>
-                                <li><a href="#">Break Kit    <span>05</span></a></li>
+                                <li><a href="#">Todos los Productos</a></li>
+                                <?php foreach ($categories as $category): ?>
+                                    <li><?= $this->Html->link(h($category->name), ['controller'=>'categories','action' => 'view', $category->id]) ?></li>
+                                <?php endforeach; ?>
+                                <!--<li><a href="#">Cooling Kit  <span>12</span></a></li>-->
                             </ul>
                         </div>
 
@@ -457,55 +293,11 @@
                                 </div>
                             </div>
                         </div>
-
-
-                        <!-- Top Related Posts -->
-                        <div class="sidebar-widget related-posts">
-                            <div class="sidebar-title"><h2>Popular Products</h2></div>
-                            <div class="widget-content">
-                                <!-- Related Post -->
-                                <div class="post">
-                                    <figure class="post-thumb"><a href="shop-detail.html"><img src="images/resource/products/thumb-1.jpg" alt=""></a></figure>
-                                    <h4><a href="shop-detail.html">Woo Album #4</a></h4>
-                                    <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
-                                    <span class="price">$287</span>
-                                </div>
-
-                                <!-- Related Post -->
-                                <div class="post">
-                                    <figure class="post-thumb"><a href="shop-detail.html"><img src="images/resource/products/thumb-2.jpg" alt=""></a></figure>
-                                    <h4><a href="shop-detail.html">Happy Ninja</a></h4>
-                                    <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
-                                    <span class="price">$18.00</span>
-                                </div>
-
-                                <!-- Related Post -->
-                                <div class="post">
-                                    <figure class="post-thumb"><a href="shop-detail.html"><img src="images/resource/products/thumb-3.jpg" alt=""></a></figure>
-                                    <h4><a href="shop-detail.html">Ninja Silhouette</a></h4>
-                                    <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
-                                    <span class="price">$20.00</span>
-                                </div>
-                            </div>
-                        </div>
                     </aside>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <!-- Subscribe Section -->
-    <section class="subscribe-section">
-        <div class="auto-container">
-            <div class="inner-container clearfix">
-                <h3>Check out our repair service for your car and get a free clean</h3>
-                <a href="#" class="call-btn">Order Now</a>
-            </div>
-        </div>
-    </section>
-    <!-- End Subscribe Section -->
-
     <!-- Main Footer -->
     <footer class="main-footer alternate" style="background-image: url(images/background/4.jpg);">
         <div class="auto-container">

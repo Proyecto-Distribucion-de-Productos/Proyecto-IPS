@@ -1,8 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Controller\Admin;
-use App\Controller\AppController;
+namespace App\Controller;
 
 /**
  * Categories Controller
@@ -17,6 +16,12 @@ class CategoriesController extends AppController
      *
      * @return \Cake\Http\Response|null|void Renders view
      */
+    public function initialize(): void
+    {
+        parent::initialize();
+        $this->Auth->allow(['index']); 
+
+    }
     public function index()
     {
         $categories = $this->paginate($this->Categories);
