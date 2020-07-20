@@ -34,6 +34,7 @@ $this->disableAutoLayout();
 <link href="home/plugins/revolution/css/settings.css" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
 <link href="home/plugins/revolution/css/layers.css" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
 <link href="home/plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
+<!-- Error boton desplegable-->
 <link href="home/css/style.css" rel="stylesheet">
 <link href="home/css/responsive.css" rel="stylesheet">
 <!--Color Switcher Mockup-->
@@ -73,10 +74,30 @@ $this->disableAutoLayout();
                     </div>
                     <div class="top-right clearfix">
                         <!-- Botones ingresar y registrarse-->
-                        <div class="">
-                            <?= $this->Html->link('Ingresar','/admin/users/login',['class' => 'btn-style-one'])?>
-                            <?= $this->Html->link('Registrarse','/admin/users/register',['class' => 'btn-style-one'])?>
-                        </div>
+                            <?php if(isset($current_user)):?>
+                                <?php if($current_user['role'] === 'Administrador'):?>
+                                    <div class="dropdown">
+                                        <?= $this->Html->link($current_user['name'],'#',['class' => 'btn-style-one dropdown-toggle', 'data-toggle'=>'dropdown'])?>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <?= $this->Html->link('Tablero de Administrador','/admin/dashboard',['class' => 'dropdown-item'])?>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Perfil</a>
+                                            <?= $this->Html->link('Cerrar Sesión','/admin/users/logout',['class' => 'dropdown-item'])?>
+                                        </div>
+                                    </div>
+                                <?php else: ?>
+                                    <div class="dropdown">
+                                        <?= $this->Html->link($current_user['name'],'#',['class' => 'btn-style-one dropdown-toggle', 'data-toggle'=>'dropdown'])?>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Perfil</a>
+                                            <?= $this->Html->link('Cerrar Sesión','/admin/users/logout',['class' => 'dropdown-item'])?>
+                                        </div>
+                                    </div>
+                                <?php endif ?>             
+                            <?php else: ?>
+                                <?= $this->Html->link('Ingresar','/admin/users/login',['class' => 'btn-style-one'])?>
+                                <?= $this->Html->link('Registrarse','/admin/users/register',['class' => 'btn-style-one'])?>  
+                            <?php endif ?>
                     </div>
                 </div>
             </div>
@@ -92,7 +113,6 @@ $this->disableAutoLayout();
                         <div class="logo"><a href="index.html"><img src="home/images/logo-2.png" alt=""></a></div>
                     </div>
 					<!--outer Box-->
-
                         <div class="outer-box">
                             <!--Search Box-->
                             <div class="dropdown dropdown-outer">

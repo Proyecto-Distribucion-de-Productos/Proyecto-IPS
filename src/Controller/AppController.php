@@ -17,6 +17,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Cake\Controller\Controller;
+use Cake\Event\EventInterface;
 
 /**
  * Application Controller
@@ -73,8 +74,10 @@ class AppController extends Controller
         //$this->loadComponent('FormProtection');
 
     }
-    public function isAuthorized($user)
-	{
+    public function beforeFilter(EventInterface $event) {
+        $this->set('current_user', $this->Auth->user());
+    }
+    public function isAuthorized($user) {
 		if(isset($user['role']) && $user['role'] === 'Administrador'){
 		    return true;
 		}

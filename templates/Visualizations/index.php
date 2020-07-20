@@ -52,10 +52,30 @@
                     </div>
                     <div class="top-right clearfix">
                         <!-- Botones ingresar y registrarse-->
-                        <div class="">
-                            <?= $this->Html->link('Ingresar','/admin/users/login',['class' => 'btn-style-one'])?>
-                            <?= $this->Html->link('Registrarse','/admin/users/register',['class' => 'btn-style-one'])?>
-                        </div>
+                            <?php if(isset($current_user)):?>
+                                <?php if($current_user['role'] === 'Administrador'):?>
+                                    <div class="dropdown">
+                                        <?= $this->Html->link($current_user['name'],'#',['class' => 'btn-style-one dropdown-toggle', 'data-toggle'=>'dropdown'])?>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <?= $this->Html->link('Tablero de Administrador','/admin/dashboard',['class' => 'dropdown-item'])?>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Perfil</a>
+                                            <?= $this->Html->link('Cerrar Sesión','/admin/users/logout',['class' => 'dropdown-item'])?>
+                                        </div>
+                                    </div>
+                                <?php else: ?>
+                                    <div class="dropdown">
+                                        <?= $this->Html->link($current_user['name'],'#',['class' => 'btn-style-one dropdown-toggle', 'data-toggle'=>'dropdown'])?>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Perfil</a>
+                                            <?= $this->Html->link('Cerrar Sesión','/admin/users/logout',['class' => 'dropdown-item'])?>
+                                        </div>
+                                    </div>
+                                <?php endif ?>             
+                            <?php else: ?>
+                                <?= $this->Html->link('Ingresar','/admin/users/login',['class' => 'btn-style-one'])?>
+                                <?= $this->Html->link('Registrarse','/admin/users/register',['class' => 'btn-style-one'])?>  
+                            <?php endif ?>
                     </div>
                 </div>
             </div>
