@@ -1,14 +1,15 @@
 <?php
 /**
  * @var \App\View\AppView $this
- * @var \App\Model\Entity\Product[]|\Cake\Collection\CollectionInterface $products
+ * @var \App\Model\Entity\Provider[]|\Cake\Collection\CollectionInterface $providers
  */
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<title>Productos</title>
+<title>Proveedores</title>
 
 <!-- Stylesheets -->
 <link href="home/css/bootstrap.css" rel="stylesheet">
@@ -47,7 +48,7 @@
                     <div class="top-left">
                         <ul class="clearfix">
                             <li>Realice consultas sobre los proveedores y productos disponibles<i class="fa fa-long-arrow-alt-right"></i></li>
-                        </ul> 
+                        </ul>
                     </div>
                     <div class="top-right clearfix">
                         <!-- Botones ingresar y registrarse-->
@@ -91,25 +92,24 @@
                     </div>
                     <!--Nav Outer-->
                     <div class="nav-outer clearfix">
-                        <nav class="main-menu navbar-expand-md">
-							<div class="navbar-header">
-								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-							</div>
+                      <nav class="main-menu navbar-expand-md">
+                        <div class="navbar-header">
+                          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                          </button>
+                        </div>
 
-							<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
-                                <ul class="navigation clearfix">
-                                    <li class="dropdown"><?= $this->Html->link('Principal','/')?></li>
-                                    <li class="dropdown"><?= $this->Html->link('Proveedores','/providers')?></li>
-                                    <li class="dropdown"><?= $this->Html->link('Visualizaciones','/visualizations')?></li>
-                                    <li class="current dropdown"><?= $this->Html->link('Productos','/products')?></li>
-                                    <li class="dropdown"><?= $this->Html->link('Ubicaciones','/ubications')?></li>
-                                </ul>
-                            </div>
-
+                          <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                              <ul class="navigation clearfix">
+                                <li class="dropdown"><?= $this->Html->link('Principal','/')?></li>
+                                <li class="current dropdown"><?= $this->Html->link('Proveedores','/providers')?></li>
+                                <li class="dropdown"><?= $this->Html->link('Visualizaciones','/visualizations')?></li>
+                                <li class="dropdown"><?= $this->Html->link('Productos','/products')?></li>
+                                <li class="dropdown"><?= $this->Html->link('Ubicaciones','/ubications')?></li>
+                              </ul>
+                          </div>
                         </nav>
                         <!-- Main Menu End-->
 
@@ -157,14 +157,13 @@
 								<span class="icon-bar"></span>
 							</button>
                         </div>
-
                         <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
                             <ul class="navigation clearfix">
                                 <li class="dropdown"><?= $this->Html->link('Principal','/')?></li>
-                                <li class="dropdown"><a href="#">Proveedores</a></li>
-                                <li class="dropdown"><a href="#">Visualizaciones</a></li>
-                                <li class="current dropdown"><?= $this->Html->link('Productos','/products')?></li>
-                                <li class="dropdown"><a href="#">Ubicaciones</a></li>
+                                <li class="current dropdown"><?= $this->Html->link('Proveedores','/providers')?></li>
+                                <li class="dropdown"><?= $this->Html->link('Visualizaciones','/visualizations')?></li>
+                                <li class="dropdown"><?= $this->Html->link('Productos','/products')?></li>
+                                <li class="dropdown"><?= $this->Html->link('Ubicaciones','/ubications')?></li>
                             </ul>
                         </div>
                     </nav><!-- Main Menu End-->
@@ -180,126 +179,86 @@
     <section class="page-title" style="background-image:url(images/background/8.jpg);">
         <div class="auto-container">
             <div class="inner-container clearfix">
-                <h1>Productos</h1>
+                <h1>PROVEEDORES</h1>
                 <ul class="bread-crumb clearfix">
                     <li><?= $this->Html->link('Principal','/')?></li>
-                    <li>Productos</li>
+                    <li>Proveedores</li>
                 </ul>
             </div>
         </div>
     </section>
     <!--End Page Title-->
 
-    <!--Sidebar Page Container-->
-    <div class="sidebar-page-container">
+    <!-- Services Section -->
+    <section class="services-page-section">
         <div class="auto-container">
             <div class="row clearfix">
-
-                <!--content side-->
-                <div class="content-side col-lg-9 col-md-12 col-sm-12">
-                    <div class="shop-upper-box clearfix">
-                        <div class="items-label pull-left">Showing 1-7 of 84 results</div>
-                        <div class="sort-by pull-right">
-                            <select class="custom-select-box">
-                                <option>Default Sorting</option>
-                                <option>Price: Lowest First</option>
-                                <option>Price: Highest First</option>
-                                <option>Ascending</option>
-                                <option>Descending</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="row clearfix">
-                        <!-- Shop item -->
-                        <?php foreach ($products as $product): ?>
-                            <div class="shop-item col-lg-4 col-md-6 col-sm-12">
-                                <div class="inner-box">
-                                    <div class="image">
-                                        <img src="home/images/resource/products/products.jpg" alt="">
-                                        <div class="overlay-box">
-                                            <div class="icon-box">
-                                                <?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-eye']).'Ver ',['action' => 'view', $product->id],['class' => 'cart-btn', 'escape' => false])?>
-                                                <!--<a href="cart.html" class="cart-btn"><i class="fa fa-shopping-cart"></i> Add To Cart</a>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="lower-content">
-                                        <h3><?= $this->Html->link(h($product->name), ['action' => 'view', $product->id]) ?></h3>
-                                        <span class="price"><?= $this->Number->format($product->price) ?></span>
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
-                                        </div>
-                                    </div>
-                                </div>
+                <!-- Service Block -->
+                
+                <?php foreach ($providers as $provider): ?>
+                    <!-- Service Block -->
+                    <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <figure><img src="home/images/resource/providers.jpg" alt=""></figure>
+                                <div class="title"><h4><?= h($provider->name) ?></h4></div>
                             </div>
-                        <?php endforeach; ?>
-                     
-                    </div>
-
-                    <!-- Styled Pagination -->
-                    <div class="styled-pagination text-center clearfix">
-                        <ul class="clearfix">
-                            <li><a href="#" class="active">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a class="next" href="#"><span class="fa fa-angle-right"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!--Sidebar Side-->
-                <div class="sidebar-side col-lg-3 col-md-4 col-sm-12">
-                    <aside class="sidebar default-sidebar">
-
-                        <!--search box-->
-                        <div class="sidebar-widget search-box">
-                            <form method="post" action="blog.html">
-                                <div class="form-group">
-                                    <input type="search" name="search-field" value="" placeholder="Search Product" required="">
-                                    <button type="submit"><span class="icon fa fa-search"></span></button>
+                            <div class="caption-box">
+                                <div class="title-box">
+                                    <span class="icon flaticon-pistons"></span>
+                                    <h4><?= $this->Html->link(h($provider->name), ['action' => 'view', $provider->id]) ?></h4>
                                 </div>
-                            </form>
-                        </div>
-
-                        <!-- Categories -->
-                        <div class="sidebar-widget categories">
-                            <div class="sidebar-title"><h2>Categorias</h2></div>
-                            <ul class="category-list">
-                                <li><?= $this->Html->link('Todos los productos', ['action' => 'index']) ?></li>
-                                <?php foreach ($categories as $category): ?>
-                                    <li><?= $this->Html->link(h($category->name), ['controller'=>'categories','action' => 'view', $category->id]) ?></li>
-                                <?php endforeach; ?>
-                                <!--<li><a href="#">Cooling Kit  <span>12</span></a></li>-->
-                            </ul>
-                        </div>
-
-                        <!--Price Filter Widget-->
-                        <div class="sidebar-widget price-filter-widget">
-                            <div class="sidebar-title"><h2>Filter by Price</h2></div>
-                            <div class="widget-content">
-                                <div class="range-slider-one clearfix">
-                                    <div class="price-range-slider"></div>
-                                    <div class="clearfix">
-                                        <div class="pull-left">
-                                            <a href="#" class="theme-btn btn-style-two">Filtter</a>
-                                        </div>
-                                        <div class="pull-right">
-                                            <div class="title">Price:</div>
-                                            <div class="input"><input type="text" class="property-amount" name="field-name" readonly></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p>Empresa distribuidora de productos para la salud</p>
+                                <?= $this->Html->link('Ver Mas'.$this->Html->tag('i', '', ['class' => 'fa fa-angle-double-right']),['action' => 'view', $provider->id],['class' => 'read-more', 'escape' => false])?>
                             </div>
                         </div>
-                    </aside>
-                </div>
+                    </div>
+
+                        
+                    
+                <?php endforeach; ?>
+
+            </div>
+
+            <!-- Styled Pagination -->
+            <div class="styled-pagination text-center clearfix">
+                <ul class="clearfix">
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a class="next" href="#"><span class="fa fa-angle-right"></span></a></li>
+                </ul>
             </div>
         </div>
-    </div>
+    </section>
+    <!-- End Services Section -->
+
+
+    <!--Clients Section-->
+    <section class="clients-section alternate">
+        <div class="auto-container">
+            <div class="sponsors-outer">
+                <!--Sponsors Carousel-->
+                <ul class="sponsors-carousel owl-carousel owl-theme">
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/1.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/2.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/3.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/4.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/5.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/1.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/2.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/3.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/4.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/5.png" alt=""></a></figure></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--End Clients Section-->
+
     <!-- Main Footer -->
-    <footer class="main-footer alternate" style="background-image: url(images/background/4.jpg);">
+    <footer class="main-footer" style="background-image: url(images/background/4.jpg);">
         <div class="auto-container">
 
             <!--Widgets Section-->
@@ -407,7 +366,7 @@
          <div class="footer-bottom">
             <div class="auto-container">
                 <div class="copyright-text">
-                    <p>Copyrights © 2019 All Rights Reserved. by <a href="#"> Expert Themes</a></p>
+                    <p>Copyrights © 2019 All Rights Reserved.</p>
                 </div>
             </div>
         </div>

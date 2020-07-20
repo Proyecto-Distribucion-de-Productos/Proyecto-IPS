@@ -1,9 +1,3 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\Provider[]|\Cake\Collection\CollectionInterface $providers
- */
-?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -13,6 +7,9 @@
 
 <!-- Stylesheets -->
 <link href="home/css/bootstrap.css" rel="stylesheet">
+<link href="home/plugins/revolution/css/settings.css" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
+<link href="home/plugins/revolution/css/layers.css" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+<link href="home/plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
 <link href="home/css/style.css" rel="stylesheet">
 <link href="home/css/responsive.css" rel="stylesheet">
 <!--Color Switcher Mockup-->
@@ -42,9 +39,9 @@
     <header class="main-header header-style-four">
 
         <!--Header Top-->
-    	<div class="header-top">
-        	<div class="auto-container">
-            	<div class="inner-container clearfix">
+        <div class="header-top">
+            <div class="auto-container">
+                <div class="inner-container clearfix">
                     <div class="top-left">
                         <ul class="clearfix">
                             <li>Realice consultas sobre los proveedores y productos disponibles<i class="fa fa-long-arrow-alt-right"></i></li>
@@ -92,24 +89,24 @@
                     </div>
                     <!--Nav Outer-->
                     <div class="nav-outer clearfix">
-                      <nav class="main-menu navbar-expand-md">
-                        <div class="navbar-header">
-                          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                          </button>
-                        </div>
+                        <nav class="main-menu navbar-expand-md">
+                            <div class="navbar-header">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            </div>
 
-                          <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
-                              <ul class="navigation clearfix">
-                                <li class="dropdown"><?= $this->Html->link('Principal','/')?></li>
-                                <li class="current dropdown"><?= $this->Html->link('Proveedores','/providers')?></li>
-                                <li class="dropdown"><?= $this->Html->link('Visualizaciones','/visualizations')?></li>
-                                <li class="dropdown"><?= $this->Html->link('Productos','/products')?></li>
-                                <li class="dropdown"><?= $this->Html->link('Ubicaciones','/ubications')?></li>
-                              </ul>
-                          </div>
+                            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                                <ul class="navigation clearfix">
+                                    <li class="dropdown"><?= $this->Html->link('Principal','/')?></li>
+                                    <li class="current dropdown"><?= $this->Html->link('Proveedores','/providers')?></li>
+                                    <li class="dropdown"><?= $this->Html->link('Visualizaciones','/visualizations')?></li>
+                                    <li class="dropdown"><?= $this->Html->link('Productos','/products')?></li>
+                                    <li class="dropdown"><?= $this->Html->link('Ubicaciones','/ubications')?></li>
+                                </ul>
+                            </div>
                         </nav>
                         <!-- Main Menu End-->
 
@@ -140,15 +137,15 @@
 
         <!--Sticky Header-->
         <div class="sticky-header">
-        	<div class="auto-container clearfix">
+            <div class="auto-container clearfix">
                 <!--Logo-->
-            	<div class="logo pull-left">
-                	<a href="index.html" class="img-responsive"><img src="images/logo-small.png" alt="" title=""></a>
+                <div class="logo pull-left">
+                    <a href="index.html" class="img-responsive"><img src="images/logo-small.png" alt="" title=""></a>
                 </div>
 
                 <!--Right Col-->
                 <div class="right-col pull-right">
-                	<!-- Main Menu -->
+                    <!-- Main Menu -->
                     <nav class="main-menu  navbar-expand-md">
                         <div class="navbar-header">
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
@@ -166,7 +163,8 @@
                                 <li class="dropdown"><?= $this->Html->link('Ubicaciones','/ubications')?></li>
                             </ul>
                         </div>
-                    </nav><!-- Main Menu End-->
+                    </nav>
+                    <!-- Main Menu End-->
                 </div>
 
             </div>
@@ -189,72 +187,80 @@
     </section>
     <!--End Page Title-->
 
-    <!-- Services Section -->
-    <section class="services-page-section">
+    <!-- Testimonials And BLogs -->
+    <section class="sidebar-page-container">
         <div class="auto-container">
             <div class="row clearfix">
-                <!-- Service Block -->
-                <?php foreach ($providers as $provider): ?>
-                    <!-- Service Block -->
-                    <div class="service-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure><img src="home/images/resource/providers.jpg" alt=""></figure>
-                                <div class="title"><h4><?= h($provider->name) ?></h4></div>
-                            </div>
-                            <div class="caption-box">
-                                <div class="title-box">
-                                    <span class="icon flaticon-pistons"></span>
-                                    <h4><?= $this->Html->link(h($provider->name), ['action' => 'view', $provider->id]) ?></h4>
+                <!--Sidebar Side-->
+                <div class="sidebar-side col-lg-3 col-md-4 col-sm-12">
+                    <aside class="sidebar default-sidebar">
+                        <!--search box-->
+                        <div class="sidebar-widget search-box">
+                            <form method="post" action="blog.html">
+                                <div class="form-group">
+                                    <input type="search" name="search-field" value="" placeholder="Buscar Proveedor" required="">
+                                    <button type="submit"><span class="icon fa fa-search"></span></button>
                                 </div>
-                                <p>Empresa distribuidora de productos para la salud</p>
-                                <?= $this->Html->link('Ver Mas'.$this->Html->tag('i', '', ['class' => 'fa fa-angle-double-right']),['action' => 'view', $provider->id],['class' => 'read-more', 'escape' => false])?>
-                            </div>
+                            </form>
                         </div>
+
+                        <!-- Categories -->
+                        <div class="sidebar-widget categories">
+                            <div class="sidebar-title"><h2>Categorias</h2></div>
+                            <ul class="category-list">
+                                <li><a href="/public_html/proyecto1/products">Todos los productos</a></li>
+                                <li><a href="/public_html/proyecto1/categories/view/1">Gaseosas</a></li>
+                                <li><a href="/public_html/proyecto1/categories/view/2">Energizantes</a></li>
+                                <li><a href="/public_html/proyecto1/categories/view/3">EPP</a></li>
+                                <li><a href="/public_html/proyecto1/categories/view/4">Medicamentos</a></li>
+                                <li><a href="/public_html/proyecto1/categories/view/5">Componentes</a></li>
+                            <!--<li><a href="#">Cooling Kit  <span>12</span></a></li>-->
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+
+                <!-- Blog Column -->
+                <div class="blogs-column col-lg-9 col-md-8 col-sm-12">
+                    <div class="row clearfix">
+                        <?php foreach ($providers as $provider): ?>
+                            <!-- News Block -->
+                            <div class="news-block-two col-lg-6 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure><img src="home/images/resource/provider.jpg" alt=""></figure>
+                                        <a href="home/images/resource/provider.jpg" class="lightbox-image"><i class="plus-icon"></i></a>
+                                    </div>
+                                    <div class="lower-content">
+                                        <div class="content">
+                                            <div class="date-and-like">
+                                                <div class="like"><i class="fa fa-map-marker" aria-hidden="true"></i><span><?= $provider->department->name;?></span></div>
+                                            </div>
+                                            <h3><?= $this->Html->link(h($provider->name), ['action' => 'view', $provider->id]) ?></h3>
+                                            <p>Empresa distribuidora de productos para la salud.</p>
+                                            <?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-angle-double-right']).'Ver Mas',['action' => 'view', $provider->id],['class' => 'read-more', 'escape' => false])?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
-
-                        
-                    
-                <?php endforeach; ?>
-
-            </div>
-
-            <!-- Styled Pagination -->
-            <div class="styled-pagination text-center clearfix">
-                <ul class="clearfix">
-                    <li><a href="#" class="active">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a class="next" href="#"><span class="fa fa-angle-right"></span></a></li>
-                </ul>
+                    <br>
+                    <!-- Styled Pagination -->
+                    <div class="styled-pagination text-center clearfix">
+                        <ul class="clearfix">
+                            <li><a href="#" class="active">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a class="next" href="#"><span class="fa fa-angle-right"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <!-- End Services Section -->
-
-
-    <!--Clients Section-->
-    <section class="clients-section alternate">
-        <div class="auto-container">
-            <div class="sponsors-outer">
-                <!--Sponsors Carousel-->
-                <ul class="sponsors-carousel owl-carousel owl-theme">
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/1.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/2.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/3.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/4.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/5.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/1.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/2.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/3.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/4.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/5.png" alt=""></a></figure></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!--End Clients Section-->
+    <!-- End Testimonials And BLogs -->
 
     <!-- Main Footer -->
     <footer class="main-footer" style="background-image: url(images/background/4.jpg);">
@@ -264,7 +270,7 @@
             <div class="widgets-section">
                 <div class="row clearfix">
                     <!--Footer Column-->
-                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-column col-md-3 col-sm-6 col-xs-12">
                         <div class="footer-widget about-widget">
                             <div class="footer-logo">
                                 <figure>
@@ -286,7 +292,7 @@
                     </div>
 
                     <!--Footer Column-->
-                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-column col-md-3 col-sm-6 col-xs-12">
                         <div class="footer-widget services-widget">
                             <h2 class="widget-title">Our Services</h2>
                             <div class="widget-content">
@@ -302,7 +308,7 @@
                     </div>
 
                     <!--Footer Column-->
-                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-column col-md-3 col-sm-6 col-xs-12">
                         <!--Footer Column-->
                         <div class="footer-widget gallery-widget">
                             <h2 class="widget-title">Instragram</h2>
@@ -339,7 +345,7 @@
 
 
                     <!--Footer Column-->
-                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-column col-md-3 col-sm-6 col-xs-12">
                         <!--Footer Column-->
                         <div class="footer-widget news-widget">
                             <h2 class="widget-title">Latest News</h2>
@@ -381,6 +387,20 @@
 <script src="home/js/jquery.js"></script>
 <script src="home/js/popper.min.js"></script>
 <script src="home/js/bootstrap.min.js"></script>
+<!--Revolution Slider-->
+<script src="home/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="home/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="home/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="home/plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="home/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="home/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="home/plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="home/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="home/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="home/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="home/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script src="home/js/main-slider-script.js"></script>
+<!--End Revolution Slider-->
 <script src="home/js/jquery-ui.js"></script>
 <script src="home/js/jquery.fancybox.js"></script>
 <script src="home/js/owl.js"></script>
@@ -388,6 +408,10 @@
 <script src="home/js/wow.js"></script>
 <script src="home/js/mixitup.js"></script>
 <script src="home/js/script.js"></script>
+<!--Google Map APi Key-->
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyBKS14AnP3HCIVlUpPKtGp7CbYuMtcXE2o"></script>
+<script src="home/js/map-script.js"></script>
+<!--End Google Map APi-->
 <script src="home/js/color-settings.js"></script>
 </body>
 </html>

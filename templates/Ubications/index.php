@@ -180,10 +180,10 @@
     <section class="page-title" style="background-image:url(images/background/8.jpg);">
         <div class="auto-container">
             <div class="inner-container clearfix">
-                <h1>Project detail</h1>
+                <h1>Ubicaciones</h1>
                 <ul class="bread-crumb clearfix">
-                    <li><a href="index.html">Home</a></li>
-                    <li>Project detail</li>
+                <li><?= $this->Html->link('Principal','/')?></li>
+                    <li>Ubicaciones</li>
                 </ul>
             </div>
         </div>
@@ -193,39 +193,12 @@
     <!-- Gallery Section -->
     <section class="project-detail">
         <div class="auto-container">
-            <!-- Upper box -->
-            <div class="upper-box">
-                <div class="row clearfix">
-                    <div class="image-column col-lg-8 col-md-12 col-sm-12">
-                       <div class="image-box"><a href="images/resource/project-detail.jpg" class="lightbox-image"><img src="images/resource/project-detail.jpg" alt=""></a></div>
-                    </div>
-                    <div class="price-column col-lg-4 col-md-12 col-sm-12">
-                        <h2>At a Glance</h2>
-                        <ul class="price-list">
-                            <li>Axle <span>$149.95 Each</span></li>
-                            <li>Front Brakes Repair <span>$49.95</span></li>
-                            <li>Rear Brakes Repair <span>$59.95</span></li>
-                            <li>Rear Brake Shoes <span>$65.25</span></li>
-                            <li>Starters / Alternators <span>$225.95 Plus Parts</span></li>
-                            <li>Blelts / Hoses <span> $65.25</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Lower Content -->
-            <div class="lower-content">
-                <h2>Brief Description</h2>
-                <p>Tremendous opportunities are available at our reputable independent, family owned and operated auto body shop. We are looking for remark able teammates to fulfill our growing staffing needs. 100% customer satisfaction and quality repairs has always been a staple in our business model and we are expanding to help serve our loyal and growing customer base. We are looking for experienced, motivated employees that are willing to work in a team-oriented repair process/model</p>
-                <p>We offer a full range of garage services to vehicle owners in Tucson. We can help you with everything from an oil change to an engine change Whether you drive a small car or medium sized truck or SUV, our mechanics strive to ensure that your vehicle will be performing at its best before leaving our car shop</p>
-            </div>
-
             <!-- Two Columns -->
             <div class="two-column">
-                <h3>Scope of wrok</h3>
+                <h2>Mapa de Ubicacion de los Proveedores y Productos que ofrece</h2>
                 <div class="row clearfix">
                     <div class="info-column col-lg-6 col-md-12 col-sm-12">
-                        <p>We offer full range of garage services to vehicle owners in Tucson Our professionals know how to handle a wide range of car services We can handle any problem on both foreign.</p>
+                        <p>En este mapa se podra ver ....</p>
                         <ul class="list-style-one">
                             <li>We make auto repair and maintenance more convenient for you</li>
                             <li>We are a friendly, helpful and professional group of people</li>
@@ -235,52 +208,33 @@
                         </ul>
                     </div>
                     <div class="image-column col-lg-6 col-md-12 col-sm-12">
-                        <a href="images/resource/image-1.jpg" class="lightbox-image"><img src="images/resource/image-1.jpg" alt=""></a>
+                        <a href="home/images/resource/image-1.jpg" class="lightbox-image"><img src="home/images/resource/image-1.jpg" alt=""></a>
                     </div>
                 </div>
             </div>
-
-            <!-- Project Info -->
-             <div class="project-info">
+            <!-- Two Columns -->
+            <div class="two-column">
+                <h2>Cantidad de Productos según tipo y Ubicación</h2>
                 <div class="row clearfix">
-                    <div class="column col-lg-6 col-md-6 col-sm-12">
-                        <div class="info"><span class="icon fa fa-user"></span><strong>Client :</strong> TransGas</div>
+                    <div class="info-column col-lg-6 col-md-12 col-sm-12">
+                        <p>En este mapa se podra ver ....</p>
+                        <ul class="list-style-one">
+                            <li>We make auto repair and maintenance more convenient for you</li>
+                            <li>We are a friendly, helpful and professional group of people</li>
+                            <li>Our professionals know how to handle a wide range of car services</li>
+                            <li>We get the job done right — the first time</li>
+                            <li>Same day service for most repairs and maintenance</li>
+                        </ul>
                     </div>
-
-                    <div class="column col-lg-6 col-md-6 col-sm-12">
-                        <div class="info"><span class="icon fa fa-globe"></span><strong>Investors Website :</strong> <a href="index.html">www.clickhere.com</a></div>
-                    </div>
-
-                    <div class="column col-lg-6 col-md-6 col-sm-12">
-                        <div class="info"><span class="icon fa fa-calendar"></span><strong>Construction Date :</strong> October 2015</div>
-                    </div>
-
-                    <div class="column col-lg-6 col-md-6 col-sm-12">
-                        <div class="social-icons">
-                            <span class="follow">Share :</span>
-                            <a href="#"><span class="fab fa-facebook-f"></span></a>
-                            <a href="#"><span class="fab fa-twitter"></span></a>
-                            <a href="#"><span class="fab fa-google-plus-g"></span></a>
-                            <a href="#"><span class="fab fa-pinterest"></span></a>
-                            <a href="#"><span class="fab fa-dribbble"></span></a>
-                        </div>
+                    <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                        <a href="home/images/resource/image-1.jpg" class="lightbox-image"><img src="home/images/resource/image-1.jpg" alt=""></a>
                     </div>
                 </div>
             </div>
+            
         </div>
     </section>
     <!-- End Gallery section -->
-
-    <!-- Subscribe Section -->
-    <section class="subscribe-section">
-        <div class="auto-container">
-            <div class="inner-container clearfix">
-                <h3>Check out our repair service for your car and get a free clean</h3>
-                <a href="#" class="call-btn">Order Now</a>
-            </div>
-        </div>
-    </section>
-    <!-- End Subscribe Section -->
 
     <!-- Main Footer -->
     <footer class="main-footer alternate" style="background-image: url(images/background/4.jpg);">
@@ -391,7 +345,7 @@
          <div class="footer-bottom">
             <div class="auto-container">
                 <div class="copyright-text">
-                    <p>Copyrights © 2019 All Rights Reserved. by <a href="#"> Expert Themes</a></p>
+                    <p>Copyrights © 2019 All Rights Reserved.</p>
                 </div>
             </div>
         </div>

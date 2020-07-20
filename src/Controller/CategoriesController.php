@@ -19,7 +19,7 @@ class CategoriesController extends AppController
     public function initialize(): void
     {
         parent::initialize();
-        $this->Auth->allow(['index']); 
+        $this->Auth->allow(['index',"view"]); 
 
     }
     public function index()
@@ -48,7 +48,9 @@ class CategoriesController extends AppController
             'contain' => ['Products'],
         ]);
 
-        $this->set(compact('category'));
+        $categories = $this->Categories->find('all', ['limit' => 200]);
+
+        $this->set(compact('category','categories'));
     }
 
     /**
