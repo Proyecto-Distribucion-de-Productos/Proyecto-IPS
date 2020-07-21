@@ -4,6 +4,7 @@
  * @var \App\Model\Entity\Product[]|\Cake\Collection\CollectionInterface $products
  */
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,7 +15,6 @@
 <?= $this->Html->css('../home/css/bootstrap.css',['rel'=>'stylesheet']);?>
 <?= $this->Html->css('../home/css/style.css',['rel'=>'stylesheet']);?>
 <?= $this->Html->css('../home/css/responsive.css',['rel'=>'stylesheet']);?>
-
 <!--Color Switcher Mockup-->
 <?= $this->Html->css('../home/css/color-switcher-design.css',['rel'=>'stylesheet']);?>
 
@@ -48,7 +48,7 @@
                     <div class="top-left">
                         <ul class="clearfix">
                             <li>Realice consultas sobre los proveedores y productos disponibles<i class="fa fa-long-arrow-alt-right"></i></li>
-                        </ul> 
+                        </ul>
                     </div>
                     <div class="top-right clearfix">
                         <!-- Botones ingresar y registrarse-->
@@ -100,7 +100,6 @@
 									<span class="icon-bar"></span>
 								</button>
 							</div>
-
 							<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
                                     <li class="dropdown"><?= $this->Html->link('Principal','/')?></li>
@@ -110,7 +109,6 @@
                                     <li class="dropdown"><?= $this->Html->link('Ubicaciones','/ubications')?></li>
                                 </ul>
                             </div>
-
                         </nav>
                         <!-- Main Menu End-->
 
@@ -158,7 +156,6 @@
 								<span class="icon-bar"></span>
 							</button>
                         </div>
-
                         <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
                             <ul class="navigation clearfix">
                                 <li class="dropdown"><?= $this->Html->link('Principal','/')?></li>
@@ -183,82 +180,120 @@
             <div class="inner-container clearfix">
                 <h1>Products</h1>
                 <ul class="bread-crumb clearfix">
-                    <li><?= $this->Html->link('Principal','/')?></li>
-                    <li>Productos</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li>Products</li>
                 </ul>
             </div>
         </div>
     </section>
     <!--End Page Title-->
 
-    <!--Sidebar Page Container-->
+    <!--Shop Single-->
     <div class="sidebar-page-container">
         <div class="auto-container">
             <div class="row clearfix">
+                <div class="content-column col-lg-9 col-md-12 col-sm-12">
+                    <div class="product-details">
 
-                <!--content side-->
-                <div class="content-side col-lg-9 col-md-12 col-sm-12">
-                    <div class="shop-upper-box clearfix">
-                        <div class="items-label pull-left">Showing 1-7 of 84 results</div>
-                        <div class="sort-by pull-right">
-                            <select class="custom-select-box">
-                                <option>Default Sorting</option>
-                                <option>Price: Lowest First</option>
-                                <option>Price: Highest First</option>
-                                <option>Ascending</option>
-                                <option>Descending</option>
-                            </select>
-                        </div>
-                    </div>
 
-                    <div class="row clearfix">
-                        <!-- Shop item -->
-                        <?php foreach ($products as $product): ?>
-                            <div class="shop-item col-lg-4 col-md-6 col-sm-12">
-                                <div class="inner-box">
-                                    <div class="image">
-                                        <img src="home/images/resource/products/products.jpg" alt="">
-                                        <div class="overlay-box">
-                                            <div class="icon-box">
-                                                <?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-eye']).'Ver ',['action' => 'view', $product->id],['class' => 'cart-btn', 'escape' => false])?>
-                                                <!--<a href="cart.html" class="cart-btn"><i class="fa fa-shopping-cart"></i> Add To Cart</a>-->
+
+
+                        <!--Basic Details-->
+                        <div class="basic-details">
+                            <div class="row clearfix">
+                                <div class="image-column col-lg-5 col-md-12 col-sm-12">
+                                    <figure class="image-box"><a href="../../home/images/resource/products/product-single.jpg" class="lightbox-image" title="Image Caption Here"><img src="../../home/images/resource/products/product-single.jpg" alt=""></a></figure>
+                                </div>
+                                <div class="info-column col-lg-7 col-md-12 col-sm-12">
+                                    <div class="inner-column">
+                                        <div class="details-header">
+                                            <h4><?= h($product->name) ?></h4>
+                                            <div class="item-price">S/<?= $this->Number->format($product->price) ?></div>
+                                            <div class="rating">
+                                                <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
                                             </div>
+                                            <!--<span class="review">( 3 Customer Reviews )</span>-->
                                         </div>
-                                    </div>
-                                    <div class="lower-content">
-                                        <h3><?= $this->Html->link(h($product->name), ['action' => 'view', $product->id]) ?></h3>
-                                        <span class="price"><?= $this->Number->format($product->price) ?></span>
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+                                        <div class="text">Leverage agile frameworks to provide a robust synopsis for high level over views. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</div>
+                                        <div class="clearfix">
+                                            <button type="button" class="theme-btn btn-style-two">Cantidad: 26</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        <?php endforeach; ?>
-                     
-                    </div>
+                        </div>
+                        <!--Basic Details-->
+                        <!--Product Info Tabs-->
+                        <div class="product-info-tabs">
 
-                    <!-- Styled Pagination -->
-                    <div class="styled-pagination text-center clearfix">
-                        <ul class="clearfix">
-                            <li><a href="#" class="active">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a class="next" href="#"><span class="fa fa-angle-right"></span></a></li>
-                        </ul>
+                            <!--Product Tabs-->
+                            <div class="prod-tabs tabs-box" id="product-tabs">
+
+                                <!--Tab Btns-->
+                                <ul class="tab-btns tab-buttons clearfix">
+                                    <li data-tab="#prod-description" class="tab-btn active-btn">DESCRIPITON</li>
+                                </ul>
+
+                                <!--Tabs Content-->
+                                <div class="tabs-container tabs-content">
+
+                                    <!--Tab / Active Tab-->
+                                    <div class="tab active-tab" id="prod-description">
+                                        <?php if (!empty($product->purchases)) : ?>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th><?= __('#') ?></th>
+                                                        <th><?= __('Provider Id') ?></th>
+                                                        <th><?= __('Date') ?></th>
+                                                        <th><?= __('User Id') ?></th>
+                                                        <th class="actions"><?= __('Actions') ?></th>
+                                                    </tr>
+                                                </thead>
+                                                <?php foreach ($product->purchases as $purchases) : ?>
+                                                <tr>
+                                                    <td><?= h($purchases->id) ?></td>
+                                                    <td><?= h($purchases->provider_id) ?></td>
+                                                    <td><?= h($purchases->date) ?></td>
+                                                    <td><?= h($purchases->user_id) ?></td>
+                                                    <td class="actions">
+                                                        <?= $this->Html->link('', ['controller' => 'Purchases', 'action' => 'view', $purchases->id], ['class' => 'btn btn-info fa fa-eye']) ?> 
+                                                    </td>
+                                                </tr>
+                                                <?php endforeach; ?>
+                                            </table>
+                                        </div>
+                                        <?php endif; ?>
+
+                                        <!--<div class="content">
+                                            <p>One of the best hardware options available to the mining community, this product is quiet and efficient. It’s a true powerhouse, offering excellent performance with a reasonable price tag and comparatively low power consumption. If you need a reliable option for your mining rig, look no further. Can be set up to mine a number of currencies (bitcoin, bitcoin gold, monero, etc.), although take care to configure it properly as different cryptocurrencies require different settings.</p>
+                                        </div>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End product info tabs -->
+
+
+
+
+
+
+
+
+
                     </div>
                 </div>
 
                 <!--Sidebar Side-->
-                <div class="sidebar-side col-lg-3 col-md-4 col-sm-12">
+                <div class="sidebar-side col-lg-3 col-md-12 col-sm-12">
                     <aside class="sidebar default-sidebar">
 
                         <!--search box-->
                         <div class="sidebar-widget search-box">
                             <form method="post" action="blog.html">
                                 <div class="form-group">
-                                    <input type="search" name="search-field" value="" placeholder="Search Product" required="">
+                                    <input type="search" name="search-field" value="" placeholder="Buscar Producto" required="">
                                     <button type="submit"><span class="icon fa fa-search"></span></button>
                                 </div>
                             </form>
@@ -266,39 +301,21 @@
 
                         <!-- Categories -->
                         <div class="sidebar-widget categories">
-                            <div class="sidebar-title"><h2>Categorias</h2></div>
+                            <div class="sidebar-title"><h2>Categories</h2></div>
                             <ul class="category-list">
-                                <li><?= $this->Html->link('Todos los productos', ['action' => 'index']) ?></li>
-                                <?php foreach ($categories as $category): ?>
-                                    <li><?= $this->Html->link(h($category->name), ['controller'=>'categories','action' => 'view', $category->id]) ?></li>
-                                <?php endforeach; ?>
-                                <!--<li><a href="#">Cooling Kit  <span>12</span></a></li>-->
+                                <li><a href="#">Cooling Kit  <span>12</span></a></li>
+                                <li><a href="#">Engine Kit   <span>15</span></a></li>
+                                <li><a href="#">Car Engine   <span>10</span></a></li>
+                                <li><a href="#">Single Parts <span>08</span></a></li>
+                                <li><a href="#">Break Kit    <span>05</span></a></li>
                             </ul>
-                        </div>
-
-                        <!--Price Filter Widget-->
-                        <div class="sidebar-widget price-filter-widget">
-                            <div class="sidebar-title"><h2>Filter by Price</h2></div>
-                            <div class="widget-content">
-                                <div class="range-slider-one clearfix">
-                                    <div class="price-range-slider"></div>
-                                    <div class="clearfix">
-                                        <div class="pull-left">
-                                            <a href="#" class="theme-btn btn-style-two">Filtter</a>
-                                        </div>
-                                        <div class="pull-right">
-                                            <div class="title">Price:</div>
-                                            <div class="input"><input type="text" class="property-amount" name="field-name" readonly></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </aside>
                 </div>
             </div>
         </div>
     </div>
+    <!--End Shop Single-->
     <!-- Main Footer -->
     <footer class="main-footer alternate" style="background-image: url(images/background/4.jpg);">
         <div class="auto-container">
@@ -426,6 +443,7 @@
 <?= $this->Html->script('../home/js/bootstrap.min.js');?>
 <?= $this->Html->script('../home/js/jquery-ui.js');?>
 <?= $this->Html->script('../home/js/jquery.fancybox.js');?>
+<?= $this->Html->script('../home/js/jquery.bootstrap-touchspin.js');?>
 <?= $this->Html->script('../home/js/owl.js');?>
 <?= $this->Html->script('../home/js/appear.js');?>
 <?= $this->Html->script('../home/js/wow.js');?>
