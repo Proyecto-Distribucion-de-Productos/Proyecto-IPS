@@ -204,9 +204,9 @@ $this->disableAutoLayout();
             <div class="rev_slider fullwidthabanner" id="rev_slider_two" data-version="5.4.1">
                 <ul>
                     <!-- Slide 1 -->
-                    <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1687" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="home/images/main-slider/image-6.jpg" data-title="Slide Title" data-transition="parallaxvertical">
+                    <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1687" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="home/images/main-slider/imagen-2IPS.jpg" data-title="Slide Title" data-transition="parallaxvertical">
 
-                        <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="home/images/main-slider/image-1.jpg">
+                        <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="home/images/main-slider/imagen-2IPS.jpg">
 
                         <div class="tp-caption"
                         data-paddingbottom="[0,0,0,0]"
@@ -223,7 +223,7 @@ $this->disableAutoLayout();
                         data-x="['left','left','left','left']"
                         data-y="['middle','middle','middle','middle']"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                            <h4>Your Vehicle is</h4>
+                            <h4>Los datos están</h4>
                         </div>
 
                         <div class="tp-caption"
@@ -241,7 +241,7 @@ $this->disableAutoLayout();
                         data-x="['left','left','left','left']"
                         data-y="['middle','middle','middle','middle']"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                            <h2>Save in our Hands</h2>
+                            <h2>Seguros en nuestras manos</h2>
                         </div>
 
                         <div class="tp-caption"
@@ -259,7 +259,7 @@ $this->disableAutoLayout();
                         data-x="['left','left','left','left']"
                         data-y="['middle','middle','middle','middle']"
                         data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                            <div class="text">We specialize in complete auto care at a low cost and in a <br> professional manner.</div>
+                            <div class="text">Nosotros nos especializamos en tener la data <br> siempre actualizada.</div>
                         </div>
 
                         <div class="tp-caption tp-resizeme"
@@ -282,9 +282,9 @@ $this->disableAutoLayout();
                     </li>
 
                     <!-- Slide 2 -->
-                    <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1688" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="home/images/main-slider/image-6.jpg" data-title="Slide Title" data-transition="parallaxvertical">
+                    <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1688" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="home/images/main-slider/imagen-1IPS.jpg" data-title="Slide Title" data-transition="parallaxvertical">
 
-                        <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="home/images/main-slider/image-2.jpg">
+                        <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="home/images/main-slider/imagen-1IPS.jpg">
 
                         <div class="tp-caption"
                         data-paddingbottom="[0,0,0,0]"
@@ -302,7 +302,7 @@ $this->disableAutoLayout();
                         data-x="['center','center','center','center']"
                         data-y="['middle','middle','middle','middle']"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                            <h4>The Best Car Repair and</h4>
+                            
                         </div>
 
                         <div class="tp-caption"
@@ -321,7 +321,7 @@ $this->disableAutoLayout();
                         data-x="['center','center','center','center']"
                         data-y="['middle','middle','middle','middle']"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                            <h2>Maintenance Auto Service</h2>
+                            <h2> Informacion De los Proveedores contratados por el estado peruano</h2>
                         </div>
 
                         <div class="tp-caption"
@@ -340,7 +340,7 @@ $this->disableAutoLayout();
                         data-x="['center','center','center','center']"
                         data-y="['middle','middle','middle','middle']"
                         data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                            <div class="text">We specialize in complete auto care at a low cost and in a <br> professional manner.</div>
+                            
                         </div>
 
                         <div class="tp-caption tp-resizeme"
@@ -364,9 +364,9 @@ $this->disableAutoLayout();
                     </li>
 
                     <!-- Slide 3 -->
-                    <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1689" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="home/images/main-slider/image-5.jpg" data-title="Slide Title" data-transition="parallaxvertical">
+                    <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1689" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="home/images/main-slider/imagen-10IPS.jpg" data-title="Slide Title" data-transition="parallaxvertical">
 
-                        <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="home/images/main-slider/image-3.jpg">
+                        <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="home/images/main-slider/imagen-10IPS.jpg">
 
                         <div class="tp-caption"
                         data-paddingbottom="[0,0,0,0]"
@@ -383,7 +383,7 @@ $this->disableAutoLayout();
                         data-x="['right','left','left','left']"
                         data-y="['middle','middle','middle','middle']"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                            <h4>The Best Car Repair and</h4>
+                            <h4>Data Acualizada de los Productos para la</h4>
                         </div>
 
                         <div class="tp-caption"
@@ -401,7 +401,7 @@ $this->disableAutoLayout();
                         data-x="['right','left','left','left']"
                         data-y="['middle','middle','middle','middle']"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                            <h2>Maintenance Service</h2>
+                            <h2>prevención del COVID-19</h2>
                         </div>
 
                         <div class="tp-caption"
@@ -419,7 +419,7 @@ $this->disableAutoLayout();
                         data-x="['right','left','left','left']"
                         data-y="['middle','middle','middle','middle']"
                         data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                            <div class="text">We specialize in complete auto care at a low cost and in a <br> professional manner.</div>
+                            <div class="text">Utilizado en el Territorio Peruano</div>
                         </div>
 
                         <div class="tp-caption tp-resizeme"
@@ -551,108 +551,7 @@ $this->disableAutoLayout();
     
     <!-- Main Footer -->
     <footer class="main-footer" style="background-image: url(home/images/background/4.jpg);">
-        <div class="auto-container">
-
-            <!--Widgets Section-->
-            <div class="widgets-section">
-                <div class="row clearfix">
-                    <!--Footer Column-->
-                    <div class="footer-column col-md-3 col-sm-6 col-xs-12">
-                        <div class="footer-widget about-widget">
-                            <div class="footer-logo">
-                                <figure>
-                                    <a href="index.html"><img src="home/images/footer-logo.png" alt=""></a>
-                                </figure>
-                            </div>
-                            <div class="widget-content">
-                                <div class="text">How to pursue pleasure rationally thats encounter consequences that extremely painful. Nor again is there anyones who loves or pursues or ut desires obtains pain of itself, because.</div>
-                                <h4>Follow Us:</h4>
-                                <ul class="social-icon">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Footer Column-->
-                    <div class="footer-column col-md-3 col-sm-6 col-xs-12">
-                        <div class="footer-widget services-widget">
-                            <h2 class="widget-title">Our Services</h2>
-                            <div class="widget-content">
-                                <ul class="services-list">
-                                    <li><a href="#">Engine Diagnostic & Repair</a></li>
-                                    <li><a href="#">Maintanence Inspaection</a></li>
-                                    <li><a href="#">Electrical System Diagnostic</a></li>
-                                    <li><a href="#">Wheel Allignment & Installation</a></li>
-                                    <li><a href="#">Air Conditioner Service & Repair</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Footer Column-->
-                    <div class="footer-column col-md-3 col-sm-6 col-xs-12">
-                        <!--Footer Column-->
-                        <div class="footer-widget gallery-widget">
-                            <h2 class="widget-title">Instragram</h2>
-                             <!--Footer Column-->
-                            <div class="widget-content">
-                                <div class="outer clearfix">
-                                    <figure class="image">
-                                        <a href="home/images/resource/feature-1.jpg" class="lightbox-image" title="Image Title Here"><img src="home/images/resource/insta-1.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="home/images/resource/feature-2.jpg" class="lightbox-image" title="Image Title Here"><img src="home/images/resource/insta-2.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="home/images/resource/feature-3.jpg" class="lightbox-image" title="Image Title Here"><img src="home/images/resource/insta-3.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="home/images/resource/feature-4.jpg" class="lightbox-image" title="Image Title Here"><img src="home/images/resource/insta-4.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="home/images/resource/news-1.jpg" class="lightbox-image" title="Image Title Here"><img src="home/images/resource/insta-5.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="home/images/resource/news-2.jpg" class="lightbox-image" title="Image Title Here"><img src="home/images/resource/insta-6.jpg" alt=""></a>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!--Footer Column-->
-                    <div class="footer-column col-md-3 col-sm-6 col-xs-12">
-                        <!--Footer Column-->
-                        <div class="footer-widget news-widget">
-                            <h2 class="widget-title">Latest News</h2>
-                             <!--Footer Column-->
-                            <div class="widget-content">
-                                <div class="post">
-                                    <h4><a href="#">Get Usefull Car Maintanence Tips From Our Expets</a></h4>
-                                    <span class="date"><i class="far fa-calendar-check"></i>Aug 21, 2015</span>
-                                </div>
-
-                                <div class="post">
-                                    <h4><a href="#">Get Usefull Car Maintanence Tips From Our Expets</a></h4>
-                                    <span class="date"><i class="far fa-calendar-check"></i>Aug 21, 2015</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
         <!--Footer Bottom-->
          <div class="footer-bottom">
