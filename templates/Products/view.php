@@ -216,7 +216,13 @@
                                         </div>
                                         <div class="text">Leverage agile frameworks to provide a robust synopsis for high level over views. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</div>
                                         <div class="clearfix">
-                                            <button type="button" class="theme-btn btn-style-two">Cantidad: 26</button>
+                                            <?php 
+                                                $cantidad_total=0;
+                                                foreach ($product->purchases as $purchases) :
+                                                    $cantidad_total = $cantidad_total + (int)$purchases->_joinData->quantity;
+                                                endforeach; 
+                                                echo ("<button type='button' class='theme-btn btn-style-two'>Cantidad: $cantidad_total {$product->measurement->name}</button>");
+                                            ?>
                                         </div>
                                     </div>
                                 </div>
@@ -231,7 +237,7 @@
 
                                 <!--Tab Btns-->
                                 <ul class="tab-btns tab-buttons clearfix">
-                                    <li data-tab="#prod-description" class="tab-btn active-btn">DESCRIPITON</li>
+                                    <li data-tab="#prod-description" class="tab-btn active-btn">Proveedores</li>
                                 </ul>
 
                                 <!--Tabs Content-->
@@ -239,32 +245,35 @@
 
                                     <!--Tab / Active Tab-->
                                     <div class="tab active-tab" id="prod-description">
-                                        <?php if (!empty($product->purchases)) : ?>
-                                        <div class="table-responsive">
-                                            <table class="table table-bordered">
-                                                <thead>
-                                                    <tr>
-                                                        <th><?= __('#') ?></th>
-                                                        <th><?= __('Provider Id') ?></th>
-                                                        <th><?= __('Date') ?></th>
-                                                        <th><?= __('User Id') ?></th>
-                                                        <th class="actions"><?= __('Actions') ?></th>
-                                                    </tr>
-                                                </thead>
-                                                <?php foreach ($product->purchases as $purchases) : ?>
-                                                <tr>
-                                                    <td><?= h($purchases->id) ?></td>
-                                                    <td><?= h($purchases->provider_id) ?></td>
-                                                    <td><?= h($purchases->date) ?></td>
-                                                    <td><?= h($purchases->user_id) ?></td>
-                                                    <td class="actions">
-                                                        <?= $this->Html->link('', ['controller' => 'Purchases', 'action' => 'view', $purchases->id], ['class' => 'btn btn-info fa fa-eye']) ?> 
-                                                    </td>
-                                                </tr>
-                                                <?php endforeach; ?>
-                                            </table>
-                                        </div>
+                                        
+                                        <?php if (!empty($query)) : ?>
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th><?= __('#') ?></th>
+                                                            <th><?= __('Proveedor') ?></th>
+                                                            <th class="actions"><?= __('Acciones') ?></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <?php for ($i = 0; $i < count($query); $i++) : ?>
+                                                        <tr>
+                                                            <td><?= h($i) ?></td>
+                                                            <td><?= h($query[$i][2]) ?></td>
+                                                            <td class="actions">
+                                                                <?= $this->Html->link('Ver', ['controller' => 'Purchases', 'action' => 'view', $query[$i][0]], ['class' => 'btn-style-one']) ?> 
+                                                            </td>
+                                                        </tr>
+                                                    <?php endfor; ?>
+                                                </table>
+                                            
+                                            </div>
+                                        <?php else: ?>
+                                            <div class="content">
+                                                <p>No hay Proveedores Disponibles</p>
+                                            </div>
                                         <?php endif; ?>
+                                        
 
                                         <!--<div class="content">
                                             <p>One of the best hardware options available to the mining community, this product is quiet and efficient. It’s a true powerhouse, offering excellent performance with a reasonable price tag and comparatively low power consumption. If you need a reliable option for your mining rig, look no further. Can be set up to mine a number of currencies (bitcoin, bitcoin gold, monero, etc.), although take care to configure it properly as different cryptocurrencies require different settings.</p>
@@ -273,15 +282,6 @@
                                 </div>
                             </div>
                         </div><!-- End product info tabs -->
-
-
-
-
-
-
-
-
-
                     </div>
                 </div>
 
@@ -301,13 +301,13 @@
 
                         <!-- Categories -->
                         <div class="sidebar-widget categories">
-                            <div class="sidebar-title"><h2>Categories</h2></div>
+                            <div class="sidebar-title"><h2>Categorias</h2></div>
                             <ul class="category-list">
-                                <li><a href="#">Cooling Kit  <span>12</span></a></li>
-                                <li><a href="#">Engine Kit   <span>15</span></a></li>
-                                <li><a href="#">Car Engine   <span>10</span></a></li>
-                                <li><a href="#">Single Parts <span>08</span></a></li>
-                                <li><a href="#">Break Kit    <span>05</span></a></li>
+                                <li><?= $this->Html->link('Todos los productos', ['action' => 'index']) ?></li>
+                                <?php foreach ($categories as $category): ?>
+                                    <li><?= $this->Html->link(h($category->name), ['controller'=>'categories','action' => 'view', $category->id]) ?></li>
+                                <?php endforeach; ?>
+                                <!--<li><a href="#">Cooling Kit  <span>12</span></a></li>-->
                             </ul>
                         </div>
                     </aside>

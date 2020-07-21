@@ -2,6 +2,10 @@
 declare(strict_types=1);
 
 namespace App\Controller;
+use Cake\ORM\Query;
+use Cake\ORM\Table;
+use Cake\ORM\TableRegistry;
+use Cake\Datasource\ConnectionManager;
 
 
 /**
@@ -47,8 +51,22 @@ class ProductsController extends AppController
         $product = $this->Products->get($id, [
             'contain' => ['Categories', 'Measurements', 'Purchases'],
         ]);
+        $categories = $this->Products->Categories->find('all', ['limit' => 200]);
+      
+        $conn = ConnectionManager::get('default');
+        $query = array();
+        $cont = 0;
+        $provider_id = -1;
 
-        $this->set(compact('product'));
+        foreach ($product->purchases as $purchases) :
+            if($provider_id != $purchases->provider_id){
+                $provider_id = $purchases->provider_id;
+                $stmt = $conn->execute('SELECT DISTINCT * FROM providers WHERE id ='.$provider_id);
+                $query[$cont] = $stmt ->fetchAll()[0];
+                $cont++;
+            }
+        endforeach;
+        $this->set(compact('product','query','categories'));
     }
 
 }
