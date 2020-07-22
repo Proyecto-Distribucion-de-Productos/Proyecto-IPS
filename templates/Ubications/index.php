@@ -182,8 +182,7 @@
             <div class="inner-container clearfix">
                 <h1>Ubicaciones</h1>
                 <ul class="bread-crumb clearfix">
-                <li><?= $this->Html->link('Principal','/')?></li>
-                    <li>Ubicaciones</li>
+                
                 </ul>
             </div>
         </div>
@@ -195,17 +194,11 @@
         <div class="auto-container">
             <!-- Two Columns -->
             <div class="two-column">
-                <h2>Mapa de Ubicacion de los Proveedores y Productos que ofrece</h2>
+                <h2>Mapa de Ubicacion de los Proveedores y Productos</h2>
                 <div class="row clearfix">
                     <div class="info-column col-lg-6 col-md-12 col-sm-12">
-                        <p>En este mapa se podra ver ....</p>
-                        <ul class="list-style-one">
-                            <li>We make auto repair and maintenance more convenient for you</li>
-                            <li>We are a friendly, helpful and professional group of people</li>
-                            <li>Our professionals know how to handle a wide range of car services</li>
-                            <li>We get the job done right — the first time</li>
-                            <li>Same day service for most repairs and maintenance</li>
-                        </ul>
+                        <p>En este mapa se podra ver los productos productos adquiridos por region, además de la ubicacion de los proveedores</p>
+                      
                     </div>
                     <div class="image-column col-lg-6 col-md-12 col-sm-12">
                         <a href="home/images/resource/image-1.jpg" class="lightbox-image"><img src="home/images/resource/image-1.jpg" alt=""></a>
@@ -214,17 +207,11 @@
             </div>
             <!-- Two Columns -->
             <div class="two-column">
-                <h2>Cantidad de Productos según tipo y Ubicación</h2>
+                <h2>Mapa de la Cantidad de Productos según Tipo y Ubicación</h2>
                 <div class="row clearfix">
                     <div class="info-column col-lg-6 col-md-12 col-sm-12">
-                        <p>En este mapa se podra ver ....</p>
-                        <ul class="list-style-one">
-                            <li>We make auto repair and maintenance more convenient for you</li>
-                            <li>We are a friendly, helpful and professional group of people</li>
-                            <li>Our professionals know how to handle a wide range of car services</li>
-                            <li>We get the job done right — the first time</li>
-                            <li>Same day service for most repairs and maintenance</li>
-                        </ul>
+                        <p>En este mapa se podra ver la cantidad de productos que existe hasta la fecha en cada región</p>
+                      
                     </div>
                     <div class="image-column col-lg-6 col-md-12 col-sm-12">
                         <a href="home/images/resource/image-1.jpg" class="lightbox-image"><img src="home/images/resource/image-1.jpg" alt=""></a>
@@ -238,108 +225,7 @@
 
     <!-- Main Footer -->
     <footer class="main-footer alternate" style="background-image: url(images/background/4.jpg);">
-        <div class="auto-container">
-
-            <!--Widgets Section-->
-            <div class="widgets-section">
-                <div class="row clearfix">
-                    <!--Footer Column-->
-                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
-                        <div class="footer-widget about-widget">
-                            <div class="footer-logo">
-                                <figure>
-                                    <a href="index.html"><img src="images/footer-logo.png" alt=""></a>
-                                </figure>
-                            </div>
-                            <div class="widget-content">
-                                <div class="text">How to pursue pleasure rationally thats encounter consequences that extremely painful. Nor again is there anyones who loves or pursues or ut desires obtains pain of itself, because.</div>
-                                <h4>Follow Us:</h4>
-                                <ul class="social-icon">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Footer Column-->
-                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
-                        <div class="footer-widget services-widget">
-                            <h2 class="widget-title">Our Services</h2>
-                            <div class="widget-content">
-                                <ul class="services-list">
-                                    <li><a href="#">Engine Diagnostic & Repair</a></li>
-                                    <li><a href="#">Maintanence Inspaection</a></li>
-                                    <li><a href="#">Electrical System Diagnostic</a></li>
-                                    <li><a href="#">Wheel Allignment & Installation</a></li>
-                                    <li><a href="#">Air Conditioner Service & Repair</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Footer Column-->
-                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
-                        <!--Footer Column-->
-                        <div class="footer-widget gallery-widget">
-                            <h2 class="widget-title">Instragram</h2>
-                             <!--Footer Column-->
-                            <div class="widget-content">
-                                <div class="outer clearfix">
-                                    <figure class="image">
-                                        <a href="images/resource/feature-1.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/insta-1.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="images/resource/feature-2.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/insta-2.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="images/resource/feature-3.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/insta-3.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="images/resource/feature-4.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/insta-4.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="images/resource/news-1.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/insta-5.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="images/resource/news-2.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/insta-6.jpg" alt=""></a>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!--Footer Column-->
-                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
-                        <!--Footer Column-->
-                        <div class="footer-widget news-widget">
-                            <h2 class="widget-title">Latest News</h2>
-                             <!--Footer Column-->
-                            <div class="widget-content">
-                                <div class="post">
-                                    <h4><a href="#">Get Usefull Car Maintanence Tips From Our Expets</a></h4>
-                                    <span class="date"><i class="far fa-calendar-check"></i>Aug 21, 2015</span>
-                                </div>
-
-                                <div class="post">
-                                    <h4><a href="#">Get Usefull Car Maintanence Tips From Our Expets</a></h4>
-                                    <span class="date"><i class="far fa-calendar-check"></i>Aug 21, 2015</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
         <!--Footer Bottom-->
          <div class="footer-bottom">

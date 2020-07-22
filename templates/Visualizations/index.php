@@ -182,10 +182,7 @@
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <h1>Visualizaciones</h1>
-                <ul class="bread-crumb clearfix">
-                <li><?= $this->Html->link('Principal','/')?></li>
-                    <li>Visualizaciones</li>
-                </ul>
+              
             </div>
         </div>
     </section>
@@ -196,17 +193,67 @@
         <div class="auto-container">
             <!-- Two Columns -->
             <div class="two-column">
+                <h2>Reporte de Productos mas Frecuentes</h2>
+                <div class="row clearfix">
+                    <div class="info-column col-lg-6 col-md-12 col-sm-12">
+                        <p>En este reporte se podra ver cuales son los productos mas frecuentes que se adquierieron</p>
+                     
+                    </div>
+                    <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                        <a href="home/images/resource/image-1.jpg" class="lightbox-image"><img src="home/images/resource/image-1.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="project-detail">
+        <div class="auto-container">
+            <!-- Two Columns -->
+            <div class="two-column">
                 <h2>Reporte Cantidad de Productos por Categoría</h2>
                 <div class="row clearfix">
                     <div class="info-column col-lg-6 col-md-12 col-sm-12">
-                        <p>En este reporte se podra ver ....</p>
-                        <ul class="list-style-one">
-                            <li>We make auto repair and maintenance more convenient for you</li>
-                            <li>We are a friendly, helpful and professional group of people</li>
-                            <li>Our professionals know how to handle a wide range of car services</li>
-                            <li>We get the job done right — the first time</li>
-                            <li>Same day service for most repairs and maintenance</li>
-                        </ul>
+                        <p>En este reporte se podra ver la cantidad de productos que se adquirieron por cada categoria </p>
+                      
+                    </div>
+                    <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                        <a href="home/images/resource/image-1.jpg" class="lightbox-image"><img src="home/images/resource/image-1.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <section class="project-detail">
+        <div class="auto-container">
+            <!-- Two Columns -->
+            <div class="two-column">
+                <h2>Reporte de Cantidad de Productos por Proveedor</h2>
+                <div class="row clearfix">
+                    <div class="info-column col-lg-6 col-md-12 col-sm-12">
+                        <p>En este reporte se podra ver la cantidad de productos que se adquiere el estado peruano respecto al proveedor</p>
+                        
+                           
+                    </div>
+                    <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                        <a href="home/images/resource/image-1.jpg" class="lightbox-image"><img src="home/images/resource/image-1.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <section class="project-detail">
+        <div class="auto-container">
+            <!-- Two Columns -->
+            <div class="two-column">
+                <h2>Reporte de Proveedores mas Frecuentes</h2>
+                <div class="row clearfix">
+                    <div class="info-column col-lg-6 col-md-12 col-sm-12">
+                        <p>En este reporte se podra ver los proveedores mas frecuentes contratados por el estado peruano</p>
+                     
                     </div>
                     <div class="image-column col-lg-6 col-md-12 col-sm-12">
                         <a href="home/images/resource/image-1.jpg" class="lightbox-image"><img src="home/images/resource/image-1.jpg" alt=""></a>
@@ -220,108 +267,7 @@
 
     <!-- Main Footer -->
     <footer class="main-footer alternate" style="background-image: url(images/background/4.jpg);">
-        <div class="auto-container">
-
-            <!--Widgets Section-->
-            <div class="widgets-section">
-                <div class="row clearfix">
-                    <!--Footer Column-->
-                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
-                        <div class="footer-widget about-widget">
-                            <div class="footer-logo">
-                                <figure>
-                                    <a href="index.html"><img src="images/footer-logo.png" alt=""></a>
-                                </figure>
-                            </div>
-                            <div class="widget-content">
-                                <div class="text">How to pursue pleasure rationally thats encounter consequences that extremely painful. Nor again is there anyones who loves or pursues or ut desires obtains pain of itself, because.</div>
-                                <h4>Follow Us:</h4>
-                                <ul class="social-icon">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Footer Column-->
-                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
-                        <div class="footer-widget services-widget">
-                            <h2 class="widget-title">Our Services</h2>
-                            <div class="widget-content">
-                                <ul class="services-list">
-                                    <li><a href="#">Engine Diagnostic & Repair</a></li>
-                                    <li><a href="#">Maintanence Inspaection</a></li>
-                                    <li><a href="#">Electrical System Diagnostic</a></li>
-                                    <li><a href="#">Wheel Allignment & Installation</a></li>
-                                    <li><a href="#">Air Conditioner Service & Repair</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Footer Column-->
-                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
-                        <!--Footer Column-->
-                        <div class="footer-widget gallery-widget">
-                            <h2 class="widget-title">Instragram</h2>
-                             <!--Footer Column-->
-                            <div class="widget-content">
-                                <div class="outer clearfix">
-                                    <figure class="image">
-                                        <a href="images/resource/feature-1.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/insta-1.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="images/resource/feature-2.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/insta-2.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="images/resource/feature-3.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/insta-3.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="images/resource/feature-4.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/insta-4.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="images/resource/news-1.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/insta-5.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="images/resource/news-2.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/insta-6.jpg" alt=""></a>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!--Footer Column-->
-                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
-                        <!--Footer Column-->
-                        <div class="footer-widget news-widget">
-                            <h2 class="widget-title">Latest News</h2>
-                             <!--Footer Column-->
-                            <div class="widget-content">
-                                <div class="post">
-                                    <h4><a href="#">Get Usefull Car Maintanence Tips From Our Expets</a></h4>
-                                    <span class="date"><i class="far fa-calendar-check"></i>Aug 21, 2015</span>
-                                </div>
-
-                                <div class="post">
-                                    <h4><a href="#">Get Usefull Car Maintanence Tips From Our Expets</a></h4>
-                                    <span class="date"><i class="far fa-calendar-check"></i>Aug 21, 2015</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
         <!--Footer Bottom-->
          <div class="footer-bottom">

@@ -175,7 +175,7 @@
     <!--End Main Header -->
 
     <!--Page Title-->
-    <section class="page-title" style="background-image:url(images/background/8.jpg);">
+    <section class="page-title" style="background-image:url(images/background/imagen-backg-1.png);">
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <h1>Products</h1>
