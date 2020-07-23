@@ -279,60 +279,72 @@
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
 
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+
+
 <!-- Reporte Productos según categoría -->
 <script type="text/javascript">
-    Highcharts.chart('container1', {
-        chart: {
-            type: 'column'
-        },
+    // Create the chart
+Highcharts.chart('container1', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Reporte Cantidad de productos por categoría'.bold()
+    },
+    accessibility: {
+        announceNewData: {
+            enabled: true
+        }
+    },
+    xAxis: {
+        type: 'category'
+    },
+    yAxis: {
         title: {
-            text: 'Reporte Cantidad de productos por categoría'.bold()
-        },
-        xAxis: {
-            type: 'category',
-            labels: {
-                rotation: -45,
-                style: {
-                    fontSize: '13px',
-                    fontFamily: 'Verdana, sans-serif'
-                }
-            }
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: 'Population (millions)'
-            }
-        },
-        legend: {
-            enabled: false
-        },
-        tooltip: {
-            pointFormat: 'Population in 2017: <b>{point.y:.1f} millions</b>'
-        },
-        series: [{
-            name: 'Cantidad',
-            data: [
-                <?php
-                 for ($i = 0; $i < count($categories); $i++) :
-                ?>
-                ['<?php echo $categories[$i][1]?>', 24.2],
-                <?php endfor;?>
-            ],
+            text: 'Cantidad de productos'
+        }
+
+    },
+    legend: {
+        enabled: false
+    },
+    plotOptions: {
+        series: {
+            borderWidth: 0,
             dataLabels: {
                 enabled: true,
-                rotation: -90,
-                color: '#FFFFFF',
-                align: 'right',
-                format: '{point.y:.1f}', // one decimal
-                y: 10, // 10 pixels down from the top
-                style: {
-                    fontSize: '13px',
-                    fontFamily: 'Verdana, sans-serif'
-                }
+                format: '{point.y:.0f}'
             }
-        }]
-    });
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}</b> en total<br/>'
+    },
+
+    series: [
+        {
+            name: "Cantidad",
+            colorByPoint: true,
+            data: [
+                <?php
+                 for ($i = 0; $i < count($productos_por_categoria); $i++) :
+                ?>
+                {
+                    name: '<?php echo $productos_por_categoria[$i][1]?>',
+                    y: <?php echo $productos_por_categoria[$i][2]?>,
+                    drilldown: null
+                },
+                <?php endfor;?>
+            ]
+        }
+    ]
+});
 </script>
 
 <!-- Reporte cantidad de productos segun proveedor -->
@@ -342,7 +354,7 @@
             type: 'column'
         },
         title: {
-            text: 'Reporte Cantidad de productos por categoría'.bold()
+            text: 'Reporte Cantidad de productos por proveedor'.bold()
         },
         xAxis: {
             type: 'category',
@@ -357,22 +369,22 @@
         yAxis: {
             min: 0,
             title: {
-                text: 'Population (millions)'
+                text: 'Cantidad de Productos'
             }
         },
         legend: {
             enabled: false
         },
         tooltip: {
-            pointFormat: 'Population in 2017: <b>{point.y:.1f} millions</b>'
+            pointFormat: 'Cantidad: <b>{point.y:.0f} Productos</b>'
         },
         series: [{
             name: 'Cantidad',
             data: [
                 <?php
-                 for ($i = 0; $i < count($categories); $i++) :
+                 for ($i = 0; $i < count($productos_por_proveedor); $i++) :
                 ?>
-                ['<?php echo $categories[$i][1]?>', 24.2],
+                ['<?php echo $productos_por_proveedor[$i][1]?>', <?php echo (int)$productos_por_proveedor[$i][2]?>],
                 <?php endfor;?>
             ],
             dataLabels: {
@@ -380,7 +392,7 @@
                 rotation: -90,
                 color: '#FFFFFF',
                 align: 'right',
-                format: '{point.y:.1f}', // one decimal
+                format: '{point.y:.0f}', // one decimal
                 y: 10, // 10 pixels down from the top
                 style: {
                     fontSize: '13px',
@@ -448,51 +460,51 @@ Highcharts.chart('container2', {
 <script type="text/javascript">
 Highcharts.chart('container4', {
     chart: {
-        type: 'variablepie'
+        type: 'pie',
+        options3d: {
+            enabled: true,
+            alpha: 45,
+            beta: 0
+        }
     },
     title: {
         text: 'Reporte de Proveedores mas frecuentes'.bold()
     },
+    accessibility: {
+        point: {
+            valueSuffix: '%'
+        }
+    },
     tooltip: {
-        headerFormat: '',
-        pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {point.name}</b><br/>' +
-            'Area (square km): <b>{point.y}</b><br/>' +
-            'Population density (people per square km): <b>{point.z}</b><br/>'
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            depth: 35,
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}'
+            }
+        }
     },
     series: [{
-        minPointSize: 10,
-        innerSize: '20%',
-        zMin: 0,
-        name: 'countries',
-        data: [{
-            name: 'Spain',
-            y: 505370,
-            z: 92.9
-        }, {
-            name: 'France',
-            y: 551500,
-            z: 118.7
-        }, {
-            name: 'Poland',
-            y: 312685,
-            z: 124.6
-        }, {
-            name: 'Czech Republic',
-            y: 78867,
-            z: 137.5
-        }, {
-            name: 'Italy',
-            y: 301340,
-            z: 201.8
-        }, {
-            name: 'Switzerland',
-            y: 41277,
-            z: 214.5
-        }, {
-            name: 'Germany',
-            y: 357022,
-            z: 235.6
-        }]
+        type: 'pie',
+        name: 'Browser share',
+        data: [
+            ['Firefox', 45.0],
+            ['IE', 26.8],
+            {
+                name: 'Chrome',
+                y: 12.8,
+                sliced: true,
+                selected: true
+            },
+            ['Safari', 8.5],
+            ['Opera', 6.2],
+            ['Others', 0.7]
+        ]
     }]
 });
 </script>
