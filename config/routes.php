@@ -134,6 +134,72 @@ Router::scope('/admin/categories', function (RouteBuilder $routes) {
     $routes->connect('/delete/*', ['prefix' => 'Admin', 'controller' => 'Categories', 'action' => 'delete']);
 });
 
+//Nuevas rutas
+
+Router::scope('/admin/departments', function (RouteBuilder $routes) {
+    $routes->connect('/', ['prefix' => 'Admin', 'controller' => 'Departments', 'action' => 'index']);
+    $routes->connect('/add', ['prefix' => 'Admin', 'controller' => 'Departments', 'action' => 'add']);
+    $routes->connect('/view/*', ['prefix' => 'Admin', 'controller' => 'Departments', 'action' => 'view']);
+    $routes->connect('/edit/*', ['prefix' => 'Admin', 'controller' => 'Departments', 'action' => 'edit']);
+    $routes->connect('/delete/*', ['prefix' => 'Admin', 'controller' => 'Departments', 'action' => 'delete']);
+});
+
+Router::scope('/admin/districts', function (RouteBuilder $routes) {
+    $routes->connect('/', ['prefix' => 'Admin', 'controller' => 'Districts', 'action' => 'index']);
+    $routes->connect('/add', ['prefix' => 'Admin', 'controller' => 'Districts', 'action' => 'add']);
+    $routes->connect('/view/*', ['prefix' => 'Admin', 'controller' => 'Districts', 'action' => 'view']);
+    $routes->connect('/edit/*', ['prefix' => 'Admin', 'controller' => 'Districts', 'action' => 'edit']);
+    $routes->connect('/delete/*', ['prefix' => 'Admin', 'controller' => 'Districts', 'action' => 'delete']);
+});
+
+Router::scope('/admin/provinces', function (RouteBuilder $routes) {
+    $routes->connect('/', ['prefix' => 'Admin', 'controller' => 'Provinces', 'action' => 'index']);
+    $routes->connect('/add', ['prefix' => 'Admin', 'controller' => 'Provinces', 'action' => 'add']);
+    $routes->connect('/view/*', ['prefix' => 'Admin', 'controller' => 'Provinces', 'action' => 'view']);
+    $routes->connect('/edit/*', ['prefix' => 'Admin', 'controller' => 'Provinces', 'action' => 'edit']);
+    $routes->connect('/delete/*', ['prefix' => 'Admin', 'controller' => 'Provinces', 'action' => 'delete']);
+});
+
+Router::scope('/admin/measurements', function (RouteBuilder $routes) {
+    $routes->connect('/', ['prefix' => 'Admin', 'controller' => 'Measurements', 'action' => 'index']);
+    $routes->connect('/add', ['prefix' => 'Admin', 'controller' => 'Measurements', 'action' => 'add']);
+    $routes->connect('/view/*', ['prefix' => 'Admin', 'controller' => 'Measurements', 'action' => 'view']);
+    $routes->connect('/edit/*', ['prefix' => 'Admin', 'controller' => 'Measurements', 'action' => 'edit']);
+    $routes->connect('/delete/*', ['prefix' => 'Admin', 'controller' => 'Measurements', 'action' => 'delete']);
+});
+
+Router::scope('/admin/phones', function (RouteBuilder $routes) {
+    $routes->connect('/', ['prefix' => 'Admin', 'controller' => 'Phones', 'action' => 'index']);
+    $routes->connect('/add', ['prefix' => 'Admin', 'controller' => 'Phones', 'action' => 'add']);
+    $routes->connect('/view/*', ['prefix' => 'Admin', 'controller' => 'Phones', 'action' => 'view']);
+    $routes->connect('/edit/*', ['prefix' => 'Admin', 'controller' => 'Phones', 'action' => 'edit']);
+    $routes->connect('/delete/*', ['prefix' => 'Admin', 'controller' => 'Phones', 'action' => 'delete']);
+});
+
+Router::scope('/admin/products_purchases', function (RouteBuilder $routes) {
+    $routes->connect('/', ['prefix' => 'Admin', 'controller' => 'ProductsPurchases', 'action' => 'index']);
+    $routes->connect('/add', ['prefix' => 'Admin', 'controller' => 'ProductsPurchases', 'action' => 'add']);
+    $routes->connect('/view/*', ['prefix' => 'Admin', 'controller' => 'ProductsPurchases', 'action' => 'view']);
+    $routes->connect('/edit/*', ['prefix' => 'Admin', 'controller' => 'ProductsPurchases', 'action' => 'edit']);
+    $routes->connect('/delete/*', ['prefix' => 'Admin', 'controller' => 'ProductsPurchases', 'action' => 'delete']);
+});
+
+Router::scope('/admin/purchases', function (RouteBuilder $routes) {
+    $routes->connect('/', ['prefix' => 'Admin', 'controller' => 'Purchases', 'action' => 'index']);
+    $routes->connect('/add', ['prefix' => 'Admin', 'controller' => 'Purchases', 'action' => 'add']);
+    $routes->connect('/view/*', ['prefix' => 'Admin', 'controller' => 'Purchases', 'action' => 'view']);
+    $routes->connect('/edit/*', ['prefix' => 'Admin', 'controller' => 'Purchases', 'action' => 'edit']);
+    $routes->connect('/delete/*', ['prefix' => 'Admin', 'controller' => 'Purchases', 'action' => 'delete']);
+});
+
+Router::scope('/admin/roles', function (RouteBuilder $routes) {
+    $routes->connect('/', ['prefix' => 'Admin', 'controller' => 'Roles', 'action' => 'index']);
+    $routes->connect('/add', ['prefix' => 'Admin', 'controller' => 'Roles', 'action' => 'add']);
+    $routes->connect('/view/*', ['prefix' => 'Admin', 'controller' => 'Roles', 'action' => 'view']);
+    $routes->connect('/edit/*', ['prefix' => 'Admin', 'controller' => 'Roles', 'action' => 'edit']);
+    $routes->connect('/delete/*', ['prefix' => 'Admin', 'controller' => 'Roles', 'action' => 'delete']);
+});
+
 Router::prefix('Admin', function (RouteBuilder $routes) {
 	// Because you are in the admin scope,
 	// you do not need to include the /admin prefix
