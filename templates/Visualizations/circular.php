@@ -12,14 +12,14 @@
 <title>Visualizaciones</title>
 
 <!-- Stylesheets -->
-<link href="home/css/bootstrap.css" rel="stylesheet">
-<link href="home/css/style.css" rel="stylesheet">
-<link href="home/css/responsive.css" rel="stylesheet">
+<link href="../home/css/bootstrap.css" rel="stylesheet">
+<link href="../home/css/style.css" rel="stylesheet">
+<link href="../home/css/responsive.css" rel="stylesheet">
 <!--Color Switcher Mockup-->
-<link href="home/css/color-switcher-design.css" rel="stylesheet">
+<link href="../home/css/color-switcher-design.css" rel="stylesheet">
 
 <!--Color Themes-->
-<link id="theme-color-file" href="home/css/color-themes/default-theme.css" rel="stylesheet">
+<link id="theme-color-file" href="../home/css/color-themes/default-theme.css" rel="stylesheet">
 
 <!--Favicon-->
 <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
@@ -182,6 +182,7 @@
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <h1>Visualizaciones</h1>
+              
             </div>
         </div>
     </section>
@@ -192,51 +193,59 @@
         <div class="auto-container">
             <!-- Two Columns -->
             <div class="two-column">
-                
+                <h2>Reporte Cantidad de Productos<br> por Categoría</h2>
                 <div class="row clearfix">
                     <div class="info-column col-lg-6 col-md-12 col-sm-12">
+                        <p>En este reporte se podra ver la cantidad de productos que se adquirieron por cada categoria </p>
+                    </div>
+                    <div class="image-column col-lg-6 col-md-12 col-sm-12">
                         <figure class="highcharts-figure">
-                            <div id="container1"></div>
-                            <p class="highcharts-description">
-                                En este reporte se podra ver la cantidad de productos que se adquirieron por cada categoria
-                            </p>
+                            <div id="container"></div>
                         </figure>
                     </div>
-                    <div class="info-column col-lg-6 col-md-12 col-sm-12">
-                        <figure class="highcharts-figure">
-                            <div id="container2"></div>
-                            <p class="highcharts-description">
-                                En este reporte se podra ver cuales son los productos mas frecuentes que se adquierieron
-                            </p>
-                        </figure>
-                    </div>
-                </div>  
-            </div> 
+                </div>
+            </div>
+            
         </div>
     </section>
     <section class="project-detail">
         <div class="auto-container">
             <!-- Two Columns -->
             <div class="two-column">
+                <h2>Reporte de Cantidad de Productos por Proveedor</h2>
                 <div class="row clearfix">
                     <div class="info-column col-lg-6 col-md-12 col-sm-12">
-                        <figure class="highcharts-figure">
-                            <div id="container3"></div>
-                            <p class="highcharts-description">
-                                En este reporte se podra ver la cantidad de productos que se adquirieron por cada categoria
-                            </p>
-                        </figure>
+                        <p>En este reporte se podra ver la cantidad de productos que se adquiere el estado peruano respecto al proveedor</p>
+                        
                     </div>
+                    <div class="image-column col-lg-6 col-md-12 col-sm-12">
+
+
+                        <a href="home/images/resource/image-1.jpg" class="lightbox-image"><img src="home/images/resource/image-1.jpg" alt=""></a>
+                    
+                    
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <section class="project-detail">
+        <div class="auto-container">
+            <!-- Two Columns -->
+            <div class="two-column">
+                <h2>Reporte de Proveedores mas Frecuentes</h2>
+                <div class="row clearfix">
                     <div class="info-column col-lg-6 col-md-12 col-sm-12">
-                        <figure class="highcharts-figure">
-                            <div id="container4"></div>
-                            <p class="highcharts-description">
-                                En este reporte se podra ver los proveedores mas frecuentes contratados por el estado peruano
-                            </p>
-                        </figure>
+                        <p>En este reporte se podra ver los proveedores mas frecuentes contratados por el estado peruano</p>
+                     
                     </div>
-                </div>  
-            </div> 
+                    <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                        <a href="home/images/resource/image-1.jpg" class="lightbox-image"><img src="home/images/resource/image-1.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </section>
     <!-- End Gallery section -->
@@ -261,241 +270,67 @@
 
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon fa fa-angle-double-up"></span></div>
-<script src="home/js/jquery.js"></script>
-<script src="home/js/popper.min.js"></script>
-<script src="home/js/bootstrap.min.js"></script>
-<script src="home/js/jquery-ui.js"></script>
-<script src="home/js/jquery.fancybox.js"></script>
-<script src="home/js/owl.js"></script>
-<script src="home/js/appear.js"></script>
-<script src="home/js/wow.js"></script>
-<script src="home/js/mixitup.js"></script>
-<script src="home/js/script.js"></script>
-<script src="home/js/color-settings.js"></script>
-
+<script src="../home/js/jquery.js"></script>
+<script src="../home/js/popper.min.js"></script>
+<script src="../home/js/bootstrap.min.js"></script>
+<script src="../home/js/jquery-ui.js"></script>
+<script src="../home/js/jquery.fancybox.js"></script>
+<script src="../home/js/owl.js"></script>
+<script src="../home/js/appear.js"></script>
+<script src="../home/js/wow.js"></script>
+<script src="../home/js/mixitup.js"></script>
+<script src="../home/js/script.js"></script>
+<script src="../home/js/color-settings.js"></script>
+<!-- Javascript para los reportes -->
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-<script src="https://code.highcharts.com/modules/variable-pie.js"></script>
-
-<!-- Reporte Productos según categoría -->
 <script type="text/javascript">
-    Highcharts.chart('container1', {
-        chart: {
-            type: 'column'
-        },
-        title: {
-            text: 'Reporte Cantidad de productos por categoría'.bold()
-        },
-        xAxis: {
-            type: 'category',
-            labels: {
-                rotation: -45,
-                style: {
-                    fontSize: '13px',
-                    fontFamily: 'Verdana, sans-serif'
-                }
-            }
-        },
-        yAxis: {
-            min: 0,
+        Highcharts.chart('container', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
             title: {
-                text: 'Population (millions)'
-            }
-        },
-        legend: {
-            enabled: false
-        },
-        tooltip: {
-            pointFormat: 'Population in 2017: <b>{point.y:.1f} millions</b>'
-        },
-        series: [{
-            name: 'Cantidad',
-            data: [
+                text: "<?= __('Clients more frequently')?>"
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Brands',
+                colorByPoint: true,
+                data: [
                 <?php
-                 for ($i = 0; $i < count($categories); $i++) :
+                 for ($i = 0; $i < count($query); $i++) :
                 ?>
-                ['<?php echo $categories[$i][1]?>', 24.2],
+                {
+                    name: '<?php echo $query[$i][1]?>',
+                    //_--------------
+                    //_--------------
+                    y: <?php echo("2")?>,
+                }, 
                 <?php endfor;?>
-            ],
-            dataLabels: {
-                enabled: true,
-                rotation: -90,
-                color: '#FFFFFF',
-                align: 'right',
-                format: '{point.y:.1f}', // one decimal
-                y: 10, // 10 pixels down from the top
-                style: {
-                    fontSize: '13px',
-                    fontFamily: 'Verdana, sans-serif'
-                }
-            }
-        }]
-    });
+                
+                ]
+            }]
+        });
 </script>
-
-<!-- Reporte cantidad de productos segun proveedor -->
-<script type="text/javascript">
-    Highcharts.chart('container3', {
-        chart: {
-            type: 'column'
-        },
-        title: {
-            text: 'Reporte Cantidad de productos por categoría'.bold()
-        },
-        xAxis: {
-            type: 'category',
-            labels: {
-                rotation: -45,
-                style: {
-                    fontSize: '13px',
-                    fontFamily: 'Verdana, sans-serif'
-                }
-            }
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: 'Population (millions)'
-            }
-        },
-        legend: {
-            enabled: false
-        },
-        tooltip: {
-            pointFormat: 'Population in 2017: <b>{point.y:.1f} millions</b>'
-        },
-        series: [{
-            name: 'Cantidad',
-            data: [
-                <?php
-                 for ($i = 0; $i < count($categories); $i++) :
-                ?>
-                ['<?php echo $categories[$i][1]?>', 24.2],
-                <?php endfor;?>
-            ],
-            dataLabels: {
-                enabled: true,
-                rotation: -90,
-                color: '#FFFFFF',
-                align: 'right',
-                format: '{point.y:.1f}', // one decimal
-                y: 10, // 10 pixels down from the top
-                style: {
-                    fontSize: '13px',
-                    fontFamily: 'Verdana, sans-serif'
-                }
-            }
-        }]
-    });
-</script>
-
-<!-- Reporte Productos mas frecuentes -->
-<script type="text/javascript">
-Highcharts.chart('container2', {
-    chart: {
-        type: 'variablepie'
-    },
-    title: {
-        text: 'Reporte Cantidad de productos mas frecuentes'.bold()
-    },
-    tooltip: {
-        headerFormat: '',
-        pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {point.name}</b><br/>' +
-            'Area (square km): <b>{point.y}</b><br/>' +
-            'Population density (people per square km): <b>{point.z}</b><br/>'
-    },
-    series: [{
-        minPointSize: 10,
-        innerSize: '20%',
-        zMin: 0,
-        name: 'countries',
-        data: [{
-            name: 'Spain',
-            y: 505370,
-            z: 92.9
-        }, {
-            name: 'France',
-            y: 551500,
-            z: 118.7
-        }, {
-            name: 'Poland',
-            y: 312685,
-            z: 124.6
-        }, {
-            name: 'Czech Republic',
-            y: 78867,
-            z: 137.5
-        }, {
-            name: 'Italy',
-            y: 301340,
-            z: 201.8
-        }, {
-            name: 'Switzerland',
-            y: 41277,
-            z: 214.5
-        }, {
-            name: 'Germany',
-            y: 357022,
-            z: 235.6
-        }]
-    }]
-});
-</script>
-
-<!-- Reporte Proveedores mas frecuentes -->
-<script type="text/javascript">
-Highcharts.chart('container4', {
-    chart: {
-        type: 'variablepie'
-    },
-    title: {
-        text: 'Reporte de Proveedores mas frecuentes'.bold()
-    },
-    tooltip: {
-        headerFormat: '',
-        pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {point.name}</b><br/>' +
-            'Area (square km): <b>{point.y}</b><br/>' +
-            'Population density (people per square km): <b>{point.z}</b><br/>'
-    },
-    series: [{
-        minPointSize: 10,
-        innerSize: '20%',
-        zMin: 0,
-        name: 'countries',
-        data: [{
-            name: 'Spain',
-            y: 505370,
-            z: 92.9
-        }, {
-            name: 'France',
-            y: 551500,
-            z: 118.7
-        }, {
-            name: 'Poland',
-            y: 312685,
-            z: 124.6
-        }, {
-            name: 'Czech Republic',
-            y: 78867,
-            z: 137.5
-        }, {
-            name: 'Italy',
-            y: 301340,
-            z: 201.8
-        }, {
-            name: 'Switzerland',
-            y: 41277,
-            z: 214.5
-        }, {
-            name: 'Germany',
-            y: 357022,
-            z: 235.6
-        }]
-    }]
-});
-</script>
-
 </body>
 </html>
