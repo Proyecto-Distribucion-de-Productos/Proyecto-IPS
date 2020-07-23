@@ -6,7 +6,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <title>Visualizaciones</title>
@@ -407,51 +407,45 @@ Highcharts.chart('container1', {
 <script type="text/javascript">
 Highcharts.chart('container2', {
     chart: {
-        type: 'variablepie'
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
     },
     title: {
         text: 'Reporte Cantidad de productos mas frecuentes'.bold()
     },
     tooltip: {
-        headerFormat: '',
-        pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {point.name}</b><br/>' +
-            'Area (square km): <b>{point.y}</b><br/>' +
-            'Population density (people per square km): <b>{point.z}</b><br/>'
+        pointFormat: '{series.name}: <b>{point.y:.0f}</b>'
+    },
+    accessibility: {
+        point: {
+            valueSuffix: '%'
+        }
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: false
+            },
+            showInLegend: true
+        }
     },
     series: [{
-        minPointSize: 10,
-        innerSize: '20%',
-        zMin: 0,
-        name: 'countries',
-        data: [{
-            name: 'Spain',
-            y: 505370,
-            z: 92.9
-        }, {
-            name: 'France',
-            y: 551500,
-            z: 118.7
-        }, {
-            name: 'Poland',
-            y: 312685,
-            z: 124.6
-        }, {
-            name: 'Czech Republic',
-            y: 78867,
-            z: 137.5
-        }, {
-            name: 'Italy',
-            y: 301340,
-            z: 201.8
-        }, {
-            name: 'Switzerland',
-            y: 41277,
-            z: 214.5
-        }, {
-            name: 'Germany',
-            y: 357022,
-            z: 235.6
-        }]
+        name: 'Cantidad',
+        colorByPoint: true,
+        data: [
+            <?php
+                 for ($i = 0; $i < count($productos_seleccionados); $i++) :
+                ?>
+                {
+                    name: '<?php echo $productos_seleccionados[$i][1]?>',
+                    y: <?php echo $productos_seleccionados[$i][2]?>, 
+                },
+            <?php endfor;?>
+           ]
     }]
 });
 </script>
@@ -476,7 +470,7 @@ Highcharts.chart('container4', {
         }
     },
     tooltip: {
-        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        pointFormat: '{series.name}: <b>{point.y:.0f}</b>'
     },
     plotOptions: {
         pie: {
@@ -491,19 +485,13 @@ Highcharts.chart('container4', {
     },
     series: [{
         type: 'pie',
-        name: 'Browser share',
+        name: 'Cantidad de Productos',
         data: [
-            ['Firefox', 45.0],
-            ['IE', 26.8],
-            {
-                name: 'Chrome',
-                y: 12.8,
-                sliced: true,
-                selected: true
-            },
-            ['Safari', 8.5],
-            ['Opera', 6.2],
-            ['Others', 0.7]
+            <?php
+                 for ($i = 0; $i < count($proveedores_seleccionados); $i++) :
+                ?>
+                ['<?php echo $proveedores_seleccionados[$i][1]?>', <?php echo $proveedores_seleccionados[$i][2]?>],
+            <?php endfor;?>
         ]
     }]
 });
