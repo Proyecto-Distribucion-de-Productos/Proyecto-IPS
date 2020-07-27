@@ -227,7 +227,7 @@ anychart.onDocumentReady(function () {
     // The data used in this sample can be obtained from the CDN
     // https://cdn.anychart.com/samples-data/maps-in-dashboard/states-of-united-states-dashboard-with-multi-select/data.json
     
-    anychart.data.loadJsonFile('http://127.0.0.1/public_html/MAPAS/peru.json', function (data) {
+    anychart.data.loadJsonFile('../home/json/peru.json', function (data) {
         // pre-processing of the data
         //alert(data[14]['value']);
         for (var i = 0; i < data.length; i++) {
@@ -332,7 +332,7 @@ anychart.onDocumentReady(function () {
                 });*/
                     
 
-                alert(data['value']);
+                //alert(data['value']);
                 //Aqui se inserta los datos al hacer click en el mapa
                 var a=[data['id'], data['value'], data['id']];
                 contents.push(a);
@@ -358,8 +358,8 @@ anychart.onDocumentReady(function () {
             var map = anychart.map();
             //set map title settings using html
             map.title().padding(10, 0, 10, 0).margin(0).useHtml(true);
-            map.title('US States<br/>by the Year of Joining the Union' +
-                    '<br/><span style="color:#212121; font-size: 11px;">Pick your state or a time period to see when chosen states joined</span>');
+            map.title('Mapa de cantidad de Productos' +
+                    '<br/>por Departamento');
             map.padding([0, 0, 10, 0]);
             var credits = map.credits();
             credits.enabled(true);
@@ -385,7 +385,7 @@ anychart.onDocumentReady(function () {
             mapSeries.tooltip().title().useHtml(true);
             mapSeries.tooltip().titleFormat(function () {
                 var data = getDataId(this.id);
-                return this.name + '<span style="font-size: 10px"> (since ' + data['statehood'] + ')</span>';
+                return data['name'] + '<span style="font-size: 10px"> (since ' + data['statehood'] + ')</span>';
             });
             mapSeries.tooltip().format(function () {
                 var data = getDataId(this.id);

@@ -482,7 +482,7 @@ $this->disableAutoLayout();
                                 <h4><a href="service-detail.html">Medicamentos</a></h4>
                             </div>
                             <p>Los medicamentos son aquellas sustancias químicas que se utilizan para prevenir o modificar estados patológicos o explorar estados fisiológicos para beneficio de quien los recibe.</p>
-                            <a href="service-detail.html" class="read-more">Ver Medicamentos disponibles <i class="fa fa-angle-double-right"></i></a>
+                            <?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-angle-double-right']).'Ver Medicamentos Disponibles',['controller'=>'products','action' => 'index'],['class' => 'read-more', 'escape' => false])?>
                         </div>
                     </div>
                 </div>
@@ -500,7 +500,7 @@ $this->disableAutoLayout();
                                 <h4><a href="service-detail.html">Material Desinfectante</a></h4>
                             </div>
                             <p>Cualquier sustancia química o algún agente físico utilizado para eliminar o inhibir el crecimiento de diversos microorganismos. Usualmente de baja toxicidad para la célula hospedera y usualmente se aplica sobre superficies.</p>
-                            <a href="service-detail.html" class="read-more">Ver Material Desinfectante disponible <i class="fa fa-angle-double-right"></i></a>
+                            <?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-angle-double-right']).'Ver Desinfectantes Disponibles',['controller'=>'products','action' => 'index'],['class' => 'read-more', 'escape' => false])?>
                         </div>
                     </div>
                 </div>
@@ -518,7 +518,7 @@ $this->disableAutoLayout();
                                 <h4><a href="service-detail.html">Pruebas de Diagnóstico</a></h4>
                             </div>
                             <p>Una prueba diagnóstica tiene como fin establecer la presencia de salud o enfermedad, en cuyo caso puede, incluso, graduar el grado de afección.</p>
-                            <a href="service-detail.html" class="read-more">Ver Pruebas de Diagnóstico <i class="fa fa-angle-double-right"></i></a>
+                            <?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-angle-double-right']).'Ver Prubas de Diagnostico',['controller'=>'products','action' => 'index'],['class' => 'read-more', 'escape' => false])?>
                         </div>
                     </div>
                 </div>
@@ -536,7 +536,7 @@ $this->disableAutoLayout();
                                 <h4><a href="service-detail.html">EPP</a></h4>
                             </div>
                             <p>Equipo o dispositivo destinado para ser utilizado por el trabajador, para protegerlo de uno o varios riesgos y aumentar su seguridad o su salud en el trabajo.</p>
-                            <a href="service-detail.html" class="read-more">Ver EPP disponible <i class="fa fa-angle-double-right"></i></a>
+                            <?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-angle-double-right']).'Ver EPP Disponible',['controller'=>'products','action' => 'index'],['class' => 'read-more', 'escape' => false])?>
                         </div>
                     </div>
                 </div>
