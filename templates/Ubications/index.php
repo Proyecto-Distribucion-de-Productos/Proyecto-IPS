@@ -193,45 +193,30 @@
     <section class="project-detail">
         <div class="auto-container">
             <!-- Two Columns -->
-            <div class="two-column">
-                <?= $this->Html->link('Mapa de Ubicacion de los Proveedores y Productos','/ubications/',['class' => 'dropdown-item'])?>
-                <h2>Mapa de Ubicacion de los Proveedores y Productos</h2>
-                <div class="row clearfix">
-                    <div class="info-column col-lg-6 col-md-12 col-sm-12">
-                        <p>En este mapa se podra ver los productos productos adquiridos por region, además de la ubicacion de los proveedores</p>
-                      
+            <div class="two-column">                
+                <div class="row no-gutters bg-light position-relative">
+                    <div class="col-md-6 mb-md-0 p-md-4">
+                        <img src="home/images/resource/image-1.jpg" class="w-100" alt="mapa1">
                     </div>
-                    <div class="image-column col-lg-6 col-md-12 col-sm-12">
-                        <a href="home/images/resource/image-1.jpg" class="lightbox-image"><img src="home/images/resource/image-1.jpg" alt=""></a>
+                    <div class="col-md-6 position-static p-4 pl-md-0">
+                        <h4 class="mt-0">Mapa de Cantidad de Productos por departamento</h4>
+                        <p>En este mapa se podra ver los productos productos adquiridos por region.</p>
+                        <?= $this->Html->link('Ver Mapa','/ubications/map_providers_products',['class' => 'btn-style-one'])?>
                     </div>
                 </div>
             </div>
             <!-- Two Columns -->
             <div class="two-column">
-                <h2>Mapa de la Cantidad de Productos según Tipo y Ubicación</h2>
-                <div class="row clearfix">
-                    <div class="info-column col-lg-6 col-md-12 col-sm-12">
-                        <p>En este mapa se podra ver la cantidad de productos que existe hasta la fecha en cada región</p>
-                      
+                <div class="row no-gutters bg-light position-relative">
+                    <div class="col-md-6 mb-md-0 p-md-4">
+                        <img src="home/images/resource/image-1.jpg" class="w-100" alt="mapa1">
                     </div>
-                    <div class="image-column col-lg-6 col-md-12 col-sm-12">
-                        <a href="home/images/resource/image-1.jpg" class="lightbox-image"><img src="home/images/resource/image-1.jpg" alt=""></a>
-                    </div>
-                </div>
-                <!--  TARJETA PARA LOS MAPAS  -->
-                <div class="card">
-                    <div class="card-header">
-                        Quote
-                    </div>
-                        <div class="card-body">
-                            <blockquote class="blockquote mb-0">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                            </blockquote>
-                        </div>
+                    <div class="col-md-6 position-static p-4 pl-md-0">
+                        <h4 class="mt-0">Mapa de la ubicacion de proveedores</h4>
+                        <p>En este mapa se podra ver la ubicacion de los proveedores por departamento.</p>
+                        <?= $this->Html->link('Ver Mapa','/ubications/map_ubication_providers',['class' => 'btn-style-one'])?>
                     </div>
                 </div>
-                <!--  FIN TARJETA PARA LOS MAPAS  -->
             
         </div>
     </section>
@@ -245,7 +230,7 @@
          <div class="footer-bottom">
             <div class="auto-container">
                 <div class="copyright-text">
-                    <p>Copyrights © 2019 All Rights Reserved.</p>
+                    <p>Copyrights © 2020 All Rights Reserved.</p>
                 </div>
             </div>
         </div>
