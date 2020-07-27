@@ -196,7 +196,7 @@
             <div class="two-column">                
                 <div class="row no-gutters bg-light position-relative">
                     <div class="col-md-6 mb-md-0 p-md-4">
-                        <img src="home/images/resource/image-1.jpg" class="w-100" alt="mapa1">
+                        <img src="home/images/resource/imagen-mapa-ips.jpg" class="w-100" alt="mapa1">
                     </div>
                     <div class="col-md-6 position-static p-4 pl-md-0">
                         <h4 class="mt-0">Mapa de Cantidad de Productos por departamento</h4>
@@ -209,7 +209,7 @@
             <div class="two-column">
                 <div class="row no-gutters bg-light position-relative">
                     <div class="col-md-6 mb-md-0 p-md-4">
-                        <img src="home/images/resource/image-1.jpg" class="w-100" alt="mapa1">
+                        <img src="home/images/resource/imagen-mapa-ips.jpg" class="w-100" alt="mapa1">
                     </div>
                     <div class="col-md-6 position-static p-4 pl-md-0">
                         <h4 class="mt-0">Mapa de la ubicacion de proveedores</h4>

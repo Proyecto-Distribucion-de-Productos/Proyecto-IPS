@@ -249,7 +249,7 @@
          <div class="footer-bottom">
             <div class="auto-container">
                 <div class="copyright-text">
-                    <p>Copyrights © 2019 All Rights Reserved.</p>
+                    <p>Copyrights © 2020 All Rights Reserved.</p>
                 </div>
             </div>
         </div>
