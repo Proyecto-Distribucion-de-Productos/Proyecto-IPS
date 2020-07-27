@@ -6,12 +6,6 @@ use Cake\ORM\TableRegistry;
 use Cake\Datasource\ConnectionManager;
 
 
-/**
- * Products Controller
- *
- * @property \App\Model\Table\ProductsTable $Products
- * @method \App\Model\Entity\Product[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
- */
 class VisualizationsController extends AppController
 {
     /**

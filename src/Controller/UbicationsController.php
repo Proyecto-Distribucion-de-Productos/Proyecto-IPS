@@ -2,29 +2,26 @@
 declare(strict_types=1);
 
 namespace App\Controller;
+use Cake\ORM\TableRegistry;
+use Cake\Datasource\ConnectionManager;
 
-
-/**
- * Products Controller
- *
- * @property \App\Model\Table\ProductsTable $Products
- * @method \App\Model\Entity\Product[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
- */
 class UbicationsController extends AppController
 {
-    /**
-     * Index method
-     *
-     * @return \Cake\Http\Response|null|void Renders view
-     */
+
     public function initialize(): void
     {
         parent::initialize();
-        $this->Auth->allow(['index']); 
+        $this->Auth->allow(['index','mapProvidersProducts','mapUbicationProviders']); 
 
     }
     public function index()
     {   
+        
+    }
+    public function mapProvidersProducts(){
+        
+    }
+    public function mapUbicationProviders(){
         
     }
     

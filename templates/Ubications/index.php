@@ -194,6 +194,7 @@
         <div class="auto-container">
             <!-- Two Columns -->
             <div class="two-column">
+                <?= $this->Html->link('Mapa de Ubicacion de los Proveedores y Productos','/ubications/',['class' => 'dropdown-item'])?>
                 <h2>Mapa de Ubicacion de los Proveedores y Productos</h2>
                 <div class="row clearfix">
                     <div class="info-column col-lg-6 col-md-12 col-sm-12">
@@ -217,12 +218,25 @@
                         <a href="home/images/resource/image-1.jpg" class="lightbox-image"><img src="home/images/resource/image-1.jpg" alt=""></a>
                     </div>
                 </div>
-            </div>
+                <!--  TARJETA PARA LOS MAPAS  -->
+                <div class="card">
+                    <div class="card-header">
+                        Quote
+                    </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <!--  FIN TARJETA PARA LOS MAPAS  -->
             
         </div>
     </section>
     <!-- End Gallery section -->
-
+    
     <!-- Main Footer -->
     <footer class="main-footer alternate" style="background-image: url(images/background/4.jpg);">
         
