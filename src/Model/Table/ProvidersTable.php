@@ -96,8 +96,8 @@ class ProvidersTable extends Table
             ->add('name', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         $validator
-            ->email('email')
-            ->allowEmptyString('email');
+            ->scalar('status')
+            ->allowEmptyString('status');
 
         $validator
             ->scalar('direction')

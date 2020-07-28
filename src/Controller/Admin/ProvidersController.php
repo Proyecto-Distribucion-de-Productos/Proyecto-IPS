@@ -84,16 +84,25 @@ class ProvidersController extends AppController
             {
                 $nombre = $search->result->razon_social;
                 $direccion = $search->result->direccion;
-                    $provider->name = $nombre;
+                //Nuevos valores
+                $estado = $search->result->estado;
+                //Cambio de valores en la cascara
+                $provider->name = $nombre;
                 $provider->direction = $direccion;
                 $provider->ruc = $ruc;
                 //Fin de recuperacion
+                $this->Flash->success(__($estado."chinga"));
 
-                if ($this->Providers->save($provider)) {
+
+
+
+
+
+                /*if ($this->Providers->save($provider)) {
                     $this->Flash->success(__('The provider has been saved.'));
 
                     return $this->redirect(['action' => 'index']);
-                }
+                }*/
                 $this->Flash->error(__('The provider could not be saved. Please, try again.'));
 
 

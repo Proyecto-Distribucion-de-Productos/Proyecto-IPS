@@ -22,26 +22,18 @@
         <?= $this->Form->create($provider) ?>
 
         <!--<form class="login-form" method="post" accept-charset="utf-8" action="user/login">-->
-          <h3 class="login-head">provider</h3>
+          <h3 class="login-head">Nuevo Proveedor</h3>
           <div class="form-group">
             <?php 
             
             echo $this->Form->control('ruc', ['label' => 'Ruc', 'class' => 'form-control']);
-            echo $this->Form->control('email', ['label' => 'Email', 'class' => 'form-control']);
-            echo $this->Form->control('district_id', ['label' => 'District', 'class' => 'form-control', 'options' => $districts]);
-            echo $this->Form->control('province_id', ['label' => 'Provinces', 'class' => 'form-control', 'options' => $provinces]);
-            echo $this->Form->control('department_id', ['label' => 'Department', 'class' => 'form-control', 'options' => $departments]);
             
-
-
-
             ?> 
           </div>
           <div class="form-group">
           </div>
           <div class="form-group btn-container">
-            <?= $this->Html->link(__('List Providers'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <button class="btn btn-primary btn-block" type="submit">AGREGAR</button>
+          <button class="btn btn-primary btn-block" type="submit">AGREGAR</button>
           </div>
           <!--</form>-->
           <?= $this->Form->end() ?></div>
