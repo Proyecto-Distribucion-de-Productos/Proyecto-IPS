@@ -195,33 +195,11 @@
     </section>
     <!--End Page Title-->
 
+    
+    <div id="container"></div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="container"></div>
+    
 <!-- Main Footer -->
 <footer class="main-footer alternate" style="background-image: url(images/background/4.jpg);">
         
@@ -230,7 +208,7 @@
          <div class="footer-bottom">
             <div class="auto-container">
                 <div class="copyright-text">
-                    <p>Copyrights © 2019 All Rights Reserved.</p>
+                    <p>Copyrights © 2020 All Rights Reserved.</p>
                 </div>
             </div>
         </div>
@@ -254,7 +232,7 @@ anychart.onDocumentReady(function () {
     // The data used in this sample can be obtained from the CDN
     // https://cdn.anychart.com/samples-data/maps-in-dashboard/states-of-united-states-dashboard-with-multi-select/data.json
     
-    anychart.data.loadJsonFile('http://127.0.0.1/public_html/MAPAS/peru.json', function (data) {
+    anychart.data.loadJsonFile('../home/json/peru.json', function (data) {
         // pre-processing of the data
         //alert(data[14]['value']);
         for (var i = 0; i < data.length; i++) {
@@ -280,12 +258,12 @@ anychart.onDocumentReady(function () {
             table.getCell(0, 0).colSpan(8).fontSize(14).vAlign('bottom').border().bottom('1px #dedede').fontColor('#7c868e');
             table.useHtml(true).contents([
                 ['Productos del Departamento'],
-                ['Nombre del Producto', 'Cantidad', 'Acciones'],
+                ['Nombre del Producto', 'Cantidad', 'Departamento'],
             ]);
             table.getRow(1).cellBorder().bottom('2px #dedede').fontColor('#7c868e');
             table.getRow(0).height(45).hAlign('center');
             table.getRow(1).height(35);
-            table.getCol(0).width(300);
+            table.getCol(0).hAlign('left');
             table.getCol(1).hAlign('left');
             table.getCol(2).hAlign('left');
             table.getCol(2).width(100);
@@ -344,7 +322,7 @@ anychart.onDocumentReady(function () {
         function changeContent(ids) {
             var contents = [
                 ['Productos del Departamento'],
-                ['Nombre del Producto', 'Cantidad', 'Acciones']];
+                ['Nombre del Producto', 'Cantidad', 'Departamento']];
             var population = 0;
             var area = 0;
             var seats = 0;
@@ -358,11 +336,27 @@ anychart.onDocumentReady(function () {
                     mode: 'fit'
                 });*/
                     
+                var valor = data['value'];
+                //alert(valor);
+                
+                var purchases = <?php echo json_encode($mapa) ?>;
 
-                alert(data['value']);
+                //alert(purchases.length);
+
                 //Aqui se inserta los datos al hacer click en el mapa
-                var a=[data['id'], data['value'], data['id']];
-                contents.push(a);
+                for (var j = 0; j < purchases.length; j++) {
+                    if(purchases[j][0] == data['value']){
+                        
+                        for(var k = 0; k < purchases[j][1].length; k++){
+                            contents.push([purchases[j][1][k][0], purchases[j][1][k][1], data['name']]);
+                        }
+                    }
+                }
+
+
+               /* var a=[data['id'], data['value'], data['id']];
+                contents.push(a);*/
+                
           
             }
 
@@ -385,8 +379,8 @@ anychart.onDocumentReady(function () {
             var map = anychart.map();
             //set map title settings using html
             map.title().padding(10, 0, 10, 0).margin(0).useHtml(true);
-            map.title('US States<br/>by the Year of Joining the Union' +
-                    '<br/><span style="color:#212121; font-size: 11px;">Pick your state or a time period to see when chosen states joined</span>');
+            map.title('Mapa de cantidad de Productos' +
+                    '<br/>por Departamento');
             map.padding([0, 0, 10, 0]);
             var credits = map.credits();
             credits.enabled(true);
@@ -403,6 +397,7 @@ anychart.onDocumentReady(function () {
                 for (var i = 0; i < selectedPoints.length; i++) {
                     selected.push(selectedPoints[i].id);
                 }
+              
                 changeContent(selected);
             });
 
@@ -412,11 +407,13 @@ anychart.onDocumentReady(function () {
             mapSeries.tooltip().title().useHtml(true);
             mapSeries.tooltip().titleFormat(function () {
                 var data = getDataId(this.id);
-                return this.name + '<span style="font-size: 10px"> (since ' + data['statehood'] + ')</span>';
+                return data['name'];
             });
             mapSeries.tooltip().format(function () {
                 var data = getDataId(this.id);
-                return '<span style="font-size: 12px; color: #b7b7b7">Capital: </span>' + data['id'];
+
+                return '<span style="font-size: 12px; color: #b7b7b7">Código: </span>' + data['id'];
+                //return '';
             });
             var scale = anychart.scales.ordinalColor([
                 {less: 0},
@@ -465,8 +462,8 @@ anychart.onDocumentReady(function () {
         function fillInMainTable(flag) {
             if (flag == 'wide') {
                 layoutTable.contents([
-                    [mapChart, tableCharts],
-                    [null, tableChart]
+                    [mapChart, tableChart],
+                    [null]
                 ], true);
                 layoutTable.getCell(0, 0).rowSpan(2);
                 layoutTable.getRow(0).height(null);
@@ -474,8 +471,8 @@ anychart.onDocumentReady(function () {
             } else {
                 layoutTable.contents([
                     [mapChart],
-                    [tableCharts],
-                    [tableChart]
+                    [tableChart],
+                    [null]
                 ], true);
                 layoutTable.getRow(0).height(350);
                 layoutTable.getRow(1).height(200);
@@ -492,8 +489,10 @@ anychart.onDocumentReady(function () {
         /*mapSeries.select(12);
         mapSeries.select(13);
         mapSeries.select(14);
-        mapSeries.select(16);
+        mapSeries.select(16);/*
         changeContent(['US.IN', 'US.KY', 'US.IL', 'US.IA']);*/
+
+        changeContent(['PE.3341', 'PE.LB','PE.PI','PE.TU','PE.AP','PE.AR','PE.CS','PE.MD','PE.CL','PE.MQ','PE.TA','PE.AN','PE.CJ','PE.HC','PE.LL','PE.PA','PE.SM','PE.UC','PE.AM','PE.LO','PE.AY','PE.LR','PE.HV','PE.IC','PE.JU','PE.148']);
 
         // On resize changing layout to mobile version or conversely
         window.onresize = function () {

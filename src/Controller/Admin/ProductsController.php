@@ -42,7 +42,7 @@ class ProductsController extends AppController
         $categories = $this->Products->Categories->find('list', ['limit' => 200]);
         $this->set(compact('products', 'categories'));
     }
-    
+
     /**
      * View method
      *
@@ -101,6 +101,7 @@ class ProductsController extends AppController
 
                 return $this->redirect(['action' => 'index']);
             }
+            
             $this->Flash->error(__('The product could not be saved. Please, try again.'));
         }
         $categories = $this->Products->Categories->find('list', ['limit' => 200]);
