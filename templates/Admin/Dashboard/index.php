@@ -101,12 +101,28 @@
                   </div>
                 </div>
                 <ul class="app-menu">
-                  <li><a class="app-menu__item active" href="dashboard"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Tablero</span></a></li>
-                  <li><a class="app-menu__item" href="providers"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Proveedores</span></a></li>
-                  <li><a class="app-menu__item" href="products"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Productos</span></a></li>
-                  <li><a class="app-menu__item" href="users"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Usuarios</span></a></li>
-                  <li><a class="app-menu__item" href="categories"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Categorias</span></a></li>
-                  <li><a class="app-menu__item" href="#"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Reportes</span></a></li>
+                  
+              
+                   <li><?= $this->Html->link('Tablero', ['controller' => 'Dashboard', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Proveedores', ['controller' => 'Providers', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Productos', ['controller' => 'Products', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Usuarios', ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Categorias', ['controller' => 'Categories', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Usuarios', ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Medidas', ['controller' => 'Measurements', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Compras de Productos', ['controller' => 'ProductsPurchases', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Departamentos', ['controller' => 'Departments', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Distritos', ['controller' => 'Districts', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Provincias', ['controller' => 'Provinces', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Roles', ['controller' => 'Roles', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Telefonos', ['controller' => 'Phones', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Reportes', ['controller' => 'Reports', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+
+
+
+
+
+
                 </ul>
               </aside>
               <!-- End Sidebar menu-->
