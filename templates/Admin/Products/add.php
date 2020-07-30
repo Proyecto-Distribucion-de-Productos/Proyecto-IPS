@@ -22,7 +22,7 @@
         <?= $this->Form->create($product) ?>
 
         <!--<form class="login-form" method="post" accept-charset="utf-8" action="user/login">-->
-          <h3 class="login-head">product</h3>
+          <h3 class="login-head">Product</h3>
           <div class="form-group">
             <?php 
             

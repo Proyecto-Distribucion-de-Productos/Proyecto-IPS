@@ -19,7 +19,7 @@ class ProvidersController extends AppController
      */
     public function index()
     {
-        $this->paginate = [
+        $this->paginate = ['limit'=>100,
             'contain' => ['Districts', 'Provinces', 'Departments'],
         ];
         $providers = $this->paginate($this->Providers);
@@ -90,19 +90,12 @@ class ProvidersController extends AppController
                 $provider->name = $nombre;
                 $provider->direction = $direccion;
                 $provider->ruc = $ruc;
-                //Fin de recuperacion
-                $this->Flash->success(__($estado."chinga"));
 
-
-
-
-
-
-                /*if ($this->Providers->save($provider)) {
+                if ($this->Providers->save($provider)) {
                     $this->Flash->success(__('The provider has been saved.'));
 
                     return $this->redirect(['action' => 'index']);
-                }*/
+                }
                 $this->Flash->error(__('The provider could not be saved. Please, try again.'));
 
 
@@ -110,8 +103,6 @@ class ProvidersController extends AppController
             }else{
                 $this->Flash->success(__('No existe el ruc'));
             }
-           
-            
         }
         $districts = $this->Providers->Districts->find('list', ['limit' => 200]);
         $provinces = $this->Providers->Provinces->find('list', ['limit' => 200]);

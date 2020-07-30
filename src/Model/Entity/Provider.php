@@ -37,7 +37,6 @@ class Provider extends Entity
     protected $_accessible = [
         'ruc' => true,
         'name' => true,
-        'status' => true,
         'district_id' => true,
         'province_id' => true,
         'department_id' => true,

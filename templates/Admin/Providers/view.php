@@ -133,11 +133,6 @@
                             <th><?= __('Name') ?></th>
                             <td><?= h($provider->name) ?></td>
                             </tr>
-
-                             <tr>
-                            <th><?= __('Email') ?></th>
-                            <td><?= h($provider->email) ?></td>
-                            </tr>
                             <tr>
                            <th><?= __('District') ?></th>
                            <td><?= $provider->has('district') ? $this->Html->link($provider->district->name, ['controller' => 'Districts', 'action' => 'view', $provider->district->id]) : '' ?></td>
@@ -165,8 +160,6 @@
                               <td class="actions">
                                 <?= $this->Html->link('', ['action' => 'edit', $provider->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
                                 <?= $this->Form->postLink('', ['action' => 'delete', $provider->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $provider->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
-                                <?= $this->Html->link(__('List Providers'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-                                <?= $this->Html->link(__('New Provider'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
                               </td>
                             </tr>
 

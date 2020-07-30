@@ -24,7 +24,7 @@ class ProvidersController extends AppController
     }
     public function index()
     {
-        $this->paginate = [
+        $this->paginate = ['limit'=>100,
             'contain' => ['Districts', 'Provinces', 'Departments'],
         ];
         $providers = $this->paginate($this->Providers);
