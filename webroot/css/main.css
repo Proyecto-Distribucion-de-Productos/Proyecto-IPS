@@ -14904,6 +14904,20 @@ be a descendant of the grid when it is being dragged.
   transition: all 0.5s ease-in-out;
 }
 
+.categorie-content .categorie-box {
+  position: relative;
+  min-width: 350px;
+  min-height: 300px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 29px 147.5px 102.5px rgba(0, 0, 0, 0.05), 0px 29px 95px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 29px 147.5px 102.5px rgba(0, 0, 0, 0.05), 0px 29px 95px 0px rgba(0, 0, 0, 0.16);
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
 .login-content .login-box .login-head {
   margin-top: 0;
   margin-bottom: 20px;
@@ -15092,6 +15106,357 @@ be a descendant of the grid when it is being dragged.
     min-width: 100%;
   }
   .register-content .register-box .register-form, .register-content .register-box .forget-form {
+    width: 100%;
+  }
+}
+
+.register-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+
+.register-content .logo {
+  margin-bottom: 40px;
+  font-family: "Niconne";
+  color: #fff;
+}
+
+.register-content .logo h1 {
+  font-size: 52px;
+  font-weight: 400;
+}
+
+.register-content .register-box {
+  position: relative;
+  min-width: 350px;
+  min-height: 600px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 29px 147.5px 102.5px rgba(0, 0, 0, 0.05), 0px 29px 95px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 29px 147.5px 102.5px rgba(0, 0, 0, 0.05), 0px 29px 95px 0px rgba(0, 0, 0, 0.16);
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.register-content .register-box .register-head {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.register-content .register-box label {
+  color: #666;
+  font-weight: 700;
+}
+
+.register-content .register-box .utility {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.register-content .register-box .btn-container {
+  margin-bottom: 0;
+}
+
+.register-content .register-box .register-form, .register-content .register-box .forget-form {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.register-content .register-box .forget-form {
+  opacity: 0;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.register-content .register-box.flipped {
+  min-height: 300px;
+}
+
+.register-content .register-box.flipped .register-form {
+  opacity: 0;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.register-content .register-box.flipped .forget-form {
+  opacity: 1;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+@media (max-width: 351px) {
+  .register-content .register-box {
+    min-width: 100%;
+  }
+  .register-content .register-box .register-form, .register-content .register-box .forget-form {
+    width: 100%;
+  }
+}
+
+.categorie-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+
+.categorie-content .logo {
+  margin-bottom: 40px;
+  font-family: "Niconne";
+  color: #fff;
+}
+
+.categorie-content .logo h1 {
+  font-size: 52px;
+  font-weight: 400;
+}
+
+.categorie-content .categorie-box {
+  position: relative;
+  min-width: 350px;
+  min-height: 300px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 29px 147.5px 102.5px rgba(0, 0, 0, 0.05), 0px 29px 95px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 29px 147.5px 102.5px rgba(0, 0, 0, 0.05), 0px 29px 95px 0px rgba(0, 0, 0, 0.16);
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.categorie-content .categorie-box .categorie-head {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.categorie-content .categorie-box label {
+  color: #666;
+  font-weight: 300;
+}
+
+.categorie-content .categorie-box .utility {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.categorie-content .categorie-box .btn-container {
+  margin-bottom: 0;
+}
+
+.categorie-content .categorie-box .categorie-form, .categorie-content .categorie-box .forget-form {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.categorie-content .categorie-box .forget-form {
+  opacity: 0;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.categorie-content .categorie-box.flipped {
+  min-height: 300px;
+}
+
+.categorie-content .categorie-box.flipped .categorie-form {
+  opacity: 0;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.categorie-content .categorie-box.flipped .forget-form {
+  opacity: 1;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+@media (max-width: 351px) {
+  .categorie-content .categorie-box {
+    min-width: 100%;
+  }
+  .categorie-content .categorie-box .categorie-form, .categorie-content .categorie-box .forget-form {
+    width: 100%;
+  }
+}
+
+.categorie-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+
+.categorie-content .logo {
+  margin-bottom: 40px;
+  font-family: "Niconne";
+  color: #fff;
+}
+
+.categorie-content .logo h1 {
+  font-size: 52px;
+  font-weight: 400;
+}
+
+.categorie-content .categorie-box {
+  position: relative;
+  min-width: 350px;
+  min-height: 300px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 29px 147.5px 102.5px rgba(0, 0, 0, 0.05), 0px 29px 95px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 29px 147.5px 102.5px rgba(0, 0, 0, 0.05), 0px 29px 95px 0px rgba(0, 0, 0, 0.16);
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.categorie-content .categorie-box .categorie-head {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.categorie-content .categorie-box label {
+  color: #666;
+  font-weight: 700;
+}
+
+.categorie-content .categorie-box .utility {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.categorie-content .categorie-box .btn-container {
+  margin-bottom: 0;
+}
+
+.categorie-content .categorie-box .categorie-form, .categorie-content .categorie-box .forget-form {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.categorie-content .categorie-box .forget-form {
+  opacity: 0;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.categorie-content .categorie-box.flipped {
+  min-height: 300px;
+}
+
+.categorie-content .categorie-box.flipped .categorie-form {
+  opacity: 0;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.categorie-content .categorie-box.flipped .forget-form {
+  opacity: 1;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+@media (max-width: 351px) {
+  .categorie-content .categorie-box {
+    min-width: 100%;
+  }
+  .categorie-content .categorie-box .categorie-form, .categorie-content .categorie-box .forget-form {
     width: 100%;
   }
 }

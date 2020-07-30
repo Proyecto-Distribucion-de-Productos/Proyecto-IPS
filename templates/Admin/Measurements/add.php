@@ -9,19 +9,19 @@
   <?= $this->Html->css('main.css') ?>
   <!-- Font-icon css-->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Agregar Medidad</title>
+  <title>Agregar Medida</title>
 </head>
 <body>
   <section class="material-half-bg">
     <div class="cover"></div>
   </section>
-  <section class="login-content">
-    <div class="login-box">
+  <section class="categorie-content">
+    <div class="categorie-box">
       <!-- Inicio del formulario login-->
-      <div class="login-form">
+      <div class="categorie-form">
         <?= $this->Form->create($measurement) ?>
         <!--<form class="login-form" method="post" accept-charset="utf-8" action="user/login">-->
-          <h3 class="login-head">MEDIDA</h3>
+          <h3 class="categorie-head">MEDIDA</h3>
           <div class="form-group">
             <?php 
             echo $this->Form->control('name', ['label' => 'NOMBRE', 'class' => 'form-control']);

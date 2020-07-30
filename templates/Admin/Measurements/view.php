@@ -19,7 +19,7 @@
   <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
   <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
   <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
-  <title>Categorias</title>
+  <title>Medidas</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -101,24 +101,33 @@
                   </div>
                 </div>
                 <ul class="app-menu">
-                  <li><a class="app-menu__item" href="dashboard"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Tablero</span></a></li>
-                  <li><a class="app-menu__item" href="providers"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Proveedores</span></a></li>
-                  <li><a class="app-menu__item" href="products"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Productos</span></a></li>
-                  <li><a class="app-menu__item active" href="users"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Usuarios</span></a></li>
-                  <li><a class="app-menu__item" href="#"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Reportes</span></a></li>
+                  <li><?= $this->Html->link('Tablero', ['controller' => 'Dashboard', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Proveedores', ['controller' => 'Providers', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Productos', ['controller' => 'Products', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Usuarios', ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Categorias', ['controller' => 'Categories', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Usuarios', ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Medidas', ['controller' => 'Measurements', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Compras de Productos', ['controller' => 'ProductsPurchases', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Departamentos', ['controller' => 'Departments', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Distritos', ['controller' => 'Districts', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Provincias', ['controller' => 'Provinces', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Roles', ['controller' => 'Roles', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Telefonos', ['controller' => 'Phones', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Reportes', ['controller' => 'Reports', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
                 </ul>
               </aside>
               <!-- End Sidebar menu-->
               <main class="app-content">
                 <div class="app-title">
                   <div>
-                    <h1><i class="fa fa-th-list"></i> Categorias</h1>
+                    <h1><i class="fa fa-th-list"></i> Medidas</h1>
                     <!--<p>Basic bootstrap tables</p>-->
                   </div>
                   <ul class="app-breadcrumb breadcrumb">
                     <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
                     <!--<li class="breadcrumb-item">Tables</li>-->
-                    <li class="breadcrumb-item active"><a href="#">Categorias</a></li>
+                    <li><?= $this->Html->link('/Medidas', ['controller' => 'Measurements', 'action' => 'index'], ['class' => 'breadcrumb-item active']) ?></li>
                   </ul>
                 </div>
                 <div class="row">
@@ -145,8 +154,8 @@
                             </tr>
                           </table>
 
+                          <?php if (!empty($measurement->products)) : ?>
                           <h4><?= __('Productos Relacionados') ?></h4>
-
                           <table class="table table-hover table-bordered" id="sampleTable">
                             <tr>
                               <th><?= $this->Paginator->sort('#') ?></th>
@@ -171,6 +180,8 @@
                               </tr>
                             <?php endforeach; ?>
                           </table>
+                          <?php endif; ?>
+                          
                         </tbody>
                       </table>
                     </div>

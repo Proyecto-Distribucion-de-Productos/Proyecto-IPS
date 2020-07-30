@@ -15,13 +15,13 @@
   <section class="material-half-bg">
     <div class="cover"></div>
   </section>
-  <section class="login-content">
-    <div class="login-box">
+  <section class="categorie-content">
+    <div class="categorie-box">
       <!-- Inicio del formulario login-->
-      <div class="login-form">
+      <div class="categorie-form">
         <?= $this->Form->create($measurement) ?>
         <!--<form class="login-form" method="post" accept-charset="utf-8" action="user/login">-->
-          <h3 class="login-head">MEDIDA</h3>
+          <h3 class="categorie-head">MEDIDA</h3>
           <div class="form-group">
             <?php 
             echo $this->Form->control('name', ['label' => 'NOMBRE', 'class' => 'form-control']);
