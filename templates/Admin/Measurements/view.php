@@ -173,9 +173,8 @@
                                 <td><?= h($products->name) ?></td>
                                 <td><?= h($products->price) ?></td>
                                 <td class="actions">
-                                  <?= $this->Html->link('', ['action' => 'view', $products->id], ['class' => 'btn btn-info fa fa-eye']) ?>
-                                  <?= $this->Html->link('', ['action' => 'edit', $products->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
-                                  <?= $this->Form->postLink('', ['action' => 'delete', $products->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $products->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
+                                  <?= $this->Html->link('', ['controller' => 'Products', 'action' => 'view', $products->id], ['class' => 'btn btn-info fa fa-eye']) ?>
+                                  <?= $this->Html->link('', ['controller' => 'Products', 'action' => 'edit', $products->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
                                 </td>
                               </tr>
                             <?php endforeach; ?>

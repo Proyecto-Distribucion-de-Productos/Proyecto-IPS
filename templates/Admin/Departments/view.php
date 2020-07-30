@@ -171,9 +171,8 @@
                                   <td><?= h($districts->department_id) ?></td>
                                   <td><?= h($districts->name) ?></td>
                                   <td class="actions">
-                                    <?= $this->Html->link('', ['action' => 'view', $districts->id], ['class' => 'btn btn-info fa fa-eye']) ?>
-                                    <?= $this->Html->link('', ['action' => 'edit', $districts->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
-                                    <?= $this->Form->postLink('', ['action' => 'delete', $districts->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $districts->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
+                                    <?= $this->Html->link('', ['controller' => 'Districts', 'action' => 'view', $districts->id], ['class' => 'btn btn-info fa fa-eye']) ?>
+                                    <?= $this->Html->link('', ['controller' => 'Districts', 'action' => 'edit', $districts->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
                                   </td>
                                 </tr>
                               <?php endforeach; ?>
@@ -204,9 +203,8 @@
                                   <td><?= h($providers->email) ?></td>
                                   <td><?= h($providers->direction) ?></td>
                                   <td class="actions">
-                                    <?= $this->Html->link('', ['action' => 'view', $providers->id], ['class' => 'btn btn-info fa fa-eye']) ?>
-                                    <?= $this->Html->link('', ['action' => 'edit', $providers->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
-                                    <?= $this->Form->postLink('', ['action' => 'delete', $providers->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $providers->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
+                                    <?= $this->Html->link('', ['controller' => 'Providers', 'action' => 'view', $providers->id], ['class' => 'btn btn-info fa fa-eye']) ?>
+                                    <?= $this->Html->link('', ['controller' => 'Providers', 'action' => 'edit', $providers->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
                                   </td>
                                 </tr>
                               <?php endforeach; ?>
@@ -228,9 +226,8 @@
                                   <td><?= h($provinces->department_id) ?></td>
                                   <td><?= h($provinces->name) ?></td>
                                   <td class="actions">
-                                    <?= $this->Html->link('', ['action' => 'view', $provinces->id], ['class' => 'btn btn-info fa fa-eye']) ?>
-                                    <?= $this->Html->link('', ['action' => 'edit', $provinces->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
-                                    <?= $this->Form->postLink('', ['action' => 'delete', $provinces->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $provinces->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
+                                    <?= $this->Html->link('', ['controller' => 'Provinces', 'action' => 'view', $provinces->id], ['class' => 'btn btn-info fa fa-eye']) ?>
+                                    <?= $this->Html->link('', ['controller' => 'Provinces', 'action' => 'edit', $provinces->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
                                   </td>
                                 </tr>
                               <?php endforeach; ?>

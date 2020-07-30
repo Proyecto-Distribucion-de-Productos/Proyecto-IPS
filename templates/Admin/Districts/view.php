@@ -185,9 +185,8 @@
                                   <td><?= h($providers->email) ?></td>
                                   <td><?= h($providers->direction) ?></td>
                                   <td class="actions">
-                                    <?= $this->Html->link('', ['action' => 'view', $providers->id], ['class' => 'btn btn-info fa fa-eye']) ?>
-                                    <?= $this->Html->link('', ['action' => 'edit', $providers->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
-                                    <?= $this->Form->postLink('', ['action' => 'delete', $providers->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $providers->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
+                                    <?= $this->Html->link('', ['controller' => 'Providers', 'action' => 'view', $providers->id], ['class' => 'btn btn-info fa fa-eye']) ?>
+                                    <?= $this->Html->link('', ['controller' => 'Providers', 'action' => 'edit', $providers->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
                                   </td>
                                 </tr>
                               <?php endforeach; ?>
