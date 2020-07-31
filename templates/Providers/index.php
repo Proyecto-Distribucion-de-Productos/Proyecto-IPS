@@ -190,31 +190,7 @@
             <div class="row clearfix">
                 <!--Sidebar Side-->
                 <div class="sidebar-side col-lg-3 col-md-4 col-sm-12">
-                    <aside class="sidebar default-sidebar">
-                        <!--search box-->
-                        <div class="sidebar-widget search-box">
-                            <form method="post" action="blog.html">
-                                <div class="form-group">
-                                    <input type="search" name="search-field" value="" placeholder="Buscar Proveedor" required="">
-                                    <button type="submit"><span class="icon fa fa-search"></span></button>
-                                </div>
-                            </form>
-                        </div>
-
-                        <!-- Categories -->
-                        <div class="sidebar-widget categories">
-                            <div class="sidebar-title"><h2>Categorias</h2></div>
-                            <ul class="category-list">
-                                <li><a href="/public_html/proyecto1/products">Todos los productos</a></li>
-                                <li><a href="/public_html/proyecto1/categories/view/1">Gaseosas</a></li>
-                                <li><a href="/public_html/proyecto1/categories/view/2">Energizantes</a></li>
-                                <li><a href="/public_html/proyecto1/categories/view/3">EPP</a></li>
-                                <li><a href="/public_html/proyecto1/categories/view/4">Medicamentos</a></li>
-                                <li><a href="/public_html/proyecto1/categories/view/5">Componentes</a></li>
-                            <!--<li><a href="#">Cooling Kit  <span>12</span></a></li>-->
-                            </ul>
-                        </div>
-                    </aside>
+           
                 </div>
 
                 <!-- Blog Column -->
@@ -233,8 +209,8 @@
                                             <div class="date-and-like">
                                                 <div class="like"><i class="fa fa-map-marker" aria-hidden="true"></i><span><?= $provider->department->name;?></span></div>
                                             </div>
-                                            <h3><?= $this->Html->link(h($provider->name), ['action' => 'view', $provider->id]) ?></h3>
-                                            <p>Empresa distribuidora de productos para la salud.</p>
+                                            <h3><?= h($provider->name) ?></h3>
+                                            
                                             <?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-angle-double-right']).'Ver Mas',['action' => 'view', $provider->id],['class' => 'read-more', 'escape' => false])?>
                                         </div>
                                     </div>

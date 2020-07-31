@@ -198,15 +198,7 @@
                 <div class="content-side col-lg-9 col-md-12 col-sm-12">
                     <div class="shop-upper-box clearfix">
                         <div class="items-label pull-left">Showing 1-7 of 84 results</div>
-                        <div class="sort-by pull-right">
-                            <select class="custom-select-box">
-                                <option>Default Sorting</option>
-                                <option>Price: Lowest First</option>
-                                <option>Price: Highest First</option>
-                                <option>Ascending</option>
-                                <option>Descending</option>
-                            </select>
-                        </div>
+                       
                     </div>
 
                     <div class="row clearfix">
@@ -250,49 +242,7 @@
 
                 <!--Sidebar Side-->
                 <div class="sidebar-side col-lg-3 col-md-4 col-sm-12">
-                    <aside class="sidebar default-sidebar">
-
-                        <!--search box-->
-                        <div class="sidebar-widget search-box">
-                            <form method="post" action="blog.html">
-                                <div class="form-group">
-                                    <input type="search" name="search-field" value="" placeholder="Search Product" required="">
-                                    <button type="submit"><span class="icon fa fa-search"></span></button>
-                                </div>
-                            </form>
-                        </div>
-
-                        <!-- Categories -->
-                        <div class="sidebar-widget categories">
-                            <div class="sidebar-title"><h2>Categorias</h2></div>
-                            <ul class="category-list">
-                                <li><?= $this->Html->link('Todos los productos', ['action' => 'index']) ?></li>
-                                <?php foreach ($categories as $category): ?>
-                                    <li><?= $this->Html->link(h($category->name), ['controller'=>'categories','action' => 'view', $category->id]) ?></li>
-                                <?php endforeach; ?>
-                                <!--<li><a href="#">Cooling Kit  <span>12</span></a></li>-->
-                            </ul>
-                        </div>
-
-                        <!--Price Filter Widget-->
-                        <div class="sidebar-widget price-filter-widget">
-                            <div class="sidebar-title"><h2>Filter by Price</h2></div>
-                            <div class="widget-content">
-                                <div class="range-slider-one clearfix">
-                                    <div class="price-range-slider"></div>
-                                    <div class="clearfix">
-                                        <div class="pull-left">
-                                            <a href="#" class="theme-btn btn-style-two">Filtter</a>
-                                        </div>
-                                        <div class="pull-right">
-                                            <div class="title">Price:</div>
-                                            <div class="input"><input type="text" class="property-amount" name="field-name" readonly></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
+               
                 </div>
             </div>
         </div>
