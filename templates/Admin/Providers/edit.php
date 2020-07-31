@@ -29,6 +29,16 @@
             echo $this->Form->control('email', ['label' => 'Email', 'class' => 'form-control']);
             echo $this->Form->control('district_id', ['label' => 'District', 'class' => 'form-control', 'options' => $districts]);
             echo $this->Form->control('province_id', ['label' => 'Province', 'class' => 'form-control', 'options' => $provinces]);
+            
+           
+            
+            ?> 
+          </div>
+
+          <div class="form-group">
+            <?php 
+        
+            
             echo $this->Form->control('department_id', ['label' => 'Department', 'class' => 'form-control', 'options' => $departments]);
              echo $this->Form->control('direction', ['label' => 'Direction', 'class' => 'form-control']);
             

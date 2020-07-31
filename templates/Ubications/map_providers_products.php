@@ -24,7 +24,7 @@
 <style type="text/css">
   .my-custom-scrollbar {
     position: relative;
-    height: 800px;
+    height: 700px;
     overflow: auto;
     }
     .table-wrapper-scroll-y {
@@ -204,35 +204,10 @@
             <div class="two-column">
                 <div class="row clearfix">
                     <div class="info-column col-lg-6 col-md-12 col-sm-12">
-                        <div id="container" style="height:800px;" class="center-block"></div>
+                        <div id="container" style="height:700px;" class="center-block"></div>
                     </div>
-                    <div class="info-column col-lg-6 col-md-12 col-sm-12">
-                        
-                        <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Fecha</th>
-                                    <th scope="col">Producto</th>
-                                    <th scope="col">Cantidad</th>
-                                    <th scope="col">Departamento</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php for ($i=0; $i < 20; $i++) { ?>
-                                            <tr>
-                                            <th scope="row"><?= $i; ?></th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                            <td>@mdo</td>
-                                            </tr>
-                                            <tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
-                        </div>
+                    <div class="info-column col-lg-6 col-md-12 col-sm-12">   
+                        <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar" id="wraped"></div>
                     </div>
                 </div>  
             </div>
@@ -241,8 +216,6 @@
         
 <!-- Main Footer -->
 <footer class="main-footer alternate" style="background-image: url(images/background/4.jpg);">
-        
-
         <!--Footer Bottom-->
          <div class="footer-bottom">
             <div class="auto-container">
@@ -264,6 +237,30 @@
 <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-table.min.js"></script>
 <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-data-adapter.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js"></script>
+<!-- graficar tabla -->
+<script type="text/javascript">
+    function graficarTablaAlertas(valores, valord, departamento) {
+        let myTable ="";
+        for (let i = 0; i < valores.length; i++) {
+            if(valores[i][0] == valord){
+                for (let j = 0; j < valores[i][1].length; j++) {
+                    myTable+="<tr><td>" + valores[i][2] + "</td>";        
+                    myTable+="<td>" + valores[i][1][j][0] + "</td>";    
+                    myTable+="<td>" + valores[i][1][j][1] + "</td>";    
+                    myTable+="<td>" + departamento + "</td>";    
+                    myTable+="</tr>";
+                }
+            }
+        }
+        return myTable;
+        
+    }
+    function printTable(tableValues){
+        tableValues = "<table class='table table-hover table-bordered'><thead><tr><td scope='col'>Fecha</td><td scope='col'>Producto</td><td scope='col'>Cantidad</td><td scope='col'>Departamento</td></tr></thead>"+tableValues+"</table>";
+        document.getElementById('wraped').innerHTML = tableValues;
+    }
+
+</script>
 <script type="text/javascript">var mapSeries, mapChart, tableCharts;
 var dataSet, tableChart, populationChart, areaChart, houseSeatsChart;
 
@@ -289,27 +286,20 @@ anychart.onDocumentReady(function () {
         layoutTable.draw();
 
         function changeContent(ids) {
+            var datosTable = "";
             var contents = [
                 ['Productos del Departamento'],
                 ['Nombre del Producto', 'Cantidad', 'Departamento']];
             for (var i = 0; i < ids.length; i++) {
                 var data = getDataId(ids[i]);
                 var purchases = <?php echo json_encode($mapa) ?>;
-                alert(data['value']);
-                //Aqui se inserta los datos al hacer click en el mapa
-                for (var j = 0; j < purchases.length; j++) {
-                    if(purchases[j][0] == data['value']){
-                        for(var k = 0; k < purchases[j][1].length; k++){
-                            contents.push([purchases[j][1][k][0], purchases[j][1][k][1], data['name']]);
-                        }
-                    }
-                }
-            }   
+                //alert(data['value']);
+                datosTable += graficarTablaAlertas(purchases, data['value'], data['name']);
+            } 
+            printTable(datosTable);  
         }
         function drawMap() {
             var map = anychart.map();
-            //set map title settings using html
-            //map.padding([0, 0, 10, 0]);
             var credits = map.credits();
             credits.enabled(true);
             credits.url('https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States');
@@ -357,13 +347,6 @@ anychart.onDocumentReady(function () {
                     .stroke(anychart.color.darken('#c2185b'));
             mapSeries.colorScale(scale);
 
-            /*mapSeries.stroke(function () {
-                this.iterator.select(this.index);
-                var pointValue = this.iterator.get(this.referenceValueNames[1]);
-                var color = this.colorScale.valueToColor(pointValue);
-                return anychart.color.darken(color);
-            });*/
-
             var colorRange = map.colorRange();
             colorRange.enabled(true);
             colorRange.ticks().stroke('3 #ffffff').position('center').length(20).enabled(true);
@@ -403,15 +386,8 @@ anychart.onDocumentReady(function () {
         else {
             fillInMainTable('slim');
         }
-        // On resize changing layout to mobile version or conversely
-        /*window.onresize = function () {
-            if (layoutTable.colsCount() == 1 && window.innerWidth > 767) {
-                fillInMainTable('wide');
-            } else if (layoutTable.colsCount() == 2 && window.innerWidth <= 767) {
-                fillInMainTable('slim');
-            }
-        };*/
-        
+
+        changeContent(['PE.3341', 'PE.LB','PE.PI','PE.TU','PE.AP','PE.AR','PE.CS','PE.MD','PE.CL','PE.MQ','PE.TA','PE.AN','PE.CJ','PE.HC','PE.LL','PE.PA','PE.SM','PE.UC','PE.AM','PE.LO','PE.AY','PE.LR','PE.HV','PE.IC','PE.JU','PE.148']);   
         function getDataId(id) {
             //id = 2;
             for (var i = 0; i < data.length; i++) {
@@ -444,6 +420,5 @@ anychart.onDocumentReady(function () {
 <script src="../home/js/mixitup.js"></script>
 <script src="../home/js/script.js"></script>
 <script src="../home/js/color-settings.js"></script>
-
 </body>
 </html>

@@ -101,11 +101,20 @@
                   </div>
                 </div>
                 <ul class="app-menu">
-                  <li><a class="app-menu__item" href="dashboard"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Tablero</span></a></li>
-                  <li><a class="app-menu__item" href="providers"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Proveedores</span></a></li>
-                  <li><a class="app-menu__item" href="products"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Productos</span></a></li>
-                  <li><a class="app-menu__item active" href="users"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Usuarios</span></a></li>
-                  <li><a class="app-menu__item" href="#"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Reportes</span></a></li>
+                  <li><?= $this->Html->link('Tablero', ['controller' => 'Dashboard', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Proveedores', ['controller' => 'Providers', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Productos', ['controller' => 'Products', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Usuarios', ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Categorias', ['controller' => 'Categories', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Usuarios', ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Medidas', ['controller' => 'Measurements', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Compras de Productos', ['controller' => 'ProductsPurchases', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Departamentos', ['controller' => 'Departments', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Distritos', ['controller' => 'Districts', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Provincias', ['controller' => 'Provinces', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Roles', ['controller' => 'Roles', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Telefonos', ['controller' => 'Phones', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Reportes', ['controller' => 'Reports', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
                 </ul>
               </aside>
               <!-- End Sidebar menu-->
@@ -118,7 +127,7 @@
                   <ul class="app-breadcrumb breadcrumb">
                     <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
                     <!--<li class="breadcrumb-item">Tables</li>-->
-                    <li class="breadcrumb-item active"><a href="#">Categorias</a></li>
+                    <li><?= $this->Html->link('/Categorias', ['controller' => 'Categories', 'action' => 'index'], ['class' => 'breadcrumb-item active']) ?></li>
                   </ul>
                 </div>
                 <div class="row">
@@ -145,8 +154,8 @@
                             </tr>
                           </table>
 
+                          <?php if (!empty($category->products)) : ?>
                           <h4><?= __('Productos Relacionados') ?></h4>
-
                           <table class="table table-hover table-bordered" id="sampleTable">
                             <tr>
                               <th><?= $this->Paginator->sort('#') ?></th>
@@ -164,13 +173,13 @@
                                 <td><?= h($products->name) ?></td>
                                 <td><?= h($products->price) ?></td>
                                 <td class="actions">
-                                  <?= $this->Html->link('', ['action' => 'view', $products->id], ['class' => 'btn btn-info fa fa-eye']) ?>
-                                  <?= $this->Html->link('', ['action' => 'edit', $products->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
-                                  <?= $this->Form->postLink('', ['action' => 'delete', $products->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $products->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
+                                  <?= $this->Html->link('', ['controller' => 'Products', 'action' => 'view', $products->id], ['class' => 'btn btn-info fa fa-eye']) ?>
+                                  <?= $this->Html->link('', ['controller' => 'Products', 'action' => 'edit', $products->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
                                 </td>
                               </tr>
                             <?php endforeach; ?>
                           </table>
+                          <?php endif; ?>
                         </tbody>
                       </table>
                     </div>
