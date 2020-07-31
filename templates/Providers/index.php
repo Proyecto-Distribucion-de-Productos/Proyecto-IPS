@@ -206,12 +206,11 @@
                             <div class="sidebar-title"><h2>Categorias</h2></div>
                             <ul class="category-list">
                                 <li><a href="/public_html/proyecto1/products">Todos los productos</a></li>
-                                <li><a href="/public_html/proyecto1/categories/view/1">Gaseosas</a></li>
-                                <li><a href="/public_html/proyecto1/categories/view/2">Energizantes</a></li>
-                                <li><a href="/public_html/proyecto1/categories/view/3">EPP</a></li>
-                                <li><a href="/public_html/proyecto1/categories/view/4">Medicamentos</a></li>
-                                <li><a href="/public_html/proyecto1/categories/view/5">Componentes</a></li>
-                            <!--<li><a href="#">Cooling Kit  <span>12</span></a></li>-->
+                                <li><a href="/public_html/proyecto1/categories/view/1">Medicamentos</a></li>
+                                <li><a href="/public_html/proyecto1/categories/view/2">EPP</a></li>
+                                <li><a href="/public_html/proyecto1/categories/view/3">Pruebas de Diag.</a></li>
+                                <li><a href="/public_html/proyecto1/categories/view/4">Material Desinfec.</a></li>
+                                <!--<li><a href="#">Cooling Kit  <span>12</span></a></li>-->
                             </ul>
                         </div>
                     </aside>
