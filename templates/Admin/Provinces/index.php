@@ -122,13 +122,13 @@
               <main class="app-content">
                 <div class="app-title">
                   <div>
-                    <h1><i class="fa fa-th-list"></i> Distritos</h1>
+                    <h1><i class="fa fa-th-list"></i> Provincias</h1>
                     <!--<p>Basic bootstrap tables</p>-->
                   </div>
                   <ul class="app-breadcrumb breadcrumb">
                     <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
                     <!--<li class="breadcrumb-item">Tables</li>-->
-                    <li class="breadcrumb-item active"><a href="#">Distritos</a></li>
+                    <li class="breadcrumb-item active"><a href="#">Provincias</a></li>
                   </ul>
                 </div>
                 <div class="row">

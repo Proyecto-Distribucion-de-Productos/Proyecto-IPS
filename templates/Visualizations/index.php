@@ -223,7 +223,7 @@
                         <figure class="highcharts-figure">
                             <div id="container3"></div>
                             <p class="highcharts-description">
-                                En este reporte se podra ver la cantidad de productos que se adquirieron por cada categoria
+                                En este reporte se podra ver la cantidad de productos por proveedor
                             </p>
                         </figure>
                     </div>
@@ -382,7 +382,8 @@ Highcharts.chart('container1', {
             name: 'Cantidad',
             data: [
                 <?php
-                 for ($i = 0; $i < count($productos_por_proveedor); $i++) :
+                 //for ($i = 0; $i < count($productos_por_proveedor); $i++) :
+                for ($i = 0; $i < 27; $i++) :
                 ?>
                 ['<?php echo $productos_por_proveedor[$i][1]?>', <?php echo (int)$productos_por_proveedor[$i][2]?>],
                 <?php endfor;?>

@@ -194,7 +194,7 @@
         </div>
     </section>
     <!--End Page Title-->
-    <div id="container"></div>
+
 <!-- Main Footer -->
 <footer class="main-footer alternate" style="background-image: url(images/background/4.jpg);">
         

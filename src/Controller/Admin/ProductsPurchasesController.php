@@ -19,7 +19,7 @@ class ProductsPurchasesController extends AppController
      */
     public function index()
     {
-        $this->paginate = [
+        $this->paginate = ['limit'=>100,
             'contain' => ['Purchases', 'Providers', 'Products'],
         ];
         $productsPurchases = $this->paginate($this->ProductsPurchases);

@@ -19,7 +19,7 @@ class PurchasesController extends AppController
      */
     public function index()
     {
-        $this->paginate = [
+        $this->paginate = ['limit'=>200,
             'contain' => ['Providers', 'Users'],
         ];
         $purchases = $this->paginate($this->Purchases);
@@ -58,11 +58,14 @@ class PurchasesController extends AppController
         $purchase = $this->Purchases->newEmptyEntity();
         if ($this->request->is('post')) {
             $purchase = $this->Purchases->patchEntity($purchase, $this->request->getData());
+            $purchase->user_id = $this->Auth->user()['id'];
             if ($this->Purchases->save($purchase)) {
                 $this->Flash->success(__('The purchase has been saved.'));
-
                 return $this->redirect(['action' => 'index']);
             }
+
+
+
             $this->Flash->error(__('The purchase could not be saved. Please, try again.'));
         }
         $providers = $this->Purchases->Providers->find('list', ['limit' => 200]);

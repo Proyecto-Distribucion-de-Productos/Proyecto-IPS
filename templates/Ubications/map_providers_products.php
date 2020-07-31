@@ -1,17 +1,36 @@
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var \App\Model\Entity\Product[]|\Cake\Collection\CollectionInterface $products
+ */
+?>
+
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8" />
-<meta content="IE=edge" http-equiv="X-UA-Compatible" />
-<meta content="width=device-width, initial-scale=1" name="viewport" />
-<title>Ubicaciones</title>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Productos</title>
+
 <!-- Stylesheets -->
-<link href="../home/css/bootstrap.css" rel="stylesheet">
-<link href="../home/css/style.css" rel="stylesheet">
-<link href="../home/css/responsive.css" rel="stylesheet">
+<?= $this->Html->css('../home/css/bootstrap.css',['rel'=>'stylesheet']);?>
+<?= $this->Html->css('../home/css/style.css',['rel'=>'stylesheet']);?>
+<?= $this->Html->css('../home/css/responsive.css',['rel'=>'stylesheet']);?>
 <!--Color Switcher Mockup-->
-<link href="../home/css/color-switcher-design.css" rel="stylesheet">
+<?= $this->Html->css('../home/css/color-switcher-design.css',['rel'=>'stylesheet']);?>
 
 <!--Color Themes-->
 <link id="theme-color-file" href="../home/css/color-themes/default-theme.css" rel="stylesheet">
+
+<style type="text/css">
+  .my-custom-scrollbar {
+    position: relative;
+    height: 700px;
+    overflow: auto;
+    }
+    .table-wrapper-scroll-y {
+    display: block;
+    }
+</style>
 
 <!--Favicon-->
 <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
@@ -22,183 +41,181 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
-
-<meta content="AJAX Chart,Chart from JSON,Choropleth Map,Circular Gauge,Dashboard,Gauges,Geo Chart,Geo Visualization,JSON Chart,JSON Plot,Table Layout" name="keywords" />
-<meta content="AnyChart - JavaScript Charts designed to be embedded and integrated" name="description" /><!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
-<link href="https://cdn.anychart.com/playground-css/maps_in_dashboard/USA_dashboard_multiselect/style.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.anychart.com/releases/8.0.1/css/anychart-ui.min.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.anychart.com/releases/8.0.1/fonts/css/anychart-font.min.css" rel="stylesheet" type="text/css" />
-
-<style>html, body, #container {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}</style>
 </head>
-<body>
 
+<body>
 <div class="page-wrapper">
+
     <!-- Preloader -->
     <div class="preloader"></div>
-</div>
-<!-- Main Header-->
-<header class="main-header header-style-four">
 
-<!--Header Top-->
-<div class="header-top">
-    <div class="auto-container">
-        <div class="inner-container clearfix">
-            <div class="top-left">
-                <ul class="clearfix">
-                    <li>Realice consultas sobre los proveedores y productos disponibles<i class="fa fa-long-arrow-alt-right"></i></li>
-                </ul> 
-            </div>
-            <div class="top-right clearfix">
-                <!-- Botones ingresar y registrarse-->
-                    <?php if(isset($current_user)):?>
-                        <?php if($current_user['role'] === 'Administrador'):?>
-                            <div class="dropdown">
-                                <?= $this->Html->link($current_user['name'],'#',['class' => 'btn-style-one dropdown-toggle', 'data-toggle'=>'dropdown'])?>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <?= $this->Html->link('Tablero de Administrador','/admin/dashboard',['class' => 'dropdown-item'])?>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Perfil</a>
-                                    <?= $this->Html->link('Cerrar Sesión','/admin/users/logout',['class' => 'dropdown-item'])?>
-                                </div>
-                            </div>
-                        <?php else: ?>
-                            <div class="dropdown">
-                                <?= $this->Html->link($current_user['name'],'#',['class' => 'btn-style-one dropdown-toggle', 'data-toggle'=>'dropdown'])?>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Perfil</a>
-                                    <?= $this->Html->link('Cerrar Sesión','/admin/users/logout',['class' => 'dropdown-item'])?>
-                                </div>
-                            </div>
-                        <?php endif ?>             
-                    <?php else: ?>
-                        <?= $this->Html->link('Ingresar','/admin/users/login',['class' => 'btn-style-one'])?>
-                        <?= $this->Html->link('Registrarse','/admin/users/register',['class' => 'btn-style-one'])?>  
-                    <?php endif ?>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Header Top -->
+    <!-- Main Header-->
+    <header class="main-header header-style-four">
 
-<!-- Header Lower -->
-<div class="header-lower">
-    <div class="auto-container">
-       <div class="main-box clearfix">
-            <!--Logo Box-->
-            <div class="logo-box">
-                <div class="logo"><a href="index.html"><img src="images/logo-3.png" alt=""></a></div>
-            </div>
-            <!--Nav Outer-->
-            <div class="nav-outer clearfix">
-                <nav class="main-menu navbar-expand-md">
-                    <div class="navbar-header">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-
-                    <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
-                        <ul class="navigation clearfix">
-                            <li class="dropdown"><?= $this->Html->link('Principal','/')?></li>
-                            <li class="dropdown"><?= $this->Html->link('Proveedores','/providers')?></li>
-                            <li class="dropdown"><?= $this->Html->link('Visualizaciones','/visualizations')?></li>
-                            <li class="dropdown"><?= $this->Html->link('Productos','/products')?></li>
-                            <li class="current dropdown"><?= $this->Html->link('Ubicaciones','/ubications')?></li>
+        <!--Header Top-->
+    	<div class="header-top">
+        	<div class="auto-container">
+            	<div class="inner-container clearfix">
+                    <div class="top-left">
+                        <ul class="clearfix">
+                            <li>Realice consultas sobre los proveedores y productos disponibles<i class="fa fa-long-arrow-alt-right"></i></li>
                         </ul>
                     </div>
-
-                </nav>
-                <!-- Main Menu End-->
-
-                <!--outer Box-->
-                <div class="outer-box">
-                    <!--Search Box-->
-                    <div class="dropdown dropdown-outer">
-                        <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
-                        <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
-                            <li class="panel-outer">
-                                <div class="form-container">
-                                    <form method="post" action="blog.html">
-                                        <div class="form-group">
-                                            <input type="search" name="field-name" value="" placeholder="Search Here" required="">
-                                            <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
+                    <div class="top-right clearfix">
+                        <!-- Botones ingresar y registrarse-->
+                            <?php if(isset($current_user)):?>
+                                <?php if($current_user['role'] === 'Administrador'):?>
+                                    <div class="dropdown">
+                                        <?= $this->Html->link($current_user['name'],'#',['class' => 'btn-style-one dropdown-toggle', 'data-toggle'=>'dropdown'])?>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <?= $this->Html->link('Tablero de Administrador','/admin/dashboard',['class' => 'dropdown-item'])?>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Perfil</a>
+                                            <?= $this->Html->link('Cerrar Sesión','/admin/users/logout',['class' => 'dropdown-item'])?>
                                         </div>
-                                    </form>
-                                </div>
-                            </li>
-                        </ul>
+                                    </div>
+                                <?php else: ?>
+                                    <div class="dropdown">
+                                        <?= $this->Html->link($current_user['name'],'#',['class' => 'btn-style-one dropdown-toggle', 'data-toggle'=>'dropdown'])?>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Perfil</a>
+                                            <?= $this->Html->link('Cerrar Sesión','/admin/users/logout',['class' => 'dropdown-item'])?>
+                                        </div>
+                                    </div>
+                                <?php endif ?>             
+                            <?php else: ?>
+                                <?= $this->Html->link('Ingresar','/admin/users/login',['class' => 'btn-style-one'])?>
+                                <?= $this->Html->link('Registrarse','/admin/users/register',['class' => 'btn-style-one'])?>  
+                            <?php endif ?>
                     </div>
-                </div><!--End outer Box-->
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<!-- End Header Lower -->
+        <!-- End Header Top -->
 
-<!--Sticky Header-->
-<div class="sticky-header">
-    <div class="auto-container clearfix">
-        <!--Logo-->
-        <div class="logo pull-left">
-            <a href="index.html" class="img-responsive"><img src="images/logo-small.png" alt="" title=""></a>
+        <!-- Header Lower -->
+        <div class="header-lower">
+            <div class="auto-container">
+               <div class="main-box clearfix">
+                    <!--Logo Box-->
+                    <div class="logo-box">
+                        <div class="logo"><a href="index.html"><img src="images/logo-3.png" alt=""></a></div>
+                    </div>
+                    <!--Nav Outer-->
+                    <div class="nav-outer clearfix">
+                        <nav class="main-menu navbar-expand-md">
+							<div class="navbar-header">
+								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+							<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                                <ul class="navigation clearfix">
+                                    <li class="dropdown"><?= $this->Html->link('Principal','/')?></li>
+                                    <li class="dropdown"><?= $this->Html->link('Proveedores','/providers')?></li>
+                                    <li class="dropdown"><?= $this->Html->link('Visualizaciones','/visualizations')?></li>
+                                    <li class="dropdown"><?= $this->Html->link('Productos','/products')?></li>
+                                    <li class="current dropdown"><?= $this->Html->link('Ubicaciones','/ubications')?></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Main Menu End-->
+
+                        <!--outer Box-->
+                        <div class="outer-box">
+                            <!--Search Box-->
+                            <div class="dropdown dropdown-outer">
+                                <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
+                                <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
+                                    <li class="panel-outer">
+                                        <div class="form-container">
+                                            <form method="post" action="blog.html">
+                                                <div class="form-group">
+                                                    <input type="search" name="field-name" value="" placeholder="Search Here" required="">
+                                                    <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--End outer Box-->
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- End Header Lower -->
 
-        <!--Right Col-->
-        <div class="right-col pull-right">
-            <!-- Main Menu -->
-            <nav class="main-menu  navbar-expand-md">
-                <div class="navbar-header">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+        <!--Sticky Header-->
+        <div class="sticky-header">
+        	<div class="auto-container clearfix">
+                <!--Logo-->
+            	<div class="logo pull-left">
+                	<a href="index.html" class="img-responsive"><img src="images/logo-small.png" alt="" title=""></a>
                 </div>
 
-                <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
-                    <ul class="navigation clearfix">
-                        <li class="dropdown"><?= $this->Html->link('Principal','/')?></li>
-                        <li class="dropdown"><?= $this->Html->link('Proveedores','/providers')?></li>
-                        <li class="dropdown"><?= $this->Html->link('Visualizaciones','/visualizations')?></li>
-                        <li class="dropdown"><?= $this->Html->link('Productos','/products')?></li>
-                        <li class="current dropdown"><?= $this->Html->link('Ubicaciones','/ubications')?></li>
-                    </ul>
+                <!--Right Col-->
+                <div class="right-col pull-right">
+                	<!-- Main Menu -->
+                    <nav class="main-menu  navbar-expand-md">
+                        <div class="navbar-header">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+                        </div>
+                        <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
+                            <ul class="navigation clearfix">
+                                <li class="dropdown"><?= $this->Html->link('Principal','/')?></li>
+                                <li class="dropdown"><a href="#">Proveedores</a></li>
+                                <li class="dropdown"><a href="#">Visualizaciones</a></li>
+                                <li class="dropdown"><?= $this->Html->link('Productos','/products')?></li>
+                                <li class="current dropdown"><a href="#">Ubicaciones</a></li>
+                            </ul>
+                        </div>
+                    </nav><!-- Main Menu End-->
                 </div>
-            </nav><!-- Main Menu End-->
-        </div>
 
-    </div>
-</div>
-<!--End Sticky Header-->
-</header>
- <!--Page Title-->
-    <section class="page-title" style="background-image:url(images/background/8.jpg);">
+            </div>
+        </div>
+        <!--End Sticky Header-->
+    </header>
+    <!--End Main Header -->
+
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url(images/background/imagen-backg-1.png);">
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <h1>Ubicaciones</h1>
-                <ul class="bread-crumb clearfix">
-                
-                </ul>
             </div>
         </div>
     </section>
     <!--End Page Title-->
-    <div id="container"></div>
+
+    <!--<div id="container" class="two-column"></div> -->  
+    <section class="project-detail">
+        <div class="auto-container">
+            <div class="sec-title text-center">
+                <h2>Mapa de productos por departamento del Perú</h2>
+            </div>
+            <div class="two-column">
+                <div class="row clearfix">
+                    <div class="info-column col-lg-6 col-md-12 col-sm-12">
+                        <div id="container" style="height:700px;" class="center-block"></div>
+                    </div>
+                    <div class="info-column col-lg-6 col-md-12 col-sm-12">   
+                        <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar" id="wraped"></div>
+                    </div>
+                </div>  
+            </div>
+        </div> 
+    </section>
+        
 <!-- Main Footer -->
 <footer class="main-footer alternate" style="background-image: url(images/background/4.jpg);">
-        
-
         <!--Footer Bottom-->
          <div class="footer-bottom">
             <div class="auto-container">
@@ -220,6 +237,30 @@
 <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-table.min.js"></script>
 <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-data-adapter.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js"></script>
+<!-- graficar tabla -->
+<script type="text/javascript">
+    function graficarTablaAlertas(valores, valord, departamento) {
+        let myTable ="";
+        for (let i = 0; i < valores.length; i++) {
+            if(valores[i][0] == valord){
+                for (let j = 0; j < valores[i][1].length; j++) {
+                    myTable+="<tr><td>" + valores[i][2] + "</td>";        
+                    myTable+="<td>" + valores[i][1][j][0] + "</td>";    
+                    myTable+="<td>" + valores[i][1][j][1] + "</td>";    
+                    myTable+="<td>" + departamento + "</td>";    
+                    myTable+="</tr>";
+                }
+            }
+        }
+        return myTable;
+        
+    }
+    function printTable(tableValues){
+        tableValues = "<table class='table table-hover table-bordered'><thead><tr><td scope='col'>Fecha</td><td scope='col'>Producto</td><td scope='col'>Cantidad</td><td scope='col'>Departamento</td></tr></thead>"+tableValues+"</table>";
+        document.getElementById('wraped').innerHTML = tableValues;
+    }
+
+</script>
 <script type="text/javascript">var mapSeries, mapChart, tableCharts;
 var dataSet, tableChart, populationChart, areaChart, houseSeatsChart;
 
@@ -236,9 +277,7 @@ anychart.onDocumentReady(function () {
             data[i]['id'] = data[i]['id'];
         }
         dataSet = anychart.data.set(data);
-        tableChart = getTableChart();
         mapChart = drawMap();
-        tableCharts = getTableCharts();
 
         // Setting layout table
         var layoutTable = anychart.standalones.table();
@@ -246,121 +285,21 @@ anychart.onDocumentReady(function () {
         layoutTable.container('container');
         layoutTable.draw();
 
-        function getTableChart() {
-            var table = anychart.standalones.table();
-            table.cellBorder(null);
-            table.fontSize(11).vAlign('middle').fontColor('#212121');
-            table.getCell(0, 0).colSpan(8).fontSize(14).vAlign('bottom').border().bottom('1px #dedede').fontColor('#7c868e');
-            table.useHtml(true).contents([
-                ['Productos del Departamento'],
-                ['Nombre del Producto', 'Cantidad', 'Acciones'],
-            ]);
-            table.getRow(1).cellBorder().bottom('2px #dedede').fontColor('#7c868e');
-            table.getRow(0).height(45).hAlign('center');
-            table.getRow(1).height(35);
-            table.getCol(0).width(300);
-            table.getCol(1).hAlign('left');
-            table.getCol(2).hAlign('left');
-            table.getCol(2).width(100);
-            return table;
-        }
-
-        function solidChart(value) {
-            var gauge = anychart.gauges.circular();
-            gauge.data([value, 100]);
-            gauge.padding(5);
-            gauge.margin(0);
-            var axis = gauge.axis().radius(100).width(1).fill(null);
-            axis.scale()
-                    .minimum(0)
-                    .maximum(100)
-                    .ticks({interval: 1})
-                    .minorTicks({interval: 1});
-            axis.labels().enabled(false);
-            axis.ticks().enabled(false);
-            axis.minorTicks().enabled(false);
-
-            var stroke = '1 #e5e4e4';
-            gauge.bar(0).dataIndex(0).radius(80).width(40).fill('#64b5f6').stroke(null).zIndex(5);
-            gauge.bar(1).dataIndex(1).radius(80).width(40).fill('#F5F4F4').stroke(stroke).zIndex(4);
-            gauge.label().width('50%').height('25%').adjustFontSize(true).hAlign('center').anchor('center');
-            gauge.label()
-                    .hAlign('center')
-                    .anchor('center')
-                    .padding(5, 10)
-                    .zIndex(1);
-            gauge.background().enabled(false);
-            gauge.fill(null);
-            gauge.stroke(null);
-            return gauge
-        }
-
-        function getTableCharts() {
-            var table = anychart.standalones.table(2, 3);
-            table.cellBorder(null);
-            table.getRow(0).height(45);
-            table.getRow(1).height(25);
-            table.fontSize(11).useHtml(true).hAlign('center');
-            table.getCell(0, 0).colSpan(3).fontSize(14).vAlign('bottom').border().bottom('1px #dedede');
-            table.getRow(1).cellBorder().bottom('2px #dedede');
-            populationChart = solidChart(0);
-            areaChart = solidChart(0);
-            houseSeatsChart = solidChart(0);
-            table.contents([
-                ['Categoria de Productos'],
-                ['Categoria 1', 'Categoria 2', 'Categoria 3'],
-                [populationChart, areaChart, houseSeatsChart]
-            ]);
-            return table;
-        }
-
         function changeContent(ids) {
+            var datosTable = "";
             var contents = [
                 ['Productos del Departamento'],
-                ['Nombre del Producto', 'Cantidad', 'Acciones']];
-            var population = 0;
-            var area = 0;
-            var seats = 0;
+                ['Nombre del Producto', 'Cantidad', 'Departamento']];
             for (var i = 0; i < ids.length; i++) {
                 var data = getDataId(ids[i]);
-                population += parseInt(data['population']);
-                area += parseInt(data['area']);
-                seats += parseInt(data['house_seats']);
-                /*label.width('100%').height('100%').text('').background().enabled(true).fill({
-                    src: data['flag'],
-                    mode: 'fit'
-                });*/
-                    
-
+                var purchases = <?php echo json_encode($mapa) ?>;
                 //alert(data['value']);
-                //Aqui se inserta los datos al hacer click en el mapa
-                var a=[data['id'], data['value'], data['id']];
-                contents.push(a);
-          
-            }
-
-            populationChart.data([(population * 100 / getDataSum('population')).toFixed(2), 100]);
-            populationChart.label().text((population * 100 / getDataSum('population')).toFixed(2) + '%');
-
-            areaChart.data([(area * 100 / getDataSum('area')).toFixed(2), 100]);
-            areaChart.label().text((area * 100 / getDataSum('area')).toFixed(2) + '%');
-
-            houseSeatsChart.data([(seats * 100 / getDataSum('house_seats')).toFixed(2), 100]);
-            houseSeatsChart.label().text((seats * 100 / getDataSum('house_seats')).toFixed(2) + '%');
-
-            tableChart.contents(contents);
-            for (i = 0; i < ids.length; i++) {
-                tableChart.getRow(i + 2).maxHeight(35);
-            }
+                datosTable += graficarTablaAlertas(purchases, data['value'], data['name']);
+            } 
+            printTable(datosTable);  
         }
-
         function drawMap() {
             var map = anychart.map();
-            //set map title settings using html
-            map.title().padding(10, 0, 10, 0).margin(0).useHtml(true);
-            map.title('Mapa de cantidad de Productos' +
-                    '<br/>por Departamento');
-            map.padding([0, 0, 10, 0]);
             var credits = map.credits();
             credits.enabled(true);
             credits.url('https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States');
@@ -385,11 +324,12 @@ anychart.onDocumentReady(function () {
             mapSeries.tooltip().title().useHtml(true);
             mapSeries.tooltip().titleFormat(function () {
                 var data = getDataId(this.id);
-                return data['name'] + '<span style="font-size: 10px"> (since ' + data['statehood'] + ')</span>';
+                return data['name'];
             });
             mapSeries.tooltip().format(function () {
                 var data = getDataId(this.id);
-                return '<span style="font-size: 12px; color: #b7b7b7">Capital: </span>' + data['id'];
+                return '<span style="font-size: 12px; color: #b7b7b7">Código: </span>' + data['id'];
+                //return '';
             });
             var scale = anychart.scales.ordinalColor([
                 {less: 0},
@@ -406,14 +346,6 @@ anychart.onDocumentReady(function () {
                     .fill('#c2185b')
                     .stroke(anychart.color.darken('#c2185b'));
             mapSeries.colorScale(scale);
-
-            mapSeries.stroke(function () {
-                this.iterator.select(this.index);
-                var pointValue = this.iterator.get(this.referenceValueNames[1]);
-                var color = this.colorScale.valueToColor(pointValue);
-                return anychart.color.darken(color);
-            });
-
             var colorRange = map.colorRange();
             colorRange.enabled(true);
             colorRange.ticks().stroke('3 #ffffff').position('center').length(20).enabled(true);
@@ -438,45 +370,23 @@ anychart.onDocumentReady(function () {
         function fillInMainTable(flag) {
             if (flag == 'wide') {
                 layoutTable.contents([
-                    [mapChart, tableCharts],
-                    [null, tableChart]
+                    [mapChart],
                 ], true);
-                layoutTable.getCell(0, 0).rowSpan(2);
-                layoutTable.getRow(0).height(null);
-                layoutTable.getRow(1).height(null);
             } else {
                 layoutTable.contents([
                     [mapChart],
-                    [tableCharts],
-                    [tableChart]
                 ], true);
-                layoutTable.getRow(0).height(350);
-                layoutTable.getRow(1).height(200);
-                layoutTable.getRow(2).height(250);
             }
             layoutTable.draw();
         }
-
+        
         if (window.innerWidth > 768)
             fillInMainTable('wide');
         else {
             fillInMainTable('slim');
         }
-        /*mapSeries.select(12);
-        mapSeries.select(13);
-        mapSeries.select(14);
-        mapSeries.select(16);
-        changeContent(['US.IN', 'US.KY', 'US.IL', 'US.IA']);*/
-
-        // On resize changing layout to mobile version or conversely
-        window.onresize = function () {
-            if (layoutTable.colsCount() == 1 && window.innerWidth > 767) {
-                fillInMainTable('wide');
-            } else if (layoutTable.colsCount() == 2 && window.innerWidth <= 767) {
-                fillInMainTable('slim');
-            }
-        };
-
+        changeContent(['PE.3341', 'PE.LB','PE.PI','PE.TU','PE.AP','PE.AR','PE.CS','PE.MD','PE.CL','PE.MQ','PE.TA','PE.AN','PE.CJ','PE.HC','PE.LL','PE.PA','PE.SM','PE.UC','PE.AM','PE.LO','PE.AY','PE.LR','PE.HV','PE.IC','PE.JU','PE.148']);
+        
         function getDataId(id) {
             //id = 2;
             for (var i = 0; i < data.length; i++) {
@@ -507,6 +417,5 @@ anychart.onDocumentReady(function () {
 <script src="../home/js/mixitup.js"></script>
 <script src="../home/js/script.js"></script>
 <script src="../home/js/color-settings.js"></script>
-
 </body>
 </html>

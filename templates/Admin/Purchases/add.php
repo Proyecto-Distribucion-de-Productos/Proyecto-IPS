@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +26,6 @@
             <?php 
             echo $this->Form->control('provider_id', ['label' => 'Proveedor', 'class' => 'form-control']);
             echo $this->Form->control('date', ['label' => 'Fecha', 'class' => 'form-control']);
-            echo $this->Form->control('user_id', ['label' => 'Usuario', 'class' => 'form-control', 'options' => $users]);
             ?> 
           </div>
           <div class="form-group">

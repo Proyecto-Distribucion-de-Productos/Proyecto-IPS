@@ -47,13 +47,6 @@
           </div>
           <div class="form-group btn-container">
             <div class="side-nav">
-            
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $product->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $product->id), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List Products'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
 
             <button class="btn btn-primary btn-block" type="submit">CONFIRMAR</button>

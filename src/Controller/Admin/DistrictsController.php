@@ -19,7 +19,7 @@ class DistrictsController extends AppController
      */
     public function index()
     {
-        $this->paginate = [
+        $this->paginate = ['limit'=>100,
             'contain' => ['Provinces', 'Departments'],
         ];
         $districts = $this->paginate($this->Districts);
