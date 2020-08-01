@@ -194,7 +194,7 @@
                 </div>
 
                 <!-- Blog Column -->
-                <div class="blogs-column col-lg-9 col-md-8 col-sm-12">
+                <div class="blogs-column col-lg-12 col-md-12 col-sm-12">
                     <div class="row clearfix">
                         <?php foreach ($providers as $provider): ?>
                             <!-- News Block -->

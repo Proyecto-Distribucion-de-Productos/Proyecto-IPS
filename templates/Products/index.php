@@ -161,10 +161,10 @@
                         <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
                             <ul class="navigation clearfix">
                                 <li class="dropdown"><?= $this->Html->link('Principal','/')?></li>
-                                <li class="dropdown"><a href="#">Proveedores</a></li>
-                                <li class="dropdown"><a href="#">Visualizaciones</a></li>
+                                <li class="dropdown"><?= $this->Html->link('Proveedores','/providers')?></li>
+                                <li class="dropdown"><?= $this->Html->link('Visualizaciones','/visualizations')?></li>
                                 <li class="current dropdown"><?= $this->Html->link('Productos','/products')?></li>
-                                <li class="dropdown"><a href="#">Ubicaciones</a></li>
+                                <li class="dropdown"><?= $this->Html->link('Ubicaciones','/ubications')?></li>
                             </ul>
                         </div>
                     </nav><!-- Main Menu End-->
@@ -196,11 +196,6 @@
 
                 <!--content side-->
                 <div class="content-side col-lg-9 col-md-12 col-sm-12">
-                    <div class="shop-upper-box clearfix">
-                        <div class="items-label pull-left">Showing 1-7 of 84 results</div>
-                       
-                    </div>
-
                     <div class="row clearfix">
                         <!-- Shop item -->
                         <?php foreach ($products as $product): ?>
@@ -242,7 +237,21 @@
 
                 <!--Sidebar Side-->
                 <div class="sidebar-side col-lg-3 col-md-4 col-sm-12">
-               
+                    <aside class="sidebar default-sidebar">
+
+                        <!--search box-->
+                        <!-- Categories -->
+                        <div class="sidebar-widget categories">
+                            <div class="sidebar-title"><h2>Categorias</h2></div>
+                            <ul class="category-list">
+                                <li><?= $this->Html->link('Todos los productos', ['action' => 'index']) ?></li>
+                                <?php foreach ($categories as $category): ?>
+                                    <li><?= $this->Html->link(h($category->name), ['controller'=>'categories','action' => 'view', $category->id]) ?></li>
+                                <?php endforeach; ?>
+                                <!--<li><a href="#">Cooling Kit  <span>12</span></a></li>-->
+                            </ul>
+                        </div>
+                    </aside>
                 </div>
             </div>
         </div>

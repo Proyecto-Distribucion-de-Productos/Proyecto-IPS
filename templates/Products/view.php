@@ -159,10 +159,10 @@
                         <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
                             <ul class="navigation clearfix">
                                 <li class="dropdown"><?= $this->Html->link('Principal','/')?></li>
-                                <li class="dropdown"><a href="#">Proveedores</a></li>
-                                <li class="dropdown"><a href="#">Visualizaciones</a></li>
+                                <li class="dropdown"><?= $this->Html->link('Proveedores','/providers')?></li>
+                                <li class="dropdown"><?= $this->Html->link('Visualizaciones','/visualizations')?></li>
                                 <li class="current dropdown"><?= $this->Html->link('Productos','/products')?></li>
-                                <li class="dropdown"><a href="#">Ubicaciones</a></li>
+                                <li class="dropdown"><?= $this->Html->link('Ubicaciones','/ubications')?></li>
                             </ul>
                         </div>
                     </nav><!-- Main Menu End-->
@@ -179,10 +179,6 @@
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <h1>Productos</h1>
-                <ul class="bread-crumb clearfix">
-                    
-                    <li>Productos</li>
-                </ul>
             </div>
         </div>
     </section>
@@ -194,10 +190,6 @@
             <div class="row clearfix">
                 <div class="content-column col-lg-9 col-md-12 col-sm-12">
                     <div class="product-details">
-
-
-
-
                         <!--Basic Details-->
                         <div class="basic-details">
                             <div class="row clearfix">
@@ -252,14 +244,16 @@
                                                         <tr>
                                                             <th><?= __('#') ?></th>
                                                             <th><?= __('Proveedor') ?></th>
-                                                            
+                                                            <th><?= __('Acciones') ?></th>
                                                         </tr>
                                                     </thead>
                                                     <?php for ($i = 0; $i < count($query); $i++) : ?>
                                                         <tr>
                                                             <td><?= h($i) ?></td>
                                                             <td><?= h($query[$i][2]) ?></td>
-                                                           
+                                                            <td class="actions">
+                                                                <?= $this->Html->link('Ver', ['controller' => 'Purchases', 'action' => 'view', $query[$i][0]], ['class' => 'btn-style-one']) ?> 
+                                                            </td>
                                                         </tr>
                                                     <?php endfor; ?>
                                                 </table>
@@ -270,8 +264,6 @@
                                                 <p>No hay Proveedores Disponibles</p>
                                             </div>
                                         <?php endif; ?>
-                                        
-
                                         <!--<div class="content">
                                             <p>One of the best hardware options available to the mining community, this product is quiet and efficient. It’s a true powerhouse, offering excellent performance with a reasonable price tag and comparatively low power consumption. If you need a reliable option for your mining rig, look no further. Can be set up to mine a number of currencies (bitcoin, bitcoin gold, monero, etc.), although take care to configure it properly as different cryptocurrencies require different settings.</p>
                                         </div>-->
@@ -284,7 +276,19 @@
 
                 <!--Sidebar Side-->
                 <div class="sidebar-side col-lg-3 col-md-12 col-sm-12">
-         
+                    <aside class="sidebar default-sidebar">
+                        <!-- Categories -->
+                        <div class="sidebar-widget categories">
+                            <div class="sidebar-title"><h2>Categorias</h2></div>
+                            <ul class="category-list">
+                                <li><?= $this->Html->link('Todos los productos', ['action' => 'index']) ?></li>
+                                <?php foreach ($categories as $category): ?>
+                                    <li><?= $this->Html->link(h($category->name), ['controller'=>'categories','action' => 'view', $category->id]) ?></li>
+                                <?php endforeach; ?>
+                                <!--<li><a href="#">Cooling Kit  <span>12</span></a></li>-->
+                            </ul>
+                        </div>
+                    </aside>
                 </div>
             </div>
         </div>
@@ -292,8 +296,6 @@
     <!--End Shop Single-->
     <!-- Main Footer -->
     <footer class="main-footer alternate" style="background-image: url(images/background/4.jpg);">
-        
-
         <!--Footer Bottom-->
          <div class="footer-bottom">
             <div class="auto-container">

@@ -2,6 +2,8 @@
 declare(strict_types=1);
 
 namespace App\Controller;
+use Cake\ORM\TableRegistry;
+use Cake\Datasource\ConnectionManager;
 
 /**
  * Providers Controller
@@ -44,8 +46,14 @@ class ProvidersController extends AppController
         $provider = $this->Providers->get($id, [
             'contain' => ['Districts', 'Provinces', 'Departments', 'Phones', 'ProductsPurchases', 'Purchases'],
         ]);
+        $productos = array();
+        $conn = ConnectionManager::get('default'); 
+        foreach ($provider->products_purchases as $productsPurchases) :
+            $stmt = $conn->execute('SELECT name FROM products WHERE id='.$productsPurchases->product_id);
+            array_push($productos, $stmt ->fetchAll()[0]);
+        endforeach;
 
-        $this->set(compact('provider'));
+        $this->set(compact('provider', 'productos'));
     }
 
 }

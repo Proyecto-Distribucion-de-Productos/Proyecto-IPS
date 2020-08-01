@@ -1,34 +1,15 @@
 <?php
 /**
  * @var \App\View\AppView $this
- * @var \App\Model\Entity\Provider $provider
+ * @var \App\Model\Entity\Product[]|\Cake\Collection\CollectionInterface $products
  */
 ?>
-
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
-<title>Productos</title>
-
+<title>Proveedores</title>
 <!-- Stylesheets -->
 <?= $this->Html->css('../home/css/bootstrap.css',['rel'=>'stylesheet']);?>
 <?= $this->Html->css('../home/css/style.css',['rel'=>'stylesheet']);?>
@@ -121,9 +102,9 @@ tr:nth-child(even) {
 							<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
                                     <li class="dropdown"><?= $this->Html->link('Principal','/')?></li>
-                                    <li class="dropdown"><?= $this->Html->link('Proveedores','/providers')?></li>
+                                    <li class="current dropdown"><?= $this->Html->link('Proveedores','/providers')?></li>
                                     <li class="dropdown"><?= $this->Html->link('Visualizaciones','/visualizations')?></li>
-                                    <li class="current dropdown"><?= $this->Html->link('Productos','/products')?></li>
+                                    <li class="dropdown"><?= $this->Html->link('Productos','/products')?></li>
                                     <li class="dropdown"><?= $this->Html->link('Ubicaciones','/ubications')?></li>
                                 </ul>
                             </div>
@@ -177,10 +158,10 @@ tr:nth-child(even) {
                         <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
                             <ul class="navigation clearfix">
                                 <li class="dropdown"><?= $this->Html->link('Principal','/')?></li>
-                                <li class="dropdown"><a href="#">Proveedores</a></li>
-                                <li class="dropdown"><a href="#">Visualizaciones</a></li>
-                                <li class="current dropdown"><?= $this->Html->link('Productos','/products')?></li>
-                                <li class="dropdown"><a href="#">Ubicaciones</a></li>
+                                <li class="current dropdown"><?= $this->Html->link('Proveedores','/providers')?></li>
+                                <li class="dropdown"><?= $this->Html->link('Visualizaciones','/visualizations')?></li>
+                                <li class="dropdown"><?= $this->Html->link('Productos','/products')?></li>
+                                <li class="dropdown"><?= $this->Html->link('Ubicaciones','/ubications')?></li>
                             </ul>
                         </div>
                     </nav><!-- Main Menu End-->
@@ -197,13 +178,8 @@ tr:nth-child(even) {
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <h1>Proveedores</h1>
-               
             </div>
-
-            
         </div>
-
-        
     </section>
     <!--End Page Title-->
 
@@ -211,132 +187,131 @@ tr:nth-child(even) {
     <div class="sidebar-page-container">
         <div class="auto-container">
             <div class="row clearfix">
-                <div class="content-column col-lg-9 col-md-12 col-sm-12">
-                <div class="row">
-   
-    <div class="column-responsive column-80">
-   
-        <div class="providers view content">
-     
-            <h3><?= h($provider->name) ?></h3>
-            <table>
-                <tr>
-                    <th><?= __('Nombre') ?></th>
-                    <td><?= h($provider->name) ?></td>
-                </tr>
-              
-                <tr>
-                    <th><?= __('Distrito') ?></th>
-                    <td><?= $provider->has('district') ? h($provider->district->name) : '' ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Provincia') ?></th>
-                    <td><?= $provider->has('province') ? h($provider->province->name) : '' ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Departamento') ?></th>
-                    <td><?= $provider->has('department') ? h($provider->department->name) : '' ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Dirección') ?></th>
-                    <td><?= h($provider->direction) ?></td>
-                </tr>
-             
-            </table>
-            <div class="related">
-                <h4><?= __('Teléfono') ?></h4>
-                <?php if (!empty($provider->phones)) : ?>
-                <div class="table-responsive">
-                    <table>
-                        <tr>
-                            
-                            <th><?= __('Number') ?></th>
-                           
-                        </tr>
-                        <?php foreach ($provider->phones as $phones) : ?>
-                        <tr>
-                           
-                            <td><?= h($phones->number) ?></td>
-                           
-                        </tr>
-                        <?php endforeach; ?>
-                    </table>
-                </div>
-                <?php endif; ?>
-            </div>
-            <div class="related">
-                <h4><?= __('Compra de productos relacionados') ?></h4>
-                <?php if (!empty($provider->products_purchases)) : ?>
-                <div class="table-responsive">
-                    <table>
-                        <tr>
-                            <th><?= __('Id') ?></th>
-                            <th><?= __('Compra Id') ?></th>
-                            
-                            <th><?= __('Producto Id') ?></th>
-                            
-                            <th><?= __('Cantidad') ?></th>
-                            
-                        </tr>
-                        <?php foreach ($provider->products_purchases as $productsPurchases) : ?>
-                        <tr>
-                            <td><?= h($productsPurchases->id) ?></td>
-                            <td><?= h($productsPurchases->purchase_id) ?></td>
-                           
-                            <td><?= h($productsPurchases->product_id) ?></td>
-                            
-                            <td><?= h($productsPurchases->quantity) ?></td>
-                        
-                        </tr>
-                        <?php endforeach; ?>
-                    </table>
-                </div>
-                <?php endif; ?>
-            </div>
-            <div class="related">
-                <h4><?= __('Compras Relacionadas') ?></h4>
-                <?php if (!empty($provider->purchases)) : ?>
-                <div class="table-responsive">
-                    <table>
-                        <tr>
-                            <th><?= __('Id') ?></th>
-                            <th><?= __('Proveedor Id') ?></th>
-                            <th><?= __('Fecha') ?></th>
-                            
-                           
-                        </tr>
-                        <?php foreach ($provider->purchases as $purchases) : ?>
-                        <tr>
-                            <td><?= h($purchases->id) ?></td>
-                            <td><?= h($purchases->provider_id) ?></td>
-                            <td><?= h($purchases->date) ?></td>
-                            
-                         
-                        </tr>
-                        <?php endforeach; ?>
-                    </table>
-                </div>
-                <?php endif; ?>
-            </div>
-        </div>
-    </div>
-</div>
-                </div>
+<<<<<<< HEAD
+                <div class="content-column col-lg-12 col-md-12 col-sm-12">
+                    <div class="product-details">
 
-             
+                        <!--Basic Details-->
+                        <div class="">
+                            <div class="row clearfix">
+                                <div class="image-column col-lg-5 col-md-12 col-sm-12">
+                                    <figure class="image-box"><a href="../../home/images/resource/products/product-single.jpg" class="lightbox-image" title="Image Caption Here"><img src="../../home/images/resource/products/product-single.jpg" alt=""></a></figure>
+                                </div>
+                                <div class="info-column col-lg-7 col-md-12 col-sm-12">
+                                    <div class="inner-column">
+                                        <div class="details-header">
+                                            <h3><?= h($provider->name) ?></h3>
+                                            <!--<span class="review">( 3 Customer Reviews )</span>-->
+                                        </div>
+                                        <div class="clearfix">
+                                            <div class="text">
+                                            
+                                            <div class="providers view content">
+                                                <table class="table table-striped table-responsive">
+                                                    <tr>
+                                                        <th><?= __('Nombre') ?></th>
+                                                        <td><?= h($provider->name) ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><?= __('Distrito') ?></th>
+                                                        <td><?= $provider->has('district') ? h($provider->district->name) : '' ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><?= __('Provincia') ?></th>
+                                                        <td><?= $provider->has('province') ? h($provider->province->name) : '' ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><?= __('Departamento') ?></th>
+                                                        <td><?= $provider->has('department') ? h($provider->department->name) : '' ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><?= __('Dirección') ?></th>
+                                                        <td><?= h($provider->direction) ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><?= __('Teléfono') ?></th>
+                                                        <?php if (!empty($provider->phones)) : ?>
+                                                        <td>
+                                                        <?php foreach ($provider->phones as $phones) : ?>
+                                                            <?= h($phones->number) ?><br>
+                                                        <?php endforeach; ?>
+                                                        </td>
+                                                        <?php endif; ?>
+                                                    </tr>
+                                                
+                                                </table> 
+                                            </div>
+                                            </div>
+                                            
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Basic Details-->
+                        <!--Product Info Tabs-->
+                        <div class="product-info-tabs">
+
+                            <!--Product Tabs-->
+                            <div class="prod-tabs tabs-box" id="product-tabs">
+
+                                <!--Tab Btns-->
+                                <ul class="tab-btns tab-buttons clearfix">
+                                    <li data-tab="#prod-description" class="tab-btn active-btn">Productos</li>
+                                </ul>
+
+                                <!--Tabs Content-->
+                                <div class="tabs-container tabs-content">
+
+                                    <!--Tab / Active Tab-->
+                                    <div class="tab active-tab" id="prod-description">
+                                    <?php if (!empty($provider->products_purchases)) : ?>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <tr>
+                                                <th><?= __('#') ?></th>
+                                                <th><?= __('Nombre Producto') ?></th>
+                                                <th><?= __('Cantidad') ?></th>
+                                                <th class="actions"><?= __('Acciones') ?></th>
+                                                
+                                            </tr>
+                                            <?php 
+                                                $i=0;
+                                                foreach ($provider->products_purchases as $productsPurchases) : 
+                                            ?>
+                                            <tr>
+                                                <td><?= h($i+1) ?></td>
+                                                <td><?= h($productos[$i][0]) ?></td>
+                                                <td><?= h($productsPurchases->quantity) ?></td>
+                                                <td class="actions">
+                                                    <?= $this->Html->link('Ver', ['controller' => 'Products', 'action' => 'view', $productsPurchases->product_id], ['class' => 'btn-style-one']) ?> 
+                                                </td>
+                                            </tr>
+                                            <?php 
+                                                $i++;
+                                                endforeach; ?>
+                                        </table>
+                                    </div>
+                                    <?php endif; ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End product info tabs -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <!--End Shop Single-->
     <!-- Main Footer -->
     <footer class="main-footer alternate" style="background-image: url(images/background/4.jpg);">
-       
-
         <!--Footer Bottom-->
          <div class="footer-bottom">
             <div class="auto-container">
                 <div class="copyright-text">
-                    <p>Copyrights © 2020 All Rights Reserved</p>
+                    <p>Copyrights © 2020 All Rights Reserved. </p>
                 </div>
             </div>
         </div>
