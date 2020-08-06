@@ -119,14 +119,6 @@ Router::scope('/admin/products', function (RouteBuilder $routes) {
     $routes->connect('/delete/*', ['prefix' => 'Admin', 'controller' => 'Products', 'action' => 'delete']);
 });
 
-Router::scope('/admin/dashboard', function (RouteBuilder $routes) {
-    $routes->connect('/', ['prefix' => 'Admin', 'controller' => 'Dashboard', 'action' => 'index']);
-    $routes->connect('/add', ['prefix' => 'Admin', 'controller' => 'Dashboard', 'action' => 'add']);
-    $routes->connect('/view/*', ['prefix' => 'Admin', 'controller' => 'Dashboard', 'action' => 'view']);
-    $routes->connect('/edit/*', ['prefix' => 'Admin', 'controller' => 'Dashboard', 'action' => 'edit']);
-    $routes->connect('/delete/*', ['prefix' => 'Admin', 'controller' => 'Dashboard', 'action' => 'delete']);
-});
-
 Router::scope('/admin/categories', function (RouteBuilder $routes) {
     $routes->connect('/', ['prefix' => 'Admin', 'controller' => 'Categories', 'action' => 'index']);
     $routes->connect('/add', ['prefix' => 'Admin', 'controller' => 'Categories', 'action' => 'add']);

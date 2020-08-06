@@ -101,8 +101,6 @@
                   </div>
                 </div>
                 <ul class="app-menu">
-                  
-               <li><?= $this->Html->link('Tablero', ['controller' => 'Dashboard', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
                   <li><?= $this->Html->link('Proveedores', ['controller' => 'Providers', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
                   <li><?= $this->Html->link('Productos', ['controller' => 'Products', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
                   <li><?= $this->Html->link('Categorias', ['controller' => 'Categories', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>

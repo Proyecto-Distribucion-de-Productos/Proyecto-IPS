@@ -96,14 +96,11 @@
               <aside class="app-sidebar">
                 <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="../img/usuario.jpg" alt="User Image">
                   <div>
-                      <p class="app-sidebar__user-name"><?= $current_user['name']; ?></p>
-                      <p class="app-sidebar__user-designation">Administrador</p>
+                    <p class="app-sidebar__user-name"><?= $current_user['name']; ?></p>
+                    <p class="app-sidebar__user-designation">Administrador</p>
                   </div>
                 </div>
                 <ul class="app-menu">
-                
-              
-                   <li><?= $this->Html->link('Tablero', ['controller' => 'Dashboard', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
                   <li><?= $this->Html->link('Proveedores', ['controller' => 'Providers', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
                   <li><?= $this->Html->link('Productos', ['controller' => 'Products', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
                   <li><?= $this->Html->link('Categorias', ['controller' => 'Categories', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
@@ -115,7 +112,7 @@
                   <li><?= $this->Html->link('Provincias', ['controller' => 'Provinces', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
                   <li><?= $this->Html->link('Roles', ['controller' => 'Roles', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
                   <li><?= $this->Html->link('Telefonos', ['controller' => 'Phones', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Reportes', ['controller' => 'Reports', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+
                 </ul>
               </aside>
               <!-- End Sidebar menu-->
@@ -136,70 +133,70 @@
                     <div class="tile">
                       <div class="tile-body">
                         <div class="table-responsive">
-                      
+                          
                          <h3><?= h($productsPurchase->id) ?></h3>
-                          <table class="table table-hover table-bordered" id="sampleTable">
-                       <tr>
-                    <th><?= __('Purchase') ?></th>
-                    <td><?= $productsPurchase->has('purchase') ? $this->Html->link($productsPurchase->purchase->id, ['controller' => 'Purchases', 'action' => 'view', $productsPurchase->purchase->id]) : '' ?></td>
-                </tr> 
+                         <table class="table table-hover table-bordered" id="sampleTable">
+                           <tr>
+                            <th><?= __('Purchase') ?></th>
+                            <td><?= $productsPurchase->has('purchase') ? $this->Html->link($productsPurchase->purchase->id, ['controller' => 'Purchases', 'action' => 'view', $productsPurchase->purchase->id]) : '' ?></td>
+                          </tr> 
 
-                    <tr>
-                    <th><?= __('Provider') ?></th>
-                    <td><?= $productsPurchase->has('provider') ? $this->Html->link($productsPurchase->provider->name, ['controller' => 'Providers', 'action' => 'view', $productsPurchase->provider->id]) : '' ?></td>
-                </tr>
-                            <tr>
-                    <th><?= __('Product') ?></th>
-                    <td><?= $productsPurchase->has('product') ? $this->Html->link($productsPurchase->product->name, ['controller' => 'Products', 'action' => 'view', $productsPurchase->product->id]) : '' ?></td>
-                </tr>
-                              <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($productsPurchase->id) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Quantity') ?></th>
-                    <td><?= $this->Number->format($productsPurchase->quantity) ?></td>
-                </tr>
+                          <tr>
+                            <th><?= __('Provider') ?></th>
+                            <td><?= $productsPurchase->has('provider') ? $this->Html->link($productsPurchase->provider->name, ['controller' => 'Providers', 'action' => 'view', $productsPurchase->provider->id]) : '' ?></td>
+                          </tr>
+                          <tr>
+                            <th><?= __('Product') ?></th>
+                            <td><?= $productsPurchase->has('product') ? $this->Html->link($productsPurchase->product->name, ['controller' => 'Products', 'action' => 'view', $productsPurchase->product->id]) : '' ?></td>
+                          </tr>
+                          <tr>
+                            <th><?= __('Id') ?></th>
+                            <td><?= $this->Number->format($productsPurchase->id) ?></td>
+                          </tr>
+                          <tr>
+                            <th><?= __('Quantity') ?></th>
+                            <td><?= $this->Number->format($productsPurchase->quantity) ?></td>
+                          </tr>
 
-                            <tr>
-                              <th><?= $this->Paginator->sort('Acciones') ?></th>
-                              <td class="actions">
-                                <?= $this->Html->link('', ['action' => 'edit', $productsPurchase->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
-                                <?= $this->Form->postLink('', ['action' => 'delete', $productsPurchase->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $productsPurchase->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
-                               <?= $this->Html->link(__('List Products Purchases'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-                               <?= $this->Html->link(__('New Products Purchase'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
-                              </td>
-                            </tr>
-                          </table>
-                        </tbody>
-                      </table>
-                    </div>
+                          <tr>
+                            <th><?= $this->Paginator->sort('Acciones') ?></th>
+                            <td class="actions">
+                              <?= $this->Html->link('', ['action' => 'edit', $productsPurchase->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
+                              <?= $this->Form->postLink('', ['action' => 'delete', $productsPurchase->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $productsPurchase->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
+                              <?= $this->Html->link(__('List Products Purchases'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+                              <?= $this->Html->link(__('New Products Purchase'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+                            </td>
+                          </tr>
+                        </table>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
             </div>
-          </main>
-          <!-- Essential javascripts for application to work-->
-          <?= $this->Html->script('jquery-3.2.1.min.js');?>
-          <?= $this->Html->script('popper.min.js');?>
-          <?= $this->Html->script('bootstrap.min.js');?>
-          <?= $this->Html->script('main.js',['type'=>'text/javascript']);?>
-          <!-- Page specific javascripts-->
-          <!-- Data table plugin-->
-          <?= $this->Html->script('main.js',['type'=>'text/javascript']);?>
-          <?= $this->Html->script('plugins/jquery.dataTables.min.js',['type'=>'text/javascript']);?>
-          <?= $this->Html->script('plugins/dataTables.bootstrap.min.js',['type'=>'text/javascript']);?>
-          <script type="text/javascript">$('#sampleTable').DataTable();</script>
-          <!-- Google analytics script-->
-          <script type="text/javascript">
-            if(document.location.hostname == 'pratikborsadiya.in') {
-              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-              ga('create', 'UA-72504830-1', 'auto');
-              ga('send', 'pageview');
-            }
-          </script>
-        </body>
-        </html>
+          </div>
+        </main>
+        <!-- Essential javascripts for application to work-->
+        <?= $this->Html->script('jquery-3.2.1.min.js');?>
+        <?= $this->Html->script('popper.min.js');?>
+        <?= $this->Html->script('bootstrap.min.js');?>
+        <?= $this->Html->script('main.js',['type'=>'text/javascript']);?>
+        <!-- Page specific javascripts-->
+        <!-- Data table plugin-->
+        <?= $this->Html->script('main.js',['type'=>'text/javascript']);?>
+        <?= $this->Html->script('plugins/jquery.dataTables.min.js',['type'=>'text/javascript']);?>
+        <?= $this->Html->script('plugins/dataTables.bootstrap.min.js',['type'=>'text/javascript']);?>
+        <script type="text/javascript">$('#sampleTable').DataTable();</script>
+        <!-- Google analytics script-->
+        <script type="text/javascript">
+          if(document.location.hostname == 'pratikborsadiya.in') {
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-72504830-1', 'auto');
+            ga('send', 'pageview');
+          }
+        </script>
+      </body>
+      </html>

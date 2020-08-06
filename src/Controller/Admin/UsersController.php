@@ -28,7 +28,7 @@ class UsersController extends AppController
              }
              //Aqui redirecciona segun el role de usuario
              if(isset($user['role']) && $user['role'] === 'Administrador'){
-                 return $this->redirect(['controller' => 'dashboard', 'action' => 'index']);
+                 return $this->redirect(['controller' => 'providers', 'action' => 'index']);
              }elseif (isset($user['role']) && $user['role'] === 'Cliente') {
                  return $this->redirect($this->Auth->redirectUrl());
              }

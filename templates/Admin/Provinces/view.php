@@ -96,14 +96,11 @@
               <aside class="app-sidebar">
                 <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="../img/usuario.jpg" alt="User Image">
                   <div>
-                      <p class="app-sidebar__user-name"><?= $current_user['name']; ?></p>
-                      <p class="app-sidebar__user-designation">Administrador</p>
+                    <p class="app-sidebar__user-name"><?= $current_user['name']; ?></p>
+                    <p class="app-sidebar__user-designation">Administrador</p>
                   </div>
                 </div>
                 <ul class="app-menu">
-                  
-              
-                    <li><?= $this->Html->link('Tablero', ['controller' => 'Dashboard', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
                   <li><?= $this->Html->link('Proveedores', ['controller' => 'Providers', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
                   <li><?= $this->Html->link('Productos', ['controller' => 'Products', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
                   <li><?= $this->Html->link('Categorias', ['controller' => 'Categories', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
@@ -115,8 +112,8 @@
                   <li><?= $this->Html->link('Provincias', ['controller' => 'Provinces', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
                   <li><?= $this->Html->link('Roles', ['controller' => 'Roles', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
                   <li><?= $this->Html->link('Telefonos', ['controller' => 'Phones', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Reportes', ['controller' => 'Reports', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>           
-                     </ul>
+                  
+                </ul>
               </aside>
               <!-- End Sidebar menu-->
               <main class="app-content">
@@ -142,7 +139,7 @@
                               <th><?= $this->Paginator->sort('#') ?></th>
                               <td><?= $this->Number->format($province->id) ?></td>
                             </tr>
-                         
+                            
                             <tr>
                               <th><?= $this->Paginator->sort('Departamento') ?></th>
                               <td><?= $province->has('department') ? $this->Html->link($province->department->name, ['controller' => 'Departments', 'action' => 'view', $province->department->id]) : '' ?>
