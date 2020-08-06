@@ -101,17 +101,13 @@
         </div>
       </div>
       <ul class="app-menu">
-                  <li><?= $this->Html->link('Proveedores', ['controller' => 'Providers', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                 <li><?= $this->Html->link('Proveedores', ['controller' => 'Providers', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
                   <li><?= $this->Html->link('Productos', ['controller' => 'Products', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  <li><?= $this->Html->link('Usuarios', ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
                   <li><?= $this->Html->link('Categorias', ['controller' => 'Categories', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
                   <li><?= $this->Html->link('Usuarios', ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Medidas', ['controller' => 'Measurements', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                  
                   <li><?= $this->Html->link('Compras de Productos', ['controller' => 'ProductsPurchases', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Departamentos', ['controller' => 'Departments', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Distritos', ['controller' => 'Districts', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Provincias', ['controller' => 'Provinces', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Roles', ['controller' => 'Roles', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Telefonos', ['controller' => 'Phones', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
 
       </ul>
     </aside>
