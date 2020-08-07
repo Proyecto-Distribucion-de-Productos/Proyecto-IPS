@@ -22,7 +22,7 @@ class UbicationsController extends AppController
         $this->products_purchases();
     }
     public function mapUbicationProviders(){
-        
+        $this->ubication_provider();
     }
 
     public function products_purchases() {
@@ -37,5 +37,12 @@ class UbicationsController extends AppController
             array_push($mapa, [$purchases[$i][2], $products_purchases, $purchases[$i][0]]);  
         endfor;
         return $this->set(compact('mapa'));
+    }
+
+    public function ubication_provider() {
+        $conn = ConnectionManager::get('default'); 
+        $stmt = $conn->execute('SELECT providers.ruc, providers.name, providers.direction, departments.id FROM providers JOIN departments ON departments.id = providers.department_id');
+        $providers = $stmt ->fetchAll();
+        return $this->set(compact('providers'));
     }
 }

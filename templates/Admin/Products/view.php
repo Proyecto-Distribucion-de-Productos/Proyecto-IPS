@@ -19,7 +19,7 @@
   <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
   <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
   <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
-  <title>Telefonos</title>
+  <title>Productos</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -94,20 +94,18 @@
               <!-- Sidebar menu-->
               <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
               <aside class="app-sidebar">
-                <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="../img/usuario.jpg" alt="User Image">
+                <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="../../../img/usuario.jpg" alt="User Image">
                   <div>
                       <p class="app-sidebar__user-name"><?= $current_user['name']; ?></p>
                       <p class="app-sidebar__user-designation">Administrador</p>
                   </div>
                 </div>
                 <ul class="app-menu">
-                  <li><?= $this->Html->link('Proveedores', ['controller' => 'Providers', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Productos', ['controller' => 'Products', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Usuarios', ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Categorias', ['controller' => 'Categories', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Usuarios', ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  
-                  <li><?= $this->Html->link('Compras de Productos', ['controller' => 'ProductsPurchases', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
+                <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-address-card-o']).$this->Html->tag('span', 'Proveedores', ['class' => 'app-menu__label']), ['controller' => 'Providers', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
+                  <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-shopping-basket']).$this->Html->tag('span', 'Productos', ['class' => 'app-menu__label']), ['controller' => 'Products', 'action' => 'index'], ['class' => 'app-menu__item active', 'escape' => false]) ?></li>
+                  <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-users']).$this->Html->tag('span', 'Usuarios', ['class' => 'app-menu__label']), ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
+                  <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-filter']).$this->Html->tag('span', 'Categorias', ['class' => 'app-menu__label']), ['controller' => 'Categories', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
+                  <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-shopping-cart']).$this->Html->tag('span', 'Compras Productos', ['class' => 'app-menu__label']), ['controller' => 'ProductsPurchases', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
                 </ul>
               </aside>
               <!-- End Sidebar menu-->

@@ -101,15 +101,12 @@
                   </div>
                 </div>
                 <ul class="app-menu">
-               <li><?= $this->Html->link('Proveedores', ['controller' => 'Providers', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Productos', ['controller' => 'Products', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Usuarios', ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Categorias', ['controller' => 'Categories', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Usuarios', ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  
-                  <li><?= $this->Html->link('Compras de Productos', ['controller' => 'ProductsPurchases', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-
-               </ul>
+                  <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-address-card-o']).$this->Html->tag('span', 'Proveedores', ['class' => 'app-menu__label']), ['controller' => 'Providers', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
+                  <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-shopping-basket']).$this->Html->tag('span', 'Productos', ['class' => 'app-menu__label']), ['controller' => 'Products', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
+                  <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-users']).$this->Html->tag('span', 'Usuarios', ['class' => 'app-menu__label']), ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item active', 'escape' => false]) ?></li>
+                  <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-filter']).$this->Html->tag('span', 'Categorias', ['class' => 'app-menu__label']), ['controller' => 'Categories', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
+                  <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-shopping-cart']).$this->Html->tag('span', 'Compras Productos', ['class' => 'app-menu__label']), ['controller' => 'ProductsPurchases', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
+                </ul>
              </aside>
              <!-- End Sidebar menu-->
              <main class="app-content">

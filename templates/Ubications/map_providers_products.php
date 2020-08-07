@@ -68,7 +68,7 @@
                                     <div class="dropdown">
                                         <?= $this->Html->link($current_user['name'],'#',['class' => 'btn-style-one dropdown-toggle', 'data-toggle'=>'dropdown'])?>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <?= $this->Html->link('Tablero de Administrador','/admin/dashboard',['class' => 'dropdown-item'])?>
+                                            <?= $this->Html->link('Tablero de Administrador','/admin/providers',['class' => 'dropdown-item'])?>
                                             <div class="dropdown-divider"></div>
                                             <a class="dropdown-item" href="#">Perfil</a>
                                             <?= $this->Html->link('Cerrar Sesión','/admin/users/logout',['class' => 'dropdown-item'])?>
@@ -170,10 +170,10 @@
                         <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
                             <ul class="navigation clearfix">
                                 <li class="dropdown"><?= $this->Html->link('Principal','/')?></li>
-                                <li class="dropdown"><a href="#">Proveedores</a></li>
-                                <li class="dropdown"><a href="#">Visualizaciones</a></li>
+                                <li class="dropdown"><?= $this->Html->link('Proveedores','/providers')?></li>
+                                <li class="dropdown"><?= $this->Html->link('Visualizaciones','/visualizations')?></li>
                                 <li class="dropdown"><?= $this->Html->link('Productos','/products')?></li>
-                                <li class="current dropdown"><a href="#">Ubicaciones</a></li>
+                                <li class="current dropdown"><?= $this->Html->link('Ubicaciones','/ubications')?></li>
                             </ul>
                         </div>
                     </nav><!-- Main Menu End-->

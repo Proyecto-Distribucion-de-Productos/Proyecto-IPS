@@ -57,7 +57,7 @@
                                     <div class="dropdown">
                                         <?= $this->Html->link($current_user['name'],'#',['class' => 'btn-style-one dropdown-toggle', 'data-toggle'=>'dropdown'])?>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <?= $this->Html->link('Tablero de Administrador','/admin/dashboard',['class' => 'dropdown-item'])?>
+                                            <?= $this->Html->link('Tablero de Administrador','/admin/providers',['class' => 'dropdown-item'])?>
                                             <div class="dropdown-divider"></div>
                                             <a class="dropdown-item" href="#">Perfil</a>
                                             <?= $this->Html->link('Cerrar Sesión','/admin/users/logout',['class' => 'dropdown-item'])?>
@@ -252,7 +252,7 @@
                                                             <td><?= h($i) ?></td>
                                                             <td><?= h($query[$i][2]) ?></td>
                                                             <td class="actions">
-                                                                <?= $this->Html->link('Ver', ['controller' => 'Purchases', 'action' => 'view', $query[$i][0]], ['class' => 'btn-style-one']) ?> 
+                                                                <?= $this->Html->link('Ver', ['controller' => 'Providers', 'action' => 'view', $query[$i][0]], ['class' => 'btn-style-one']) ?> 
                                                             </td>
                                                         </tr>
                                                     <?php endfor; ?>

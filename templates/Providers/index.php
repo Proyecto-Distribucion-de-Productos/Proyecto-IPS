@@ -54,7 +54,7 @@
                                     <div class="dropdown">
                                         <?= $this->Html->link($current_user['name'],'#',['class' => 'btn-style-one dropdown-toggle', 'data-toggle'=>'dropdown'])?>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <?= $this->Html->link('Tablero de Administrador','/admin/dashboard',['class' => 'dropdown-item'])?>
+                                            <?= $this->Html->link('Tablero de Administrador','/admin/providers',['class' => 'dropdown-item'])?>
                                             <div class="dropdown-divider"></div>
                                             <a class="dropdown-item" href="#">Perfil</a>
                                             <?= $this->Html->link('Cerrar Sesión','/admin/users/logout',['class' => 'dropdown-item'])?>
