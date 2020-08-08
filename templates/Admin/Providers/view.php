@@ -118,7 +118,7 @@
                   <ul class="app-breadcrumb breadcrumb">
                     <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
                     <!--<li class="breadcrumb-item">Tables</li>-->
-                    <li class="breadcrumb-item active"><a href="#">Providers</a></li>
+                    <li class="breadcrumb-item active"><a href="#">Proveedores</a></li>
                   </ul>
                 </div>
                 <div class="row">
@@ -126,7 +126,7 @@
                     <div class="tile">
                       <div class="tile-body">
                         <div class="table-responsive">
-                          
+
                          <h3><?= h($provider->name) ?></h3>
                          <table class="table table-hover table-bordered" id="sampleTable">
                           <tr>
@@ -163,46 +163,47 @@
                           </td>
                         </tr>
 
+
                       </table>
-                      <h4><?= __('Telefonos relacionados') ?></h4>
-                      <table class="table table-hover table-bordered" id="sampleTable">
-                       <tr>
-                        <th><?= $this->Paginator->sort('Id') ?></th>
-                        <th><?= $this->Paginator->sort('Provider Id') ?></th>
-                        <th><?= $this->Paginator->sort('Number') ?></th>
-                        <th class="actions"><?= __('Actions') ?></th>
-                      </tr>
 
-                      <?php foreach ($provider->phones as $phones) : ?>
-                        <tr>
-                          <td><?= h($phones->id) ?></td>
-                          <td><?= h($phones->provider_id) ?></td>
-                          <td><?= h($phones->number) ?></td>
-                          <td class="actions">
-                            <?= $this->Html->link('', ['action' => 'view', $phones->id], ['class' => 'btn btn-info fa fa-eye']) ?>
-                            <?= $this->Html->link('', ['action' => 'edit', $phones->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
-                            <?= $this->Form->postLink('', ['action' => 'delete', $phones->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $phones->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
-
-                          </td>
+                      <?php if (!empty($provider->products_purchases)): ?>
+                        <h4><?= __('Telefonos Relacionados') ?></h4>
+                        <table class="table table-hover table-bordered" id="sampleTable">
+                         <tr>
+                          <th><?= $this->Paginator->sort('Id') ?></th>
+                          <th><?= $this->Paginator->sort('Provider Id') ?></th>
+                          <th><?= $this->Paginator->sort('Number') ?></th>
+                          <th class="actions"><?= __('Actions') ?></th>
                         </tr>
-                      <?php endforeach; ?>
-                    </table>
 
+                        <?php foreach ($provider->phones as $phones) : ?>
+                          <tr>
+                            <td><?= h($phones->id) ?></td>
+                            <td><?= h($phones->provider_id) ?></td>
+                            <td><?= h($phones->number) ?></td>
+                            <td class="actions">
+                              <?= $this->Html->link('', ['action' => 'view', $phones->id], ['class' => 'btn btn-info fa fa-eye']) ?>
+                              <?= $this->Html->link('', ['action' => 'edit', $phones->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
+                            </td>
+                          </tr>
+                        <?php endforeach; ?>
+                      </table>
+                    <?php endif; ?>
 
 
                     <div class="related">
                       <?php if (!empty($provider->products_purchases)): ?>
-                        <h4><?= __('Compras de productos relacionados') ?></h4>
+                        <h4><?= __('Compras de Productos Relacionados') ?></h4>
                         <?php if (!empty($provider->products_purchases)) : ?>
                           <div class="table-responsive">
-                            <table>
+                            <table class="table table-hover table-bordered" id="sampleTable">
                               <tr>
-                                <th><?= $this->Paginator->sort('Id') ?></th>
-                                <th><?= $this->Paginator->sort('Purchase Id') ?></th>
-                                <th><?= $this->Paginator->sort('Provider Id') ?></th>
-                                <th><?= $this->Paginator->sort('Product Id') ?></th>
-                                <th><?= $this->Paginator->sort('Quantity') ?></th>
-                                <th class="actions"><?= __('Actions') ?></th>
+                                <th><?= $this->Paginator->sort('#') ?></th>
+                                <th><?= $this->Paginator->sort('# Compra') ?></th>
+                                <th><?= $this->Paginator->sort('# Proveedor') ?></th>
+                                <th><?= $this->Paginator->sort('# Producto') ?></th>
+                                <th><?= $this->Paginator->sort('Cantidad') ?></th>
+                                <th class="actions"><?= __('Acciones') ?></th>
                               </tr>
 
                               <?php foreach ($provider->products_purchases as $productsPurchases) : ?>
@@ -216,7 +217,6 @@
                                   <td class="actions">
                                     <?= $this->Html->link('', ['action' => 'view', $productsPurchases->id], ['class' => 'btn btn-info fa fa-eye']) ?>
                                     <?= $this->Html->link('', ['action' => 'edit', $productsPurchases->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
-                                    <?= $this->Form->postLink('', ['action' => 'delete', $productsPurchases->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $productsPurchases->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
                                   </td>
                                 </tr>
                               <?php endforeach; ?>
@@ -231,14 +231,14 @@
                         <h4><?= __('Compras relacionadas') ?></h4>
                         <?php if (!empty($provider->purchases)) : ?>
                           <div class="table-responsive">
-                            <table>
-                             
+                            <table class="table table-hover table-bordered" id="sampleTable">
+
                               <tr>
-                                <th><?= $this->Paginator->sort('Id') ?></th>
-                                <th><?= $this->Paginator->sort('Provider Id') ?></th>
-                                <th><?= $this->Paginator->sort('Date') ?></th>
-                                <th><?= $this->Paginator->sort('User Id') ?></th>
-                                <th class="actions"><?= __('Actions') ?></th>
+                                <th><?= $this->Paginator->sort('#') ?></th>
+                                <th><?= $this->Paginator->sort('# Proveedor') ?></th>
+                                <th><?= $this->Paginator->sort('Fecha') ?></th>
+                                <th><?= $this->Paginator->sort('# Usuario') ?></th>
+                                <th class="actions"><?= __('Acciones') ?></th>
                               </tr>
                               <?php foreach ($provider->purchases as $purchases) : ?>
                                 <tr>
@@ -250,7 +250,6 @@
                                   <td class="actions">
                                     <?= $this->Html->link('', ['action' => 'view', $purchases->id], ['class' => 'btn btn-info fa fa-eye']) ?>
                                     <?= $this->Html->link('', ['action' => 'edit', $purchases->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
-                                    <?= $this->Form->postLink('', ['action' => 'delete', $purchases->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $purchases->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
                                   </td>
 
                                 </tr>

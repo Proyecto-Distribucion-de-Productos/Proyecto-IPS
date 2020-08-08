@@ -24,7 +24,7 @@
           <h3 class="categorie-head">MEDIDA</h3>
           <div class="form-group">
             <?php 
-            echo $this->Form->control('name', ['label' => 'NOMBRE', 'class' => 'form-control']);
+            echo $this->Form->control('name', ['label' => 'Nombre', 'class' => 'form-control']);
             ?> 
           </div>
           <div class="form-group">

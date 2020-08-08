@@ -9,7 +9,7 @@
   <?= $this->Html->css('main.css') ?>
   <!-- Font-icon css-->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Agregar product</title>
+  <title>Agregar Producto</title>
 </head>
 <body>
   <section class="material-half-bg">
@@ -22,18 +22,15 @@
         <?= $this->Form->create($product) ?>
 
         <!--<form class="login-form" method="post" accept-charset="utf-8" action="user/login">-->
-          <h3 class="login-head">Product</h3>
+          <h3 class="login-head">PRODUCTO</h3>
           <div class="form-group">
             <?php 
             
-            echo $this->Form->control('category_id', ['label' => 'Category', 'class' => 'form-control', 'options' => $categories]);
-            echo $this->Form->control('measurement_id', ['label' => 'Measurement', 'class' => 'form-control', 'options' => $measurements]);
-            echo $this->Form->control('name', ['label' => 'Name', 'class' => 'form-control']);
-            echo $this->Form->control('price', ['label' => 'Price', 'class' => 'form-control']);
-            echo $this->Form->control('purchases_ids', ['label' => 'Purchases Ids', 'class' => 'form-control', 'options' => $purchases]);
-
-
-
+            echo $this->Form->control('category_id', ['label' => 'Categoria', 'class' => 'form-control', 'options' => $categories]);
+            echo $this->Form->control('measurement_id', ['label' => 'Medida', 'class' => 'form-control', 'options' => $measurements]);
+            echo $this->Form->control('name', ['label' => 'Nombre', 'class' => 'form-control']);
+            echo $this->Form->control('price', ['label' => 'Precio', 'class' => 'form-control']);
+            echo $this->Form->control('purchases._ids', ['label' => 'Compra', 'class' => 'form-control', 'options' => $purchases]);
             ?> 
           </div>
           <div class="form-group">

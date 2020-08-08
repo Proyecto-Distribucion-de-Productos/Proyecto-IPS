@@ -9,26 +9,26 @@
   <?= $this->Html->css('main.css') ?>
   <!-- Font-icon css-->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Editar proveedor</title>
+  <title>Editar Proveedor</title>
 </head>
 <body>
   <section class="material-half-bg">
     <div class="cover"></div>
   </section>
-  <section class="login-content">
-    <div class="login-box">
+  <section class="register-content">
+    <div class="register-box">
       <!-- Inicio del formulario login-->
-      <div class="login-form">
+      <div class="register-form">
         <?= $this->Form->create($provider) ?>
         <!--<form class="login-form" method="post" accept-charset="utf-8" action="user/login">-->
-          <h3 class="login-head">Proveedor</h3>
+          <h3 class="login-head">PROVEEDOR</h3>
           <div class="form-group">
             <?php 
         
-            echo $this->Form->control('name', ['label' => 'Name', 'class' => 'form-control']);
-            echo $this->Form->control('email', ['label' => 'Email', 'class' => 'form-control']);
-            echo $this->Form->control('district_id', ['label' => 'District', 'class' => 'form-control', 'options' => $districts]);
-            echo $this->Form->control('province_id', ['label' => 'Province', 'class' => 'form-control', 'options' => $provinces]);
+            echo $this->Form->control('name', ['label' => 'Nombre', 'class' => 'form-control']);
+            echo $this->Form->control('email', ['label' => 'Correo', 'class' => 'form-control']);
+            echo $this->Form->control('district_id', ['label' => 'Districto', 'class' => 'form-control', 'options' => $districts]);
+            echo $this->Form->control('province_id', ['label' => 'Provincia', 'class' => 'form-control', 'options' => $provinces]);
             
            
             
@@ -39,23 +39,14 @@
             <?php 
         
             
-            echo $this->Form->control('department_id', ['label' => 'Department', 'class' => 'form-control', 'options' => $departments]);
-             echo $this->Form->control('direction', ['label' => 'Direction', 'class' => 'form-control']);
+            echo $this->Form->control('department_id', ['label' => 'Departmento', 'class' => 'form-control', 'options' => $departments]);
+             echo $this->Form->control('direction', ['label' => 'Direccion', 'class' => 'form-control']);
             
             ?> 
           </div>
           <div class="form-group">
           </div>
           <div class="form-group btn-container">
-            <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $provider->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $provider->id), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List Providers'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
             <button class="btn btn-primary btn-block" type="submit">CONFIRMAR</button>
           </div>
           <!--</form>-->

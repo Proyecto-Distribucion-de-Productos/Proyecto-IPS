@@ -21,13 +21,13 @@
       <div class="login-form">
         <?= $this->Form->create($phone) ?>
         <!--<form class="login-form" method="post" accept-charset="utf-8" action="user/login">-->
-          <h3 class="login-head">Telefono</h3>
+          <h3 class="login-head">TELEFONO</h3>
           <div class="form-group">
             <?php 
         
 
             echo $this->Form->control('provider_id', ['label' => 'Proveedor', 'class' => 'form-control', 'options' => $providers]);
-             echo $this->Form->control('number', ['label' => 'numero', 'class' => 'form-control']);
+             echo $this->Form->control('number', ['label' => 'Numero', 'class' => 'form-control']);
             
             ?> 
           </div>

@@ -9,7 +9,7 @@
   <?= $this->Html->css('main.css') ?>
   <!-- Font-icon css-->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Agregar Distrito</title>
+  <title>Agregar Provincia</title>
 </head>
 <body>
   <section class="material-half-bg">
@@ -24,9 +24,9 @@
           <h3 class="login-head">PROVINCIA</h3>
           <div class="form-group">
             <?php 
-            echo $this->Form->control('name', ['label' => 'NOMBRE', 'class' => 'form-control']);
+            echo $this->Form->control('name', ['label' => 'Nombre', 'class' => 'form-control']);
          
-            echo $this->Form->control('department_id', ['label' => 'DEPARTAMENTO', 'class' => 'form-control', 'options' => $departments]);
+            echo $this->Form->control('department_id', ['label' => 'Departemanto', 'class' => 'form-control', 'options' => $departments]);
             ?> 
           </div>
           <div class="form-group">

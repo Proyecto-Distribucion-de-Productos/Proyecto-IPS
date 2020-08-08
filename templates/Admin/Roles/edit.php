@@ -9,7 +9,7 @@
   <?= $this->Html->css('main.css') ?>
   <!-- Font-icon css-->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Editar Departamento</title>
+  <title>Editar Rol</title>
 </head>
 <body>
   <section class="material-half-bg">
@@ -23,7 +23,7 @@
         <!--<form class="login-form" method="post" accept-charset="utf-8" action="user/login">-->
           <h3 class="login-head">ROL</h3>
           <div class="form-group">
-            <?php echo $this->Form->control('name', ['label' => 'NOMBRE', 'class' => 'form-control']); ?>
+            <?php echo $this->Form->control('name', ['label' => 'Nombre', 'class' => 'form-control']); ?>
           </div>
           <div class="form-group">
           </div>

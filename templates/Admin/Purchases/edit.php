@@ -9,7 +9,7 @@
   <?= $this->Html->css('main.css') ?>
   <!-- Font-icon css-->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Editar Distrito</title>
+  <title>Editar Compra</title>
 </head>
 <body>
   <section class="material-half-bg">
@@ -24,9 +24,9 @@
           <h3 class="login-head">COMPRA</h3>
           <div class="form-group">
             <?php 
-            echo $this->Form->control('provider_id', ['label' => 'PROVEEDOR', 'class' => 'form-control']);
-            echo $this->Form->control('date', ['label' => 'FECHA', 'class' => 'form-control']);
-            echo $this->Form->control('user_id', ['label' => 'USUARIO', 'class' => 'form-control', 'options' => $users]);
+            echo $this->Form->control('provider_id', ['label' => 'Proveedor', 'class' => 'form-control']);
+            echo $this->Form->control('date', ['label' => 'Fecha', 'class' => 'form-control']);
+            echo $this->Form->control('user_id', ['label' => 'Usuario', 'class' => 'form-control', 'options' => $users]);
           
             ?> 
           </div>

@@ -19,7 +19,7 @@
   <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
   <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
   <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
-  <title>Telefonos</title>
+  <title>Compras de Productos</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -112,13 +112,13 @@
               <main class="app-content">
                 <div class="app-title">
                   <div>
-                    <h1><i class="fa fa-th-list"></i>products_purchases</h1>
+                    <h1><i class="fa fa-th-list"></i>Compras de Productos</h1>
                     <!--<p>Basic bootstrap tables</p>-->
                   </div>
                   <ul class="app-breadcrumb breadcrumb">
                     <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
                     <!--<li class="breadcrumb-item">Tables</li>-->
-                    <li class="breadcrumb-item active"><a href="#">products_purchases</a></li>
+                    <li class="breadcrumb-item active"><a href="#">Compras de Productos</a></li>
                   </ul>
                 </div>
                 <div class="row">
@@ -156,8 +156,6 @@
                             <td class="actions">
                               <?= $this->Html->link('', ['action' => 'edit', $productsPurchase->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
                               <?= $this->Form->postLink('', ['action' => 'delete', $productsPurchase->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $productsPurchase->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
-                              <?= $this->Html->link(__('List Products Purchases'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-                              <?= $this->Html->link(__('New Products Purchase'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
                             </td>
                           </tr>
                         </table>

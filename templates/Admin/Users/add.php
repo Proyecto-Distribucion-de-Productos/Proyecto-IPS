@@ -9,7 +9,7 @@
   <?= $this->Html->css('main.css') ?>
   <!-- Font-icon css-->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Agregar usuario</title>
+  <title>Agregar Usuario</title>
 </head>
 <body>
 <section class="material-half-bg">
@@ -25,7 +25,7 @@
           <div class="form-group">
             <?php 
             echo $this->Form->control('name', ['label' => 'Nombre', 'class' => 'form-control']);
-            echo $this->Form->control('email', ['label' => 'Correo electrónico', 'class' => 'form-control']);
+            echo $this->Form->control('email', ['label' => 'Correo Electronico', 'class' => 'form-control']);
             echo $this->Form->control('password', ['label' => 'Contraseña', 'class' => 'form-control']);
             echo $this->Form->control('firstname', ['label' => 'Primer apellido', 'class' => 'form-control']);
             echo $this->Form->control('secondname', ['label' => 'Segundo apellido', 'class' => 'form-control']);

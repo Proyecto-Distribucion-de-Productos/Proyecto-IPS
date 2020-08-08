@@ -24,9 +24,9 @@
           <h3 class="login-head">DISTRITO</h3>
           <div class="form-group">
             <?php 
-            echo $this->Form->control('name', ['label' => 'NOMBRE', 'class' => 'form-control']);
-            echo $this->Form->control('province_id', ['label' => '¨PROVINCIA', 'class' => 'form-control', 'options' => $provinces]);
-            echo $this->Form->control('department_id', ['label' => 'DEPARTAMENTO', 'class' => 'form-control', 'options' => $departments]);
+            echo $this->Form->control('name', ['label' => 'Nombre', 'class' => 'form-control']);
+            echo $this->Form->control('province_id', ['label' => 'Provincia', 'class' => 'form-control', 'options' => $provinces]);
+            echo $this->Form->control('department_id', ['label' => 'Departamento', 'class' => 'form-control', 'options' => $departments]);
             ?> 
           </div>
           <div class="form-group">

@@ -19,7 +19,7 @@
   <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
   <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
   <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
-  <title>Usuarios</title>
+  <title>Telefonos</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -101,27 +101,24 @@
                   </div>
                 </div>
                 <ul class="app-menu">
-               <li><?= $this->Html->link('Proveedores', ['controller' => 'Providers', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Productos', ['controller' => 'Products', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Usuarios', ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Categorias', ['controller' => 'Categories', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Usuarios', ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  
-                  <li><?= $this->Html->link('Compras de Productos', ['controller' => 'ProductsPurchases', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-
+               <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-address-card-o']).$this->Html->tag('span', 'Proveedores', ['class' => 'app-menu__label']), ['controller' => 'Providers', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
+                  <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-shopping-basket']).$this->Html->tag('span', 'Productos', ['class' => 'app-menu__label']), ['controller' => 'Products', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
+                  <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-users']).$this->Html->tag('span', 'Usuarios', ['class' => 'app-menu__label']), ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
+                  <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-filter']).$this->Html->tag('span', 'Categorias', ['class' => 'app-menu__label']), ['controller' => 'Categories', 'action' => 'index'], ['class' => 'app-menu__item active', 'escape' => false]) ?></li>
+                  <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-shopping-cart']).$this->Html->tag('span', 'Compras Productos', ['class' => 'app-menu__label']), ['controller' => 'ProductsPurchases', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
                 </ul>
               </aside>
               <!-- End Sidebar menu-->
               <main class="app-content">
                 <div class="app-title">
                   <div>
-                    <h1><i class="fa fa-th-list"></i>phones</h1>
+                    <h1><i class="fa fa-th-list"></i>Telefonos</h1>
                     <!--<p>Basic bootstrap tables</p>-->
                   </div>
                   <ul class="app-breadcrumb breadcrumb">
                     <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
                     <!--<li class="breadcrumb-item">Tables</li>-->
-                    <li class="breadcrumb-item active"><a href="#">Usuarios</a></li>
+                    <li class="breadcrumb-item active"><a href="#">Telefonos</a></li>
                   </ul>
                 </div>
                 <div class="row">

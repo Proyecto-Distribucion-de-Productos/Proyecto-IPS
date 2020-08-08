@@ -23,7 +23,7 @@
         <!--<form class="login-form" method="post" accept-charset="utf-8" action="user/login">-->
           <h3 class="categorie-head">DEPARTAMENTO</h3>
           <div class="form-group">
-            <?php echo $this->Form->control('name', ['label' => 'NOMBRE', 'class' => 'form-control']); ?>
+            <?php echo $this->Form->control('name', ['label' => 'Nombre', 'class' => 'form-control']); ?>
           </div>
           <div class="form-group">
           </div>

@@ -9,7 +9,7 @@
   <?= $this->Html->css('main.css') ?>
   <!-- Font-icon css-->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Editar products_Purchase</title>
+  <title>Editar Compra de Producto</title>
 </head>
 <body>
   <section class="material-half-bg">
@@ -22,16 +22,16 @@
 
          <?= $this->Form->create($productsPurchase) ?>
         <!--<form class="login-form" method="post" accept-charset="utf-8" action="user/login">-->
-          <h3 class="login-head">products_Purchase</h3>
+          <h3 class="login-head">COMPRA DE PRODUCTO</h3>
 
           <div class="form-group">
             <?php 
         
 
-            echo $this->Form->control('purchase_id', ['label' => 'Purchase', 'class' => 'form-control', 'options' => $purchases]);
-            echo $this->Form->control('provider_id', ['label' => 'Provider', 'class' => 'form-control', 'options' => $providers]);
-            echo $this->Form->control('product_id', ['label' => 'Product', 'class' => 'form-control', 'options' => $products]);
-             echo $this->Form->control('quantity', ['label' => 'Quantity', 'class' => 'form-control']);
+            echo $this->Form->control('purchase_id', ['label' => 'Compra', 'class' => 'form-control', 'options' => $purchases]);
+            echo $this->Form->control('provider_id', ['label' => 'Proveedor', 'class' => 'form-control', 'options' => $providers]);
+            echo $this->Form->control('product_id', ['label' => 'Producto', 'class' => 'form-control', 'options' => $products]);
+             echo $this->Form->control('quantity', ['label' => 'Cantidad', 'class' => 'form-control']);
              
            
             ?> 
@@ -40,15 +40,7 @@
 
           <div class="form-group">
           </div>
-          <div class="form-group btn-container">
-            <div class="side-nav">
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $productsPurchase->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $productsPurchase->id), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List Products Purchases'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
+
 
             <button class="btn btn-primary btn-block" type="submit">CONFIRMAR</button>
             

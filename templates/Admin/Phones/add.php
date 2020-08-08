@@ -9,7 +9,7 @@
   <?= $this->Html->css('main.css') ?>
   <!-- Font-icon css-->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Agregar telefonos</title>
+  <title>Agregar Telefono</title>
 </head>
 <body>
   <section class="material-half-bg">
@@ -21,15 +21,12 @@
       <div class="login-form">
         <?= $this->Form->create($phone) ?>
         <!--<form class="login-form" method="post" accept-charset="utf-8" action="user/login">-->
-          <h3 class="login-head">phone</h3>
+          <h3 class="login-head">TELEFONO</h3>
           <div class="form-group">
             <?php 
             
-            echo $this->Form->control('provider_id', ['label' => 'Provider', 'class' => 'form-control', 'options' => $providers]);
-            echo $this->Form->control('number', ['label' => 'Quantity', 'class' => 'form-control']);
-
-            
-
+            echo $this->Form->control('provider_id', ['label' => 'Proveedor', 'class' => 'form-control', 'options' => $providers]);
+            echo $this->Form->control('number', ['label' => 'Numero', 'class' => 'form-control']);
             ?> 
           </div>
           <div class="form-group">

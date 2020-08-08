@@ -19,7 +19,7 @@
   <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
   <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
   <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
-  <title>Categorias</title>
+  <title>Compras</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -94,131 +94,127 @@
               <!-- Sidebar menu-->
               <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
               <aside class="app-sidebar">
-                <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="../img/usuario.jpg" alt="User Image">
+                <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="../../../img/usuario.jpg" alt="User Image">
                   <div>
-                      <p class="app-sidebar__user-name"><?= $current_user['name']; ?></p>
-                      <p class="app-sidebar__user-designation">Administrador</p>
+                    <p class="app-sidebar__user-name"><?= $current_user['name']; ?></p>
+                    <p class="app-sidebar__user-designation">Administrador</p>
                   </div>
                 </div>
                 <ul class="app-menu">
-                 <li><?= $this->Html->link('Proveedores', ['controller' => 'Providers', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Productos', ['controller' => 'Products', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Usuarios', ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Categorias', ['controller' => 'Categories', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  <li><?= $this->Html->link('Usuarios', ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-                  
-                  <li><?= $this->Html->link('Compras de Productos', ['controller' => 'ProductsPurchases', 'action' => 'index'], ['class' => 'app-menu__item app-menu__label']) ?></li>
-
-                </ul>
-              </aside>
-              <!-- End Sidebar menu-->
-              <main class="app-content">
-                <div class="app-title">
-                  <div>
-                    <h1><i class="fa fa-th-list"></i>Compras</h1>
-                    <!--<p>Basic bootstrap tables</p>-->
-                  </div>
-                  <ul class="app-breadcrumb breadcrumb">
-                    <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-                    <!--<li class="breadcrumb-item">Tables</li>-->
-                    <li class="breadcrumb-item active"><a href="#">Categorias</a></li>
-                  </ul>
+                 <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-address-card-o']).$this->Html->tag('span', 'Proveedores', ['class' => 'app-menu__label']), ['controller' => 'Providers', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
+                 <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-shopping-basket']).$this->Html->tag('span', 'Productos', ['class' => 'app-menu__label']), ['controller' => 'Products', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
+                 <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-users']).$this->Html->tag('span', 'Usuarios', ['class' => 'app-menu__label']), ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
+                 <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-filter']).$this->Html->tag('span', 'Categorias', ['class' => 'app-menu__label']), ['controller' => 'Categories', 'action' => 'index'], ['class' => 'app-menu__item active', 'escape' => false]) ?></li>
+                 <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-shopping-cart']).$this->Html->tag('span', 'Compras Productos', ['class' => 'app-menu__label']), ['controller' => 'ProductsPurchases', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
+               </ul>
+             </aside>
+             <!-- End Sidebar menu-->
+             <main class="app-content">
+              <div class="app-title">
+                <div>
+                  <h1><i class="fa fa-th-list"></i>Compras</h1>
+                  <!--<p>Basic bootstrap tables</p>-->
                 </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="tile">
-                      <div class="tile-body">
-                        <div class="table-responsive">
-                         
+                <ul class="app-breadcrumb breadcrumb">
+                  <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+                  <!--<li class="breadcrumb-item">Tables</li>-->
+                  <li class="breadcrumb-item active"><a href="#">Compras</a></li>
+                </ul>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="tile">
+                    <div class="tile-body">
+                      <div class="table-responsive">
+                       
+                        <table class="table table-hover table-bordered" id="sampleTable">
+                          <tr>
+                            <th><?= $this->Paginator->sort('#') ?></th>
+                            <td><?= $this->Number->format($purchase->id) ?></td>
+                          </tr>
+                          
+                          <tr>
+                            <th><?= $this->Paginator->sort('Proveedor') ?></th>
+                            <td><?= $purchase->has('provider') ? $this->Html->link($purchase->provider->name, ['controller' => 'Departments', 'action' => 'view', $purchase->provider->id]) : '' ?>
+                          </tr>
+                          <tr>
+                            <th><?= $this->Paginator->sort('Fecha') ?></th>
+                            <td><?= h($purchase->date) ?></td>
+                          </tr>
+
+                          <tr>
+                            <th><?= $this->Paginator->sort('Usuario') ?></th>
+                            <td><?= $purchase->has('user') ? $this->Html->link($purchase->user->name, ['controller' => 'Departments', 'action' => 'view', $purchase->user->id]) : '' ?>
+                            
+                          </tr>
+                          <tr>
+                            <th><?= $this->Paginator->sort('Acciones') ?></th>
+                            <td class="actions">
+                              <?= $this->Html->link('', ['action' => 'edit', $purchase->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
+                              <?= $this->Form->postLink('', ['action' => 'delete', $purchase->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $purchase->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
+                            </td>
+                          </tr>
+                          <?php if (!empty($purchase->providers)) : ?>
+                          </table>
+                          <h4><?= __('Proveedores Relacionados') ?></h4>
+                          
                           <table class="table table-hover table-bordered" id="sampleTable">
                             <tr>
                               <th><?= $this->Paginator->sort('#') ?></th>
-                              <td><?= $this->Number->format($purchase->id) ?></td>
+                              <th><?= $this->Paginator->sort('# Ditrito') ?></th>
+                              <th><?= $this->Paginator->sort('# Provincia') ?></th>
+                              <th><?= $this->Paginator->sort('# Departamento') ?></th>
+                              <th><?= $this->Paginator->sort('Nombre') ?></th>
+                              <th><?= $this->Paginator->sort('Correo') ?></th>
+                              <th><?= $this->Paginator->sort('Direccion') ?></th>
+                              <th class="actions"><?= __('Acciones') ?></th>
                             </tr>
-                         
-                            <tr>
-                              <th><?= $this->Paginator->sort('Proveedor') ?></th>
-                              <td><?= $purchase->has('provider') ? $this->Html->link($purchase->provider->name, ['controller' => 'Departments', 'action' => 'view', $purchase->provider->id]) : '' ?>
-                            </tr>
-                            <tr>
-                              <th><?= $this->Paginator->sort('Fecha') ?></th>
-                              <td><?= h($purchase->date) ?></td>
-                            </tr>
-
-                            <tr>
-                              <th><?= $this->Paginator->sort('Usuario') ?></th>
-                              <td><?= $purchase->has('user') ? $this->Html->link($purchase->user->name, ['controller' => 'Departments', 'action' => 'view', $purchase->user->id]) : '' ?>
-                              
-                            </tr>
-                            <tr>
-                              <th><?= $this->Paginator->sort('Acciones') ?></th>
-                              <td class="actions">
-                                <?= $this->Html->link('', ['action' => 'edit', $purchase->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
-                                <?= $this->Form->postLink('', ['action' => 'delete', $purchase->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $purchase->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
-                              </td>
-                            </tr>
-                          </table>
-                          <h4><?= __('Proveedores Relacionados') ?></h4>
-                          <?php if (!empty($purchase->providers)) : ?>
-                            <table class="table table-hover table-bordered" id="sampleTable">
+                            <?php foreach ($purchase->providers as $providers) : ?>
                               <tr>
-                                <th><?= $this->Paginator->sort('#') ?></th>
-                                <th><?= $this->Paginator->sort('# Ditrito') ?></th>
-                                <th><?= $this->Paginator->sort('# Provincia') ?></th>
-                                <th><?= $this->Paginator->sort('# Departamento') ?></th>
-                                <th><?= $this->Paginator->sort('Nombre') ?></th>
-                                <th><?= $this->Paginator->sort('Correo') ?></th>
-                                <th><?= $this->Paginator->sort('Direccion') ?></th>
-                                <th class="actions"><?= __('Acciones') ?></th>
+                                <td><?= h($providers->id) ?></td>
+                                <td><?= h($providers->district_id) ?></td>
+                                <td><?= h($providers->province_id) ?></td>
+                                <td><?= h($providers->department_id) ?></td>
+                                <td><?= h($providers->name) ?></td>
+                                <td><?= h($providers->email) ?></td>
+                                <td><?= h($providers->direction) ?></td>
+                                <td class="actions">
+                                  <?= $this->Html->link('', ['action' => 'view', $providers->id], ['class' => 'btn btn-info fa fa-eye']) ?>
+                                  <?= $this->Html->link('', ['action' => 'edit', $providers->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
+                                </td>
                               </tr>
-                              <?php foreach ($purchase->providers as $providers) : ?>
-                                <tr>
-                                  <td><?= h($providers->id) ?></td>
-                                  <td><?= h($providers->district_id) ?></td>
-                                  <td><?= h($providers->province_id) ?></td>
-                                  <td><?= h($providers->department_id) ?></td>
-                                  <td><?= h($providers->name) ?></td>
-                                  <td><?= h($providers->email) ?></td>
-                                  <td><?= h($providers->direction) ?></td>
-                                  <td class="actions">
-                                    <?= $this->Html->link('', ['action' => 'view', $providers->id], ['class' => 'btn btn-info fa fa-eye']) ?>
-                                    <?= $this->Html->link('', ['action' => 'edit', $providers->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
-                                    <?= $this->Form->postLink('', ['action' => 'delete', $providers->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $providers->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
-                                  </td>
-                                </tr>
-                              <?php endforeach; ?>
-                            </table>
-                          <?php endif; ?>
-                          
-                        </tbody>
-                      </table>
-                    </div>
+                            <?php endforeach; ?>
+                          </table>
+                        <?php endif; ?>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
             </div>
-          </main>
-          <!-- Essential javascripts for application to work-->
-          <?= $this->Html->script('jquery-3.2.1.min.js');?>
-          <?= $this->Html->script('popper.min.js');?>
-          <?= $this->Html->script('bootstrap.min.js');?>
-          <?= $this->Html->script('main.js',['type'=>'text/javascript']);?>
-          <!-- Page specific javascripts-->
-          <!-- Data table plugin-->
-          <?= $this->Html->script('main.js',['type'=>'text/javascript']);?>
-          <?= $this->Html->script('plugins/jquery.dataTables.min.js',['type'=>'text/javascript']);?>
-          <?= $this->Html->script('plugins/dataTables.bootstrap.min.js',['type'=>'text/javascript']);?>
-          <script type="text/javascript">$('#sampleTable').DataTable();</script>
-          <!-- Google analytics script-->
-          <script type="text/javascript">
-            if(document.location.hostname == 'pratikborsadiya.in') {
-              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-              ga('create', 'UA-72504830-1', 'auto');
-              ga('send', 'pageview');
-            }
-          </script>
-        </body>
-        </html>
+          </div>
+        </main>
+        <!-- Essential javascripts for application to work-->
+        <?= $this->Html->script('jquery-3.2.1.min.js');?>
+        <?= $this->Html->script('popper.min.js');?>
+        <?= $this->Html->script('bootstrap.min.js');?>
+        <?= $this->Html->script('main.js',['type'=>'text/javascript']);?>
+        <!-- Page specific javascripts-->
+        <!-- Data table plugin-->
+        <?= $this->Html->script('main.js',['type'=>'text/javascript']);?>
+        <?= $this->Html->script('plugins/jquery.dataTables.min.js',['type'=>'text/javascript']);?>
+        <?= $this->Html->script('plugins/dataTables.bootstrap.min.js',['type'=>'text/javascript']);?>
+        <script type="text/javascript">$('#sampleTable').DataTable();</script>
+        <!-- Google analytics script-->
+        <script type="text/javascript">
+          if(document.location.hostname == 'pratikborsadiya.in') {
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-72504830-1', 'auto');
+            ga('send', 'pageview');
+          }
+        </script>
+      </body>
+      </html>

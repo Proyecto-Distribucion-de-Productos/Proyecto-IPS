@@ -96,12 +96,12 @@
               <aside class="app-sidebar">
                 <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="../../../img/usuario.jpg" alt="User Image">
                   <div>
-                      <p class="app-sidebar__user-name"><?= $current_user['name']; ?></p>
-                      <p class="app-sidebar__user-designation">Administrador</p>
+                    <p class="app-sidebar__user-name"><?= $current_user['name']; ?></p>
+                    <p class="app-sidebar__user-designation">Administrador</p>
                   </div>
                 </div>
                 <ul class="app-menu">
-                <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-address-card-o']).$this->Html->tag('span', 'Proveedores', ['class' => 'app-menu__label']), ['controller' => 'Providers', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
+                  <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-address-card-o']).$this->Html->tag('span', 'Proveedores', ['class' => 'app-menu__label']), ['controller' => 'Providers', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
                   <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-shopping-basket']).$this->Html->tag('span', 'Productos', ['class' => 'app-menu__label']), ['controller' => 'Products', 'action' => 'index'], ['class' => 'app-menu__item active', 'escape' => false]) ?></li>
                   <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-users']).$this->Html->tag('span', 'Usuarios', ['class' => 'app-menu__label']), ['controller' => 'Users', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
                   <li><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'app-menu__icon fa fa-filter']).$this->Html->tag('span', 'Categorias', ['class' => 'app-menu__label']), ['controller' => 'Categories', 'action' => 'index'], ['class' => 'app-menu__item', 'escape' => false]) ?></li>
@@ -112,13 +112,13 @@
               <main class="app-content">
                 <div class="app-title">
                   <div>
-                    <h1><i class="fa fa-th-list"></i>productos</h1>
+                    <h1><i class="fa fa-th-list"></i>Productos</h1>
                     <!--<p>Basic bootstrap tables</p>-->
                   </div>
                   <ul class="app-breadcrumb breadcrumb">
                     <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
                     <!--<li class="breadcrumb-item">Tables</li>-->
-                    <li class="breadcrumb-item active"><a href="#">productos</a></li>
+                    <li class="breadcrumb-item active"><a href="#">Productos</a></li>
                   </ul>
                 </div>
                 <div class="row">
@@ -127,66 +127,64 @@
                       <div class="tile-body">
                         <div class="table-responsive">
                          <h3><?= h($product->name) ?></h3>
-                          <table class="table table-hover table-bordered" id="sampleTable">
-                       <tr>
-                    <th><?= __('Category') ?></th>
-                    <td><?= $product->has('category') ? $this->Html->link($product->category->name, ['controller' => 'Categories', 'action' => 'view', $product->category->id]) : '' ?></td>
-                </tr>     
-                    <tr>
-                    <th><?= __('Measurement') ?></th>
-                    <td><?= $product->has('measurement') ? $this->Html->link($product->measurement->name, ['controller' => 'Measurements', 'action' => 'view', $product->measurement->id]) : '' ?></td>
-                     </tr>
-                            <tr>
-                               <th><?= __('Name') ?></th>
-                    <td><?= h($product->name) ?></td>
-                            </tr>
-                            <tr>
-                              <th><?= __('Id') ?></th>
-                               <td><?= $this->Number->format($product->id) ?></td>
-                            </tr>
-                            <tr>
-                    <th><?= __('Price') ?></th>
-                    <td><?= $this->Number->format($product->price) ?></td>
-                    </tr>
-                            <tr>
-                              <th><?= $this->Paginator->sort('Acciones') ?></th>
-                              <td class="actions">
-                                <?= $this->Html->link('', ['action' => 'edit', $product->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
-                                <?= $this->Form->postLink('', ['action' => 'delete', $product->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $product->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
-                                <?= $this->Html->link(__('List Products'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-                                <?= $this->Html->link(__('New Product'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
-                              </td>
-                            </tr>
-                          </table>
-                        </tbody>
+                         <table class="table table-hover table-bordered" id="sampleTable">
+                           <tr>
+                            <th><?= __('Category') ?></th>
+                            <td><?= $product->has('category') ? $this->Html->link($product->category->name, ['controller' => 'Categories', 'action' => 'view', $product->category->id]) : '' ?></td>
+                          </tr>     
+                          <tr>
+                            <th><?= __('Measurement') ?></th>
+                            <td><?= $product->has('measurement') ? $this->Html->link($product->measurement->name, ['controller' => 'Measurements', 'action' => 'view', $product->measurement->id]) : '' ?></td>
+                          </tr>
+                          <tr>
+                           <th><?= __('Name') ?></th>
+                           <td><?= h($product->name) ?></td>
+                         </tr>
+                         <tr>
+                          <th><?= __('Id') ?></th>
+                          <td><?= $this->Number->format($product->id) ?></td>
+                        </tr>
+                        <tr>
+                          <th><?= __('Price') ?></th>
+                          <td><?= $this->Number->format($product->price) ?></td>
+                        </tr>
+                        <tr>
+                          <th><?= $this->Paginator->sort('Acciones') ?></th>
+                          <td class="actions">
+                            <?= $this->Html->link('', ['action' => 'edit', $product->id], ['class' => 'btn btn-warning fa fa-pencil']) ?>
+                            <?= $this->Form->postLink('', ['action' => 'delete', $product->id], ['confirm' => __('¿Estás seguro de que quieres eliminar # {0}?', $product->id), 'class' => 'btn btn-danger fa fa-trash']) ?>
+                          </td>
+                        </tr>
                       </table>
-                    </div>
-                  </div>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
-          </main>
-          <!-- Essential javascripts for application to work-->
-          <?= $this->Html->script('jquery-3.2.1.min.js');?>
-          <?= $this->Html->script('popper.min.js');?>
-          <?= $this->Html->script('bootstrap.min.js');?>
-          <?= $this->Html->script('main.js',['type'=>'text/javascript']);?>
-          <!-- Page specific javascripts-->
-          <!-- Data table plugin-->
-          <?= $this->Html->script('main.js',['type'=>'text/javascript']);?>
-          <?= $this->Html->script('plugins/jquery.dataTables.min.js',['type'=>'text/javascript']);?>
-          <?= $this->Html->script('plugins/dataTables.bootstrap.min.js',['type'=>'text/javascript']);?>
-          <script type="text/javascript">$('#sampleTable').DataTable();</script>
-          <!-- Google analytics script-->
-          <script type="text/javascript">
-            if(document.location.hostname == 'pratikborsadiya.in') {
-              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-              ga('create', 'UA-72504830-1', 'auto');
-              ga('send', 'pageview');
-            }
-          </script>
-        </body>
-        </html>
+          </div>
+        </div>
+      </main>
+      <!-- Essential javascripts for application to work-->
+      <?= $this->Html->script('jquery-3.2.1.min.js');?>
+      <?= $this->Html->script('popper.min.js');?>
+      <?= $this->Html->script('bootstrap.min.js');?>
+      <?= $this->Html->script('main.js',['type'=>'text/javascript']);?>
+      <!-- Page specific javascripts-->
+      <!-- Data table plugin-->
+      <?= $this->Html->script('main.js',['type'=>'text/javascript']);?>
+      <?= $this->Html->script('plugins/jquery.dataTables.min.js',['type'=>'text/javascript']);?>
+      <?= $this->Html->script('plugins/dataTables.bootstrap.min.js',['type'=>'text/javascript']);?>
+      <script type="text/javascript">$('#sampleTable').DataTable();</script>
+      <!-- Google analytics script-->
+      <script type="text/javascript">
+        if(document.location.hostname == 'pratikborsadiya.in') {
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-72504830-1', 'auto');
+          ga('send', 'pageview');
+        }
+      </script>
+    </body>
+    </html>
