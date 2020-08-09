@@ -108,10 +108,6 @@ $this->disableAutoLayout();
         <div class="header-lower">
             <div class="auto-container">
                <div class="main-box clearfix">
-                    <!--Logo Box-->
-                    <div class="logo-box">
-                        <div class="logo"><a href="index.html"><img src="home/images/logo-2.png" alt=""></a></div>
-                    </div>
 					<!--outer Box-->
                         <div class="outer-box">
                             <!--Search Box-->
@@ -163,11 +159,6 @@ $this->disableAutoLayout();
         <!--Sticky Header-->
         <div class="sticky-header">
         	<div class="auto-container clearfix">
-                <!--Logo-->
-            	<div class="logo pull-left">
-                	<a href="index.html" class="img-responsive"><img src="home/images/logo-small.png" alt="" title=""></a>
-                </div>
-
                 <!--Right Col-->
                 <div class="right-col pull-right">
                 	<!-- Main Menu -->
@@ -550,9 +541,7 @@ $this->disableAutoLayout();
     <!-- End Services Section -->
     
     <!-- Main Footer -->
-    <footer class="main-footer" style="background-image: url(home/images/background/4.jpg);">
-        
-
+    <footer class="main-footer">
         <!--Footer Bottom-->
          <div class="footer-bottom">
             <div class="auto-container">

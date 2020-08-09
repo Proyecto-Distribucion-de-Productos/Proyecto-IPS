@@ -21,10 +21,6 @@
 <!--Color Themes-->
 <link id="theme-color-file" href="../../home/css/color-themes/default-theme.css" rel="stylesheet">
 
-<!--Favicon-->
-<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-<link rel="icon" href="images/favicon.png" type="image/x-icon">
-
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -86,10 +82,6 @@
         <div class="header-lower">
             <div class="auto-container">
                <div class="main-box clearfix">
-                    <!--Logo Box-->
-                    <div class="logo-box">
-                        <div class="logo"><a href="index.html"><img src="images/logo-3.png" alt=""></a></div>
-                    </div>
                     <!--Nav Outer-->
                     <div class="nav-outer clearfix">
                         <nav class="main-menu navbar-expand-md">
@@ -142,11 +134,6 @@
         <!--Sticky Header-->
         <div class="sticky-header">
         	<div class="auto-container clearfix">
-                <!--Logo-->
-            	<div class="logo pull-left">
-                	<a href="index.html" class="img-responsive"><img src="images/logo-small.png" alt="" title=""></a>
-                </div>
-
                 <!--Right Col-->
                 <div class="right-col pull-right">
                 	<!-- Main Menu -->
@@ -178,14 +165,10 @@
     <!--End Main Header -->
 
     <!--Page Title-->
-    <section class="page-title" style="background-image:url(images/background/8.jpg);">
+    <section class="page-title">
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <h1>Productos/<?= h($category->name);?></h1>
-                <ul class="bread-crumb clearfix">
-                    <li><?= $this->Html->link('Principal','/')?></li>
-                    <li>Productos</li>
-                </ul>
             </div>
         </div>
     </section>
@@ -198,19 +181,6 @@
 
                 <!--content side-->
                 <div class="content-side col-lg-9 col-md-12 col-sm-12">
-                    <div class="shop-upper-box clearfix">
-                        <div class="items-label pull-left">Showing 1-7 of 84 results</div>
-                        <div class="sort-by pull-right">
-                            <select class="custom-select-box">
-                                <option>Default Sorting</option>
-                                <option>Price: Lowest First</option>
-                                <option>Price: Highest First</option>
-                                <option>Ascending</option>
-                                <option>Descending</option>
-                            </select>
-                        </div>
-                    </div>
-
                     <div class="row clearfix">
                         <!-- Shop item -->
                         <?php foreach ($category->products as $product) : ?>
@@ -252,17 +222,6 @@
                 <!--Sidebar Side-->
                 <div class="sidebar-side col-lg-3 col-md-4 col-sm-12">
                     <aside class="sidebar default-sidebar">
-
-                        <!--search box-->
-                        <div class="sidebar-widget search-box">
-                            <form method="post" action="blog.html">
-                                <div class="form-group">
-                                    <input type="search" name="search-field" value="" placeholder="Search Product" required="">
-                                    <button type="submit"><span class="icon fa fa-search"></span></button>
-                                </div>
-                            </form>
-                        </div>
-
                         <!-- Categories -->
                         <div class="sidebar-widget categories">
                             <div class="sidebar-title"><h2>Categorias</h2></div>
@@ -276,133 +235,13 @@
                         </div>
 
                         <!--Price Filter Widget-->
-                        <div class="sidebar-widget price-filter-widget">
-                            <div class="sidebar-title"><h2>Filter by Price</h2></div>
-                            <div class="widget-content">
-                                <div class="range-slider-one clearfix">
-                                    <div class="price-range-slider"></div>
-                                    <div class="clearfix">
-                                        <div class="pull-left">
-                                            <a href="#" class="theme-btn btn-style-two">Filtter</a>
-                                        </div>
-                                        <div class="pull-right">
-                                            <div class="title">Price:</div>
-                                            <div class="input"><input type="text" class="property-amount" name="field-name" readonly></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </aside>
                 </div>
             </div>
         </div>
     </div>
     <!-- Main Footer -->
-    <footer class="main-footer alternate" style="background-image: url(images/background/4.jpg);">
-        <div class="auto-container">
-
-            <!--Widgets Section-->
-            <div class="widgets-section">
-                <div class="row clearfix">
-                    <!--Footer Column-->
-                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
-                        <div class="footer-widget about-widget">
-                            <div class="footer-logo">
-                                <figure>
-                                    <a href="index.html"><img src="images/footer-logo.png" alt=""></a>
-                                </figure>
-                            </div>
-                            <div class="widget-content">
-                                <div class="text">How to pursue pleasure rationally thats encounter consequences that extremely painful. Nor again is there anyones who loves or pursues or ut desires obtains pain of itself, because.</div>
-                                <h4>Follow Us:</h4>
-                                <ul class="social-icon">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Footer Column-->
-                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
-                        <div class="footer-widget services-widget">
-                            <h2 class="widget-title">Our Services</h2>
-                            <div class="widget-content">
-                                <ul class="services-list">
-                                    <li><a href="#">Engine Diagnostic & Repair</a></li>
-                                    <li><a href="#">Maintanence Inspaection</a></li>
-                                    <li><a href="#">Electrical System Diagnostic</a></li>
-                                    <li><a href="#">Wheel Allignment & Installation</a></li>
-                                    <li><a href="#">Air Conditioner Service & Repair</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Footer Column-->
-                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
-                        <!--Footer Column-->
-                        <div class="footer-widget gallery-widget">
-                            <h2 class="widget-title">Instragram</h2>
-                             <!--Footer Column-->
-                            <div class="widget-content">
-                                <div class="outer clearfix">
-                                    <figure class="image">
-                                        <a href="images/resource/feature-1.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/insta-1.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="images/resource/feature-2.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/insta-2.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="images/resource/feature-3.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/insta-3.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="images/resource/feature-4.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/insta-4.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="images/resource/news-1.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/insta-5.jpg" alt=""></a>
-                                    </figure>
-
-                                    <figure class="image">
-                                        <a href="images/resource/news-2.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/insta-6.jpg" alt=""></a>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!--Footer Column-->
-                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
-                        <!--Footer Column-->
-                        <div class="footer-widget news-widget">
-                            <h2 class="widget-title">Latest News</h2>
-                             <!--Footer Column-->
-                            <div class="widget-content">
-                                <div class="post">
-                                    <h4><a href="#">Get Usefull Car Maintanence Tips From Our Expets</a></h4>
-                                    <span class="date"><i class="far fa-calendar-check"></i>Aug 21, 2015</span>
-                                </div>
-
-                                <div class="post">
-                                    <h4><a href="#">Get Usefull Car Maintanence Tips From Our Expets</a></h4>
-                                    <span class="date"><i class="far fa-calendar-check"></i>Aug 21, 2015</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+    <footer class="main-footer alternate">
         <!--Footer Bottom-->
          <div class="footer-bottom">
             <div class="auto-container">

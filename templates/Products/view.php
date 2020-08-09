@@ -21,10 +21,6 @@
 <!--Color Themes-->
 <link id="theme-color-file" href="../../home/css/color-themes/default-theme.css" rel="stylesheet">
 
-<!--Favicon-->
-<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-<link rel="icon" href="images/favicon.png" type="image/x-icon">
-
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -86,10 +82,6 @@
         <div class="header-lower">
             <div class="auto-container">
                <div class="main-box clearfix">
-                    <!--Logo Box-->
-                    <div class="logo-box">
-                        <div class="logo"><a href="index.html"><img src="images/logo-3.png" alt=""></a></div>
-                    </div>
                     <!--Nav Outer-->
                     <div class="nav-outer clearfix">
                         <nav class="main-menu navbar-expand-md">
@@ -140,11 +132,6 @@
         <!--Sticky Header-->
         <div class="sticky-header">
         	<div class="auto-container clearfix">
-                <!--Logo-->
-            	<div class="logo pull-left">
-                	<a href="index.html" class="img-responsive"><img src="images/logo-small.png" alt="" title=""></a>
-                </div>
-
                 <!--Right Col-->
                 <div class="right-col pull-right">
                 	<!-- Main Menu -->
@@ -175,7 +162,7 @@
     <!--End Main Header -->
 
     <!--Page Title-->
-    <section class="page-title" style="background-image:url(images/background/imagen-backg-1.png);">
+    <section class="page-title">
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <h1>Productos</h1>
@@ -295,7 +282,7 @@
     </div>
     <!--End Shop Single-->
     <!-- Main Footer -->
-    <footer class="main-footer alternate" style="background-image: url(images/background/4.jpg);">
+    <footer class="main-footer alternate">
         <!--Footer Bottom-->
          <div class="footer-bottom">
             <div class="auto-container">

@@ -85,10 +85,6 @@
         <div class="header-lower">
             <div class="auto-container">
                <div class="main-box clearfix">
-                    <!--Logo Box-->
-                    <div class="logo-box">
-                        <div class="logo"><a href="index.html"><img src="images/logo-3.png" alt=""></a></div>
-                    </div>
                     <!--Nav Outer-->
                     <div class="nav-outer clearfix">
                         <nav class="main-menu navbar-expand-md">
@@ -141,11 +137,6 @@
         <!--Sticky Header-->
         <div class="sticky-header">
         	<div class="auto-container clearfix">
-                <!--Logo-->
-            	<div class="logo pull-left">
-                	<a href="index.html" class="img-responsive"><img src="images/logo-small.png" alt="" title=""></a>
-                </div>
-
                 <!--Right Col-->
                 <div class="right-col pull-right">
                 	<!-- Main Menu -->
@@ -177,7 +168,7 @@
     <!--End Main Header -->
 
     <!--Page Title-->
-    <section class="page-title" style="background-image:url(images/background/8.jpg);">
+    <section class="page-title">
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <h1>Productos</h1>
@@ -248,7 +239,6 @@
                                 <?php foreach ($categories as $category): ?>
                                     <li><?= $this->Html->link(h($category->name), ['controller'=>'categories','action' => 'view', $category->id]) ?></li>
                                 <?php endforeach; ?>
-                                <!--<li><a href="#">Cooling Kit  <span>12</span></a></li>-->
                             </ul>
                         </div>
                     </aside>
@@ -257,7 +247,7 @@
         </div>
     </div>
     <!-- Main Footer -->
-    <footer class="main-footer alternate" style="background-image: url(images/background/4.jpg);">
+    <footer class="main-footer alternate">
        
 
         <!--Footer Bottom-->

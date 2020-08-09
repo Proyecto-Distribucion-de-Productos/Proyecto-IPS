@@ -32,8 +32,6 @@ class UsersController extends AppController
              }elseif (isset($user['role']) && $user['role'] === 'Cliente') {
                  return $this->redirect($this->Auth->redirectUrl());
              }
-            //return $this->redirect(['controller' => 'dashboard', 'action' => 'index']);
-            //return $this->redirect(['Controller'=>'dashboard','action'=>'index']);
         }else{
             $this->Flash->error('Your username or password is incorrect.');
         }
@@ -157,7 +155,7 @@ class UsersController extends AppController
             $user->role_id=$rolid;
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect($this->Auth->redirectUrl());
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
