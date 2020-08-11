@@ -126,6 +126,7 @@
                     <div class="tile">
                       <div class="tile-body">
                         <div class="table-responsive">
+                        <?= $this->Flash->render() ?>
                           <div class="row mb-3">
                             <div class="col-sm-12 col-md-12"><?= $this->Html->link($this->Html->tag('i', '', ['class' => 'fa fa-plus', 'aria-hidden' => 'true']).'Nuevo', ['action' => 'add'],['class' => 'btn btn-success float-right', 'escape' => false])?></div>
                             <!--<div class="col-sm-12 col-md-12"><button class="btn btn-success float-right" type="button"><i class="fa fa-plus" aria-hidden="true"></i>Nuevo</button></div>-->

@@ -15,25 +15,21 @@
   <section class="material-half-bg">
     <div class="cover"></div>
   </section>
-  <section class="login-content">
-    <div class="login-box">
+  <section class="register-content">
+    <div class="register-box">
       <!-- Inicio del formulario login-->
-      <div class="login-form">
+      <div class="register-form">
 
         <?= $this->Form->create($product) ?>
         <!--<form class="login-form" method="post" accept-charset="utf-8" action="user/login">-->
-          <h3 class="login-head">PRODUCTO</h3>
+          <h3 class="register-head">PRODUCTO</h3>
 
           <div class="form-group">
             <?php 
-        
-
-            echo $this->Form->control('category_id', ['label' => 'Categoria', 'class' => 'form-control', 'options' => $categories]);
-            echo $this->Form->control('measurement_id', ['label' => 'Medida', 'class' => 'form-control', 'options' => $measurements]);
-             echo $this->Form->control('name', ['label' => 'Nombre', 'class' => 'form-control']);
-             echo $this->Form->control('price', ['label' => 'Precio', 'class' => 'form-control']);
-             
-
+              echo $this->Form->control('category_id', ['label' => 'Categoria', 'class' => 'form-control', 'options' => $categories]);
+              echo $this->Form->control('measurement_id', ['label' => 'Medida', 'class' => 'form-control', 'options' => $measurements]);
+              echo $this->Form->control('name', ['label' => 'Nombre', 'class' => 'form-control']);
+              echo $this->Form->control('price', ['label' => 'Precio', 'class' => 'form-control']);
             ?> 
           </div>
           <div class="form-group">

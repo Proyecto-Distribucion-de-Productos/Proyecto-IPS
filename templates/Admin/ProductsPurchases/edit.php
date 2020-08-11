@@ -15,25 +15,21 @@
   <section class="material-half-bg">
     <div class="cover"></div>
   </section>
-  <section class="login-content">
-    <div class="login-box">
+  <section class="register-content">
+    <div class="register-box">
       <!-- Inicio del formulario login-->
-      <div class="login-form">
+      <div class="register-form">
 
          <?= $this->Form->create($productsPurchase) ?>
         <!--<form class="login-form" method="post" accept-charset="utf-8" action="user/login">-->
-          <h3 class="login-head">COMPRA DE PRODUCTO</h3>
+          <h3 class="register-head">COMPRA DE PRODUCTO</h3>
 
           <div class="form-group">
             <?php 
-        
-
-            echo $this->Form->control('purchase_id', ['label' => 'Compra', 'class' => 'form-control', 'options' => $purchases]);
-            echo $this->Form->control('provider_id', ['label' => 'Proveedor', 'class' => 'form-control', 'options' => $providers]);
-            echo $this->Form->control('product_id', ['label' => 'Producto', 'class' => 'form-control', 'options' => $products]);
-             echo $this->Form->control('quantity', ['label' => 'Cantidad', 'class' => 'form-control']);
-             
-           
+              echo $this->Form->control('purchase_id', ['label' => 'Compra', 'class' => 'form-control', 'options' => $purchases]);
+              echo $this->Form->control('provider_id', ['label' => 'Proveedor', 'class' => 'form-control', 'options' => $providers]);
+              echo $this->Form->control('product_id', ['label' => 'Producto', 'class' => 'form-control', 'options' => $products]);
+              echo $this->Form->control('quantity', ['label' => 'Cantidad', 'class' => 'form-control']);
             ?> 
           </div>
           

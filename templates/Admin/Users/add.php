@@ -24,11 +24,11 @@
           <h3 class="register-head"><i class="fa fa-lg fa-fw fa-user"></i>USUARIO</h3>
           <div class="form-group">
             <?php 
-            echo $this->Form->control('name', ['label' => 'Nombre', 'class' => 'form-control']);
+            echo $this->Form->control('name', ['label' => 'Nombre de Usuario', 'class' => 'form-control']);
             echo $this->Form->control('email', ['label' => 'Correo Electronico', 'class' => 'form-control']);
             echo $this->Form->control('password', ['label' => 'Contraseña', 'class' => 'form-control']);
-            echo $this->Form->control('firstname', ['label' => 'Primer apellido', 'class' => 'form-control']);
-            echo $this->Form->control('secondname', ['label' => 'Segundo apellido', 'class' => 'form-control']);
+            echo $this->Form->control('firstname', ['label' => 'Nombres', 'class' => 'form-control']);
+            echo $this->Form->control('secondname', ['label' => 'Apellidos', 'class' => 'form-control']);
             echo $this->Form->control('role_id', ['label' => 'Rol', 'class' => 'form-control', 'options' => $roles]);
           
             ?> 

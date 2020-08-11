@@ -102,26 +102,6 @@
                             </div>
                         </nav>
                         <!-- Main Menu End-->
-
-                        <!--outer Box-->
-                        <div class="outer-box">
-                            <!--Search Box-->
-                            <div class="dropdown dropdown-outer">
-                                <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
-                                <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
-                                    <li class="panel-outer">
-                                        <div class="form-container">
-                                            <form method="post" action="blog.html">
-                                                <div class="form-group">
-                                                    <input type="search" name="field-name" value="" placeholder="Search Here" required="">
-                                                    <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div><!--End outer Box-->
                     </div>
                 </div>
             </div>

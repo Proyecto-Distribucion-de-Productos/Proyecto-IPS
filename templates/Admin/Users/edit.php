@@ -19,7 +19,7 @@
       <div class="register-box">
         <!-- Inicio del formulario login-->
         <div class="register-form">
-        <?= $this->Form->create() ?>
+        <?= $this->Form->create($user) ?>
         <!--<form class="register-form" method="post" accept-charset="utf-8" action="user/login">-->
           <h3 class="register-head"><i class="fa fa-lg fa-fw fa-user"></i>USUARIO</h3>
           <div class="form-group">

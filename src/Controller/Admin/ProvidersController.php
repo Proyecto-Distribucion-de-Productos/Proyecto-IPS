@@ -27,12 +27,6 @@ class ProvidersController extends AppController
         $this->set(compact('providers'));
     }
 
-         public function logout()
-{
-    $this->Flash->success('You are now logged out.');
-    return $this->redirect($this->Auth->logout());
-}
-
     /**
      * View method
      *
@@ -92,11 +86,11 @@ class ProvidersController extends AppController
                 $provider->ruc = $ruc;
 
                 if ($this->Providers->save($provider)) {
-                    $this->Flash->success(__('The provider has been saved.'));
+                    $this->Flash->success(__('El proveedor ha sido guardado.'));
 
                     return $this->redirect(['action' => 'index']);
                 }
-                $this->Flash->error(__('The provider could not be saved. Please, try again.'));
+                $this->Flash->error(__('El proveedor no pudo ser guardado, Intente de nuevo.'));
 
 
 
@@ -125,11 +119,11 @@ class ProvidersController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $provider = $this->Providers->patchEntity($provider, $this->request->getData());
             if ($this->Providers->save($provider)) {
-                $this->Flash->success(__('The provider has been saved.'));
+                $this->Flash->success(__('El proveedor ha sido guardado.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The provider could not be saved. Please, try again.'));
+            $this->Flash->error(__('El proveedor no pudo ser guardado, Intente de nuevo.'));
         }
         $districts = $this->Providers->Districts->find('list', ['limit' => 200]);
         $provinces = $this->Providers->Provinces->find('list', ['limit' => 200]);
@@ -147,11 +141,20 @@ class ProvidersController extends AppController
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
-        $provider = $this->Providers->get($id);
-        if ($this->Providers->delete($provider)) {
-            $this->Flash->success(__('The provider has been deleted.'));
-        } else {
-            $this->Flash->error(__('The provider could not be deleted. Please, try again.'));
+        //$provider = $this->Providers->get($id);
+        $provider = $this->Providers->get($id, [
+            'contain' => ['ProductsPurchases'],
+        ]);
+
+        if (count($provider->products_purchases) == 0) {
+            if ($this->Providers->delete($provider)) {
+                $this->Flash->success(__('El proveedor ha sido eliminado.'));
+            } else {
+                $this->Flash->error(__('El proveedor no pudo ser eliminado, Intente de nuevo.'));
+            }
+        }else{
+            $this->Flash->error(__('No se pudo eliminar, el proveedor tiene productos relacionados.'));
+
         }
 
         return $this->redirect(['action' => 'index']);

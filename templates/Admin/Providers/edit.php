@@ -24,14 +24,9 @@
           <h3 class="login-head">PROVEEDOR</h3>
           <div class="form-group">
             <?php 
-        
             echo $this->Form->control('name', ['label' => 'Nombre', 'class' => 'form-control']);
-            echo $this->Form->control('email', ['label' => 'Correo', 'class' => 'form-control']);
-            echo $this->Form->control('district_id', ['label' => 'Districto', 'class' => 'form-control', 'options' => $districts]);
+            echo $this->Form->control('district_id', ['label' => 'Distrito', 'class' => 'form-control', 'options' => $districts]);
             echo $this->Form->control('province_id', ['label' => 'Provincia', 'class' => 'form-control', 'options' => $provinces]);
-            
-           
-            
             ?> 
           </div>
 

@@ -23,13 +23,6 @@ class CategoriesController extends AppController
 
         $this->set(compact('categories'));
     }
-
-         public function logout()
-{
-    $this->Flash->success('You are now logged out.');
-    return $this->redirect($this->Auth->logout());
-}
-
     /**
      * View method
      *
@@ -57,11 +50,11 @@ class CategoriesController extends AppController
         if ($this->request->is('post')) {
             $category = $this->Categories->patchEntity($category, $this->request->getData());
             if ($this->Categories->save($category)) {
-                $this->Flash->success(__('The category has been saved.'));
+                $this->Flash->success(__('La categoria ha sido guardada.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The category could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se pudo guardar la categoria, Intente de nuevo.'));
         }
         $this->set(compact('category'));
     }
@@ -81,11 +74,11 @@ class CategoriesController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $category = $this->Categories->patchEntity($category, $this->request->getData());
             if ($this->Categories->save($category)) {
-                $this->Flash->success(__('The category has been saved.'));
+                $this->Flash->success(__('La categoria ha sido editada'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The category could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se pudo guardar la categoria. Intente de nuevo.'));
         }
         $this->set(compact('category'));
     }
@@ -100,12 +93,24 @@ class CategoriesController extends AppController
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
-        $category = $this->Categories->get($id);
-        if ($this->Categories->delete($category)) {
-            $this->Flash->success(__('The category has been deleted.'));
-        } else {
-            $this->Flash->error(__('The category could not be deleted. Please, try again.'));
+        $category = $this->Categories->get($id, [
+            'contain' => ['Products'],
+        ]);
+
+        if (count($category->products) == 0) {
+            if ($this->Categories->delete($category)) {
+                $this->Flash->success(__('La categoria ha sido eliminada.'));
+            } else {
+                $this->Flash->error(__('La categoria no pudo ser eliminada, Intente de nuevo.'));
+            }
+        }else{
+            $this->Flash->error(__('No se pudo eliminar, la categoria tiene productos relacionados.'));
+
         }
+
+        
+
+        
 
         return $this->redirect(['action' => 'index']);
     }

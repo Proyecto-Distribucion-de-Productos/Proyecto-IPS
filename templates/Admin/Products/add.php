@@ -15,14 +15,14 @@
   <section class="material-half-bg">
     <div class="cover"></div>
   </section>
-  <section class="login-content">
-    <div class="login-box">
+  <section class="register-content">
+    <div class="register-box">
       <!-- Inicio del formulario login-->
-      <div class="login-form">
+      <div class="register-form">
         <?= $this->Form->create($product) ?>
 
         <!--<form class="login-form" method="post" accept-charset="utf-8" action="user/login">-->
-          <h3 class="login-head">PRODUCTO</h3>
+          <h3 class="register-head">PRODUCTO</h3>
           <div class="form-group">
             <?php 
             
