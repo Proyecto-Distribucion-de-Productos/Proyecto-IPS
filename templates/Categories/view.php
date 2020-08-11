@@ -226,7 +226,7 @@
                         <div class="sidebar-widget categories">
                             <div class="sidebar-title"><h2>Categorias</h2></div>
                             <ul class="category-list">
-                                <li><?= $this->Html->link('Todos los productos', ['action' => 'index']) ?></li>
+                                <li><?= $this->Html->link('Todos los productos', ['controller'=>'products', 'action' => 'index']) ?></li>
                                 <?php foreach ($categories as $category): ?>
                                     <li><?= $this->Html->link(h($category->name), ['controller'=>'categories','action' => 'view', $category->id]) ?></li>
                                 <?php endforeach; ?>
