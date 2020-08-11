@@ -29,12 +29,11 @@ class ProductsController extends AppController
     }
     public function index()
     {   
-        $this->paginate = [
+        $this->paginate = ['limit'=>9,
             'contain' => ['Categories', 'Measurements'],
         ];
         $products = $this->paginate($this->Products);
         $categories = $this->Products->Categories->find('all', ['limit' => 200]);
-
         $this->set(compact('products', 'categories'));
     }
     

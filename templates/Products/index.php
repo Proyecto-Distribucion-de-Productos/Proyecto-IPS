@@ -193,15 +193,11 @@
                         <?php endforeach; ?>
                      
                     </div>
-
-                    <!-- Styled Pagination -->
                     <div class="styled-pagination text-center clearfix">
                         <ul class="clearfix">
-                            <li><a href="#" class="active">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a class="next" href="#"><span class="fa fa-angle-right"></span></a></li>
+                            <?= $this->Paginator->prev('<', ['class' => 'next']) ?>
+                            <?= $this->Paginator->numbers(['before' => '', 'after' => '']) ?>
+                            <?= $this->Paginator->next('>', ['class' => 'next']) ?>
                         </ul>
                     </div>
                 </div>
